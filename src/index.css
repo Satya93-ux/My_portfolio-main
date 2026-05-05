@@ -1145,16 +1145,7 @@ input, textarea {
     margin: 0 auto;
 }
 
-.frame-border {
-    position: absolute;
-    top: -15px;
-    left: -15px;
-    right: 15px;
-    bottom: 15px;
-    border: 2px solid rgba(var(--primary-rgb), 0.3);
-    border-radius: var(--radius-lg);
-    z-index: -1;
-}
+/* frame-border removed */
 
 .image-wrapper {
     position: relative;
@@ -1181,15 +1172,7 @@ input, textarea {
     transform: scale(1.05);
 }
 
-.image-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, transparent 60%, rgba(var(--bg-dark), 0.8) 100%);
-    pointer-events: none;
-}
+/* image-overlay removed */
 
 /* Brand Orbit - Home Page */
 .brand-orbit {
@@ -1280,9 +1263,6 @@ input, textarea {
     font-family: var(--font-primary);
     color: var(--text-muted);
     font-style: italic;
-    background: rgba(10, 10, 15, 0.6);
-    padding: 8px 16px;
-    border-radius: var(--radius-sm);
     opacity: 0;
     animation: slideUpFade 0.8s 1.2s ease forwards;
     z-index: 10;

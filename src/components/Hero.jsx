@@ -61,7 +61,7 @@ const Hero = () => {
       <div className="container">
         <div className="hero-content">
           <div className="hero-left">
-            <div className="hero-badge" style={{ maxWidth: '500px', padding: '10px 20px', textTransform: 'none', borderRadius: 'var(--radius-md)' }}>
+            <div className="hero-badge" style={{ maxWidth: '500px', padding: '10px 20px', textTransform: 'none', borderRadius: '50px' }}>
               <span className="badge-dot"></span>
               <span style={{ fontWeight: 500, fontSize: '0.9rem' }}>I build clean, scalable mobile apps and premium websites — delivering complete digital solutions as services.</span>
             </div>
@@ -123,11 +123,9 @@ const Hero = () => {
           <div className="hero-right">
             <div className="hero-image-container">
               <div className="image-frame">
-                <div className="frame-border"></div>
                 <div className="image-wrapper">
                   <img src={myImage} alt="Satyaprakash Upadhyay" className="hero-image" />
                 </div>
-                <div className="image-overlay"></div>
               </div>
               
               {/* Brand Icons Orbiting */}
