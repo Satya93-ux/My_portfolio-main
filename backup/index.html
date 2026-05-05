@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satyaprakash Upadhyay | Flutter Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span class="preloader-text">A</span>
+            </div>
+            <div class="preloader-bar">
+                <div class="preloader-progress"></div>
+            </div>
+            <p class="preloader-loading">Loading Experience...</p>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Noise Overlay -->
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="nav-logo">
+                <span class="logo-bracket">{</span>
+                <span class="logo-name">Satya</span>
+                <span class="logo-bracket">}</span>
+            </a>
+            
+            <div class="nav-menu" id="navMenu">
+                <div class="nav-menu-bg"></div>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link active" data-text="Home">
+                            <span class="nav-link-number">01</span>
+                            <span class="nav-link-text">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link" data-text="About">
+                            <span class="nav-link-number">02</span>
+                            <span class="nav-link-text">About</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#skills" class="nav-link" data-text="Skills">
+                            <span class="nav-link-number">03</span>
+                            <span class="nav-link-text">Skills</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#work" class="nav-link" data-text="Work">
+                            <span class="nav-link-number">04</span>
+                            <span class="nav-link-text">Work</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#videos" class="nav-link" data-text="Videos">
+                            <span class="nav-link-number">05</span>
+                            <span class="nav-link-text">Videos</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link" data-text="Contact">
+                            <span class="nav-link-number">06</span>
+                            <span class="nav-link-text">Contact</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="nav-footer">
+                    <div class="nav-social">
+                        <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://dribbble.com" target="_blank"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-actions">
+                <a href="#contact" class="nav-cta">
+                    <span>Let's Talk</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu">
+                    <span class="toggle-line"></span>
+                    <span class="toggle-line"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+            <div class="grid-lines"></div>
+        </div>
+
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-left">
+                    <div class="hero-badge" style="max-width: 500px; padding: 10px 20px; text-transform: none; border-radius: var(--radius-md);">
+                        <span class="badge-dot"></span>
+                        <span style="font-weight: 500; font-size: 0.9rem;">I build clean, scalable mobile apps and premium websites — delivering complete digital solutions as services.</span>
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        <span class="title-line">
+                            <span class="title-word">Flutter</span>
+                            <span class="title-word highlight">Developer</span>
+                        </span>
+                    </h1>
+
+                    <div class="hero-info">
+                        <div class="info-item">
+                            <span class="info-label">I'm</span>
+                            <h2 class="info-name">Satyaprakash Upadhyay</h2>
+                        </div>
+                        <div class="info-divider"></div>
+                        <div class="info-item">
+                            <span class="info-label">Specialized in</span>
+                            <div class="info-role">
+                                <span class="role-text" id="roleText">Flutter Development</span>
+                                <span class="role-cursor">|</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="hero-description">
+                        Building clean, scalable mobile apps with modern architecture.
+                    </p>
+
+                    <div class="hero-cta">
+                        <a href="#work" class="btn-primary">
+                            <span class="btn-text">View Projects</span>
+                            <span class="btn-icon">
+                                <i class="fas fa-arrow-down"></i>
+                            </span>
+                        </a>
+                        <a href="#contact" class="btn-outline">
+                            <span class="btn-text">Get In Touch</span>
+                        </a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-value" data-value="5>0</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value" data-value="6">0</span>
+                            <span class="stat-label">Months Experience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value" data-value="10">0</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-right">
+                    <div class="hero-image-container">
+                        <div class="image-frame">
+                            <div class="frame-border"></div>
+                            <div class="image-wrapper">
+                                <img src="myimg.jpeg" alt="Satyaprakash Upadhyay" class="hero-image">
+                            </div>
+                            <div class="image-overlay"></div>
+                        </div>
+                        
+                        <div class="floating-elements">
+                            <div class="floating-tag tag-1">
+                                <i class="fab fa-flutter"></i>
+                                <span>Flutter</span>
+                            </div>
+                            <div class="floating-tag tag-2">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>Mobile First</span>
+                            </div>
+                            <div class="floating-tag tag-3">
+                                <i class="fas fa-code"></i>
+                                <span>Clean Code</span>
+                            </div>
+                        </div>
+
+                        <p class="image-tagline">Passionate about mobile innovation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-scroll">
+            <div class="scroll-line"></div>
+            <span>Scroll to explore</span>
+        </div>
+
+        <div class="hero-social-bar">
+            <span class="social-label">Follow Me</span>
+            <div class="social-line"></div>
+            <div class="social-links">
+                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </section>
+
+    
+
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-label">
+                <span class="label-number">02</span>
+                <span class="label-text">About Me</span>
+                <span class="label-line"></span>
+            </div>
+
+            <div class="about-content">
+                <div class="about-left">
+                    <div class="about-image-wrapper">
+                        <div class="about-image-frame">
+                            <img src="myimg.jpeg" alt="Satyaprakash Upadhyay">
+                        </div>
+                        <div class="about-pattern"></div>
+                    </div>
+                </div>
+
+                <div class="about-right">
+                    <h2 class="about-title">
+                        Passionate about creating 
+                        <span class="text-gradient">impactful digital solutions</span>
+                    </h2>
+
+                    <div class="about-text">
+                        <p>
+                            Hello! I'm <strong>Satyaprakash Upadhyay</strong>. As a dedicated Flutter developer, I excel in building high‑quality mobile applications using Dart, Flutter, and Firebase, supported by advanced state management frameworks including Provider, Riverpod, BLoC, and GetX.
+                        </p>
+                        <p>
+                            I build professional websites and mobile apps as services — tailored to client needs.
+                        </p>
+                        <p>
+                            My technical proficiency covers Java, REST APIs, Git, GitHub, MongoDB, and Railway for backend systems.
+                        </p>
+                        <p>
+                            I am skilled in prompt engineering and AI‑driven development, leveraging tools such as Cursor and Antigravity to design modern, efficient, and intelligent solutions that merge creativity with technical precision.
+                        </p>
+                    </div>
+
+                    <div class="about-info-grid">
+                        <div class="info-box">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <span class="info-box-label">Location</span>
+                                <span class="info-box-value">Jaipur, Rajasthan, India</span>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <span class="info-box-label">Email</span>
+                                <span class="info-box-value">sk9334069077@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <span class="info-box-label">Education</span>
+                                <span class="info-box-value">B.Tech Computer Science</span>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <i class="fas fa-briefcase"></i>
+                            <div>
+                                <span class="info-box-label">Employment</span>
+                                <span class="info-box-value">Open to Opportunities</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-cta">
+                        <a href="#" class="btn-primary" download>
+                            <span class="btn-text">Download CV</span>
+                            <span class="btn-icon"><i class="fas fa-download"></i></span>
+                        </a>
+                        <a href="#contact" class="btn-outline">
+                            <span class="btn-text">Contact Me</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-label">
+                <span class="label-number">03</span>
+                <span class="label-text">Skills & Expertise</span>
+                <span class="label-line"></span>
+            </div>
+
+            <div class="skills-header">
+                <h2 class="section-title">
+                    Technologies I work with
+                </h2>
+                <p class="section-subtitle">
+                    I've worked with a variety of technologies in the mobile development world. 
+                    Here are the tools and frameworks I use to bring ideas to life.
+                </p>
+            </div>
+
+                        <div class="skills-category">
+                <h3 class="category-title"><i class="fas fa-mobile-alt"></i> Frontend & Mobile</h3>
+                <div class="skills-grid">
+                    <div class="skill-card" data-tilt>
+                        <div class="skill-card-inner">
+                            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="30" height="30"><path d="M14.314 0L2.3 12.013l3.7 3.7 15.7-15.7H14.314zM2.3 12.013l3.7 3.7L2.3 19.42z"/></svg></div>
+                            <h3 class="skill-name">Flutter</h3>
+                            <p class="skill-desc">Cross-platform mobile app development</p>
+                        </div>
+                        <div class="skill-card-glow"></div>
+                    </div>
+                    <div class="skill-card" data-tilt>
+                        <div class="skill-card-inner">
+                            <div class="skill-icon"><i class="fab fa-medapps"></i></div>
+                            <h3 class="skill-name">Dart</h3>
+                            <p class="skill-desc">Object-oriented programming for Flutter</p>
+                        </div>
+                        <div class="skill-card-glow"></div>
+                    </div>
+                    <div class="skill-card" data-tilt>
+                        <div class="skill-card-inner">
+                            <div class="skill-icon"><i class="fas fa-fire"></i></div>
+                            <h3 class="skill-name">Firebase</h3>
+                            <p class="skill-desc">Backend services and authentication</p>
+                        </div>
+                        <div class="skill-card-glow"></div>
+                    </div>
+                    <div class="skill-card" data-tilt>
+                        <div class="skill-card-inner">
+                            <div class="skill-icon"><i class="fas fa-cubes"></i></div>
+                            <h3 class="skill-name">State Management</h3>
+                            <p class="skill-desc">Provider, Riverpod, BLoC, GetX</p>
+                        </div>
+                        <div class="skill-card-glow"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3 class="category-title"><i class="fas fa-server"></i> Backend</h3>
+                <div class="skills-grid">
+                    <div class="skill-card" data-tilt>
+                        <div class="skill-card-inner">
+                            <div class="skill-icon"><i class="fas fa-plug"></i></div>
+                            <h3 class="skill-name">REST APIs</h3>
+                            <p class="skill-desc">API integration and data handling</p>
+                        </div>
+                        <div class="skill-card-glow"></div>
+                    </div>
+                    <div class="skill-card" data-tilt>
+                        <div class="skill-card-inner">
+                            <div class="skill-icon"><i class="fas fa-database"></i></div>
+                            <h3 class="skill-name">MongoDB</h3>
+                            <p class="skill-desc">NoSQL database management</p>
+                        </div>
+                        <div class="skill-card-glow"></div>
+                    </div>
+                    <div class="skill-card" data-tilt>
+                        <div class="skill-card-inner">
+                            <div class="skill-icon"><i class="fas fa-train"></i></div>
+                            <h3 class="skill-name">Railway</h3>
+                            <p class="skill-desc">Backend system deployment</p>
+                        </div>
+                        <div class="skill-card-glow"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3 class="category-title"><i class="fas fa-laptop-code"></i> Other Expertise</h3>
+                <div class="skills-grid">
+                    <div class="skill-card" data-tilt>
+                        <div class="skill-card-inner">
+                            <div class="skill-icon"><i class="fab fa-java"></i></div>
+                            <h3 class="skill-name">Java</h3>
+                            <p class="skill-desc">Object-oriented programming</p>
+                        </div>
+                        <div class="skill-card-glow"></div>
+                    </div>
+                    <div class="skill-card" data-tilt>
+                        <div class="skill-card-inner">
+                            <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+                            <h3 class="skill-name">Git & GitHub</h3>
+                            <p class="skill-desc">Version control and collaboration</p>
+                        </div>
+                        <div class="skill-card-glow"></div>
+                    </div>
+                    <div class="skill-card" data-tilt>
+                        <div class="skill-card-inner">
+                            <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                            <h3 class="skill-name">Prompt Engineering</h3>
+                            <p class="skill-desc">Advanced AI prompt crafting</p>
+                        </div>
+                        <div class="skill-card-glow"></div>
+                    </div>
+                    <div class="skill-card" data-tilt>
+                        <div class="skill-card-inner">
+                            <div class="skill-icon"><i class="fas fa-robot"></i></div>
+                            <h3 class="skill-name">AI Tools</h3>
+                            <p class="skill-desc">Cursor, Antigravity</p>
+                        </div>
+                        <div class="skill-card-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work/Projects Section -->
+    <section id="work" class="work">
+        <div class="container">
+            <div class="section-label">
+                <span class="label-number">04</span>
+                <span class="label-text">Featured Work</span>
+                <span class="label-line"></span>
+            </div>
+
+            <div class="work-header">
+                <h2 class="section-title">
+                    Selected Projects
+                </h2>
+                <div class="work-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="app">Mobile Apps</button>
+                    <button class="filter-btn" data-filter="web">Web Apps</button>
+                    <button class="filter-btn" data-filter="ui">UI Design</button>
+                </div>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <article class="project-card" data-category="app">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop" alt="E-Commerce App">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <span class="project-category">Mobile App</span>
+                                <h3 class="project-title">ShopEase</h3>
+                                <p class="project-excerpt">Full-featured e-commerce mobile application</p>
+                                <div class="project-actions">
+                                    <a href="#" class="action-btn" title="View Details">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="#" class="action-btn" title="GitHub">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="#" class="action-btn" title="Live Demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="meta-year">2024</span>
+                            <span class="meta-divider">•</span>
+                            <span class="meta-type">Flutter App</span>
+                        </div>
+                        <h3 class="project-name">ShopEase E-Commerce</h3>
+                        <p class="project-description">
+                            Complete e-commerce solution with product catalog, cart management, 
+                            payment integration, and order tracking.
+                        </p>
+                        <div class="project-tech">
+                            <span>Flutter</span>
+                            <span>Firebase</span>
+                            <span>Stripe</span>
+                            <span>GetX</span>
+                        </div>
+                        <div class="project-stats-bar">
+                            <div class="stat-item">
+                                <i class="fas fa-download"></i>
+                                <span>10K+</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-star"></i>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card" data-category="app">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop" alt="Social Media App">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <span class="project-category">Mobile App</span>
+                                <h3 class="project-title">ConnectHub</h3>
+                                <p class="project-excerpt">Social networking platform with real-time features</p>
+                                <div class="project-actions">
+                                    <a href="#" class="action-btn" title="View Details">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="#" class="action-btn" title="GitHub">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="#" class="action-btn" title="Live Demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="meta-year">2024</span>
+                            <span class="meta-divider">•</span>
+                            <span class="meta-type">Flutter App</span>
+                        </div>
+                        <h3 class="project-name">ConnectHub Social</h3>
+                        <p class="project-description">
+                            Social media platform featuring real-time chat, stories, 
+                            posts, and video calling functionality.
+                        </p>
+                        <div class="project-tech">
+                            <span>Flutter</span>
+                            <span>Socket.io</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="project-stats-bar">
+                            <div class="stat-item">
+                                <i class="fas fa-download"></i>
+                                <span>25K+</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-star"></i>
+                                <span>4.6</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card" data-category="app">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=800&h=600&fit=crop" alt="Fitness App">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <span class="project-category">Mobile App</span>
+                                <h3 class="project-title">FitTrack Pro</h3>
+                                <p class="project-excerpt">Comprehensive fitness tracking application</p>
+                                <div class="project-actions">
+                                    <a href="#" class="action-btn" title="View Details">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="#" class="action-btn" title="GitHub">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="#" class="action-btn" title="App Store">
+                                        <i class="fab fa-app-store"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="meta-year">2023</span>
+                            <span class="meta-divider">•</span>
+                            <span class="meta-type">Flutter App</span>
+                        </div>
+                        <h3 class="project-name">FitTrack Pro</h3>
+                        <p class="project-description">
+                            Fitness app with workout plans, nutrition tracking, 
+                            progress analytics, and health integration.
+                        </p>
+                        <div class="project-tech">
+                            <span>Flutter</span>
+                            <span>HealthKit</span>
+                            <span>Charts</span>
+                            <span>Bloc</span>
+                        </div>
+                        <div class="project-stats-bar">
+                            <div class="stat-item">
+                                <i class="fas fa-download"></i>
+                                <span>15K+</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-star"></i>
+                                <span>4.9</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop" alt="Dashboard">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <span class="project-category">Web App</span>
+                                <h3 class="project-title">Analytics Dashboard</h3>
+                                <p class="project-excerpt">Business intelligence dashboard</p>
+                                <div class="project-actions">
+                                    <a href="#" class="action-btn" title="View Details">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="#" class="action-btn" title="GitHub">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="#" class="action-btn" title="Live Demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="meta-year">2023</span>
+                            <span class="meta-divider">•</span>
+                            <span class="meta-type">Flutter Web</span>
+                        </div>
+                        <h3 class="project-name">Analytics Dashboard</h3>
+                        <p class="project-description">
+                            Business analytics platform with real-time data visualization, 
+                            reports, and team collaboration.
+                        </p>
+                        <div class="project-tech">
+                            <span>Flutter Web</span>
+                            <span>REST API</span>
+                            <span>Charts</span>
+                            <span>Provider</span>
+                        </div>
+                        <div class="project-stats-bar">
+                            <div class="stat-item">
+                                <i class="fas fa-users"></i>
+                                <span>500+</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-star"></i>
+                                <span>4.7</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 5 -->
+                <article class="project-card" data-category="app">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop" alt="Food Delivery">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <span class="project-category">Mobile App</span>
+                                <h3 class="project-title">FoodieGo</h3>
+                                <p class="project-excerpt">Food delivery application</p>
+                                <div class="project-actions">
+                                    <a href="#" class="action-btn" title="View Details">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="#" class="action-btn" title="GitHub">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="#" class="action-btn" title="Play Store">
+                                        <i class="fab fa-google-play"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="meta-year">2023</span>
+                            <span class="meta-divider">•</span>
+                            <span class="meta-type">Flutter App</span>
+                        </div>
+                        <h3 class="project-name">FoodieGo Delivery</h3>
+                        <p class="project-description">
+                            Food delivery app with real-time tracking, restaurant discovery, 
+                            and seamless payment integration.
+                        </p>
+                        <div class="project-tech">
+                            <span>Flutter</span>
+                            <span>Google Maps</span>
+                            <span>Razorpay</span>
+                            <span>Firebase</span>
+                        </div>
+                        <div class="project-stats-bar">
+                            <div class="stat-item">
+                                <i class="fas fa-download"></i>
+                                <span>50K+</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-star"></i>
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 6 -->
+                <article class="project-card" data-category="ui">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=600&fit=crop" alt="Banking UI">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <span class="project-category">UI Design</span>
+                                <h3 class="project-title">FinanceFlow</h3>
+                                <p class="project-excerpt">Modern banking app UI design</p>
+                                <div class="project-actions">
+                                    <a href="#" class="action-btn" title="View Details">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="#" class="action-btn" title="Dribbble">
+                                        <i class="fab fa-dribbble"></i>
+                                    </a>
+                                    <a href="#" class="action-btn" title="Figma">
+                                        <i class="fab fa-figma"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="meta-year">2024</span>
+                            <span class="meta-divider">•</span>
+                            <span class="meta-type">UI/UX Design</span>
+                        </div>
+                        <h3 class="project-name">FinanceFlow Banking UI</h3>
+                        <p class="project-description">
+                            Modern banking app UI with dark mode, intuitive navigation, 
+                            and smooth micro-interactions.
+                        </p>
+                        <div class="project-tech">
+                            <span>Figma</span>
+                            <span>UI Design</span>
+                            <span>Prototype</span>
+                        </div>
+                        <div class="project-stats-bar">
+                            <div class="stat-item">
+                                <i class="fas fa-heart"></i>
+                                <span>2.5K</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-eye"></i>
+                                <span>15K</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="work-cta">
+                <a href="https://github.com" target="_blank" class="btn-primary">
+                    <span class="btn-text">View All Projects</span>
+                    <span class="btn-icon"><i class="fab fa-github"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section id="videos" class="videos">
+        <div class="container">
+            <div class="section-label">
+                <span class="label-number">05</span>
+                <span class="label-text">Video Showcase</span>
+                <span class="label-line"></span>
+            </div>
+
+            <div class="videos-header">
+                <h2 class="section-title">Project Demos & Tutorials</h2>
+                <p class="section-subtitle">
+                    Watch my project demonstrations and Flutter development tutorials
+                </p>
+            </div>
+
+            <div class="videos-grid">
+                <!-- Video Card 1 -->
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <div class="video-embed">
+                            <iframe 
+                                src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                title="E-Commerce App Demo"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <div class="video-meta">
+                            <span class="video-duration"><i class="fas fa-clock"></i> 12:45</span>
+                            <span class="video-views"><i class="fas fa-eye"></i> 5.2K views</span>
+                        </div>
+                        <h3 class="video-title">E-Commerce App - Complete Demo</h3>
+                        <p class="video-description">
+                            Full walkthrough of the ShopEase app showing all features including 
+                            product browsing, cart, checkout, and order tracking.
+                        </p>
+                        <div class="video-tags">
+                            <span>Flutter</span>
+                            <span>Demo</span>
+                            <span>E-Commerce</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Card 2 -->
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <div class="video-embed">
+                            <iframe 
+                                src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                title="Social Media App Demo"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <div class="video-meta">
+                            <span class="video-duration"><i class="fas fa-clock"></i> 15:30</span>
+                            <span class="video-views"><i class="fas fa-eye"></i> 3.8K views</span>
+                        </div>
+                        <h3 class="video-title">Real-time Chat Implementation</h3>
+                        <p class="video-description">
+                            Learn how I implemented real-time chat, stories, and video calling 
+                            in the ConnectHub social media app.
+                        </p>
+                        <div class="video-tags">
+                            <span>Flutter</span>
+                            <span>Socket.io</span>
+                            <span>Chat</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Card 3 -->
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <div class="video-embed">
+                            <iframe 
+                                src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                title="Flutter Animation Tutorial"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <div class="video-meta">
+                            <span class="video-duration"><i class="fas fa-clock"></i> 20:15</span>
+                            <span class="video-views"><i class="fas fa-eye"></i> 8.5K views</span>
+                        </div>
+                        <h3 class="video-title">Flutter Animation Masterclass</h3>
+                        <p class="video-description">
+                            Deep dive into creating stunning animations using AnimationController, 
+                            Tween, and custom curves in Flutter.
+                        </p>
+                        <div class="video-tags">
+                            <span>Flutter</span>
+                            <span>Tutorial</span>
+                            <span>Animation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Card 4 -->
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <div class="video-embed">
+                            <iframe 
+                                src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                title="State Management Tutorial"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <div class="video-meta">
+                            <span class="video-duration"><i class="fas fa-clock"></i> 25:00</span>
+                            <span class="video-views"><i class="fas fa-eye"></i> 12K views</span>
+                        </div>
+                        <h3 class="video-title">GetX State Management Guide</h3>
+                        <p class="video-description">
+                            Complete guide to GetX state management - from basics to advanced 
+                            patterns used in production apps.
+                        </p>
+                        <div class="video-tags">
+                            <span>Flutter</span>
+                            <span>GetX</span>
+                            <span>Tutorial</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="videos-cta">
+                <a href="https://youtube.com" target="_blank" class="btn-outline">
+                    <span class="btn-text">Watch More on YouTube</span>
+                    <span class="btn-icon"><i class="fab fa-youtube"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-label">
+                <span class="label-number">—</span>
+                <span class="label-text">Testimonials</span>
+                <span class="label-line"></span>
+            </div>
+
+            <div class="testimonials-content">
+                <h2 class="section-title">What clients say about me</h2>
+                
+                <div class="testimonials-slider" id="testimonialSlider">
+                    <div class="testimonials-track">
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-item">
+                            <div class="testimonial-card">
+                                <div class="testimonial-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <blockquote class="testimonial-text">
+                                    "Satyaprakash delivered an exceptional e-commerce app that exceeded our 
+                                    expectations. His attention to detail and technical expertise 
+                                    made our vision come to life perfectly."
+                                </blockquote>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face" alt="John Smith">
+                                    </div>
+                                    <div class="author-info">
+                                        <h4 class="author-name">John Smith</h4>
+                                        <span class="author-role">CEO, TechStart Inc.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-item">
+                            <div class="testimonial-card">
+                                <div class="testimonial-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <blockquote class="testimonial-text">
+                                    "Working with Satyaprakash was an absolute pleasure. He understood our 
+                                    requirements quickly and delivered a beautiful, performant app 
+                                    ahead of schedule. Highly recommended!"
+                                </blockquote>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face" alt="Sarah Johnson">
+                                    </div>
+                                    <div class="author-info">
+                                        <h4 class="author-name">Sarah Johnson</h4>
+                                        <span class="author-role">Product Manager, AppCo</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3 -->
+                        <div class="testimonial-item">
+                            <div class="testimonial-card">
+                                <div class="testimonial-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <blockquote class="testimonial-text">
+                                    "Satyaprakash's expertise in Flutter is remarkable. He built our fitness 
+                                    app with complex features and smooth animations. The code quality 
+                                    was exceptional and well-documented."
+                                </blockquote>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" alt="Mike Chen">
+                                    </div>
+                                    <div class="author-info">
+                                        <h4 class="author-name">Mike Chen</h4>
+                                        <span class="author-role">Founder, FitLife</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonials-nav">
+                        <button class="nav-arrow prev" id="prevTestimonial">
+                            <i class="fas fa-arrow-left"></i>
+                        </button>
+                        <div class="nav-dots" id="testimonialDots"></div>
+                        <button class="nav-arrow next" id="nextTestimonial">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-label">
+                <span class="label-number">06</span>
+                <span class="label-text">Get In Touch</span>
+                <span class="label-line"></span>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-left">
+                    <h2 class="contact-title">
+                        Let's work together on your next project
+                    </h2>
+                    <p class="contact-text">
+                        Have a project in mind? I'd love to hear about it. Let's discuss 
+                        how I can help you build an amazing mobile application that your 
+                        users will love.
+                    </p>
+
+                    <div class="contact-info-list">
+                        <div class="contact-info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-content">
+                                <span class="info-label">Email</span>
+                                <a href="mailto:sk9334069077@gmail.com" class="info-value">sk9334069077@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <span class="info-label">Phone</span>
+                                <a href="tel:+919876543210" class="info-value">+91 9504875565</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <span class="info-label">Location</span>
+                                <span class="info-value">Jaipur, Rajasthan, India</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-social">
+                        <span class="social-label">Connect with me</span>
+                        <div class="social-icons">
+                            <a href="https://github.com" target="_blank" class="social-icon">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" class="social-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://twitter.com" target="_blank" class="social-icon">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://dribbble.com" target="_blank" class="social-icon">
+                                <i class="fab fa-dribbble"></i>
+                            </a>
+                            <a href="https://instagram.com" target="_blank" class="social-icon">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-right">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Your Name</label>
+                                <input type="text" id="name" name="name" class="form-input" required>
+                                <span class="form-highlight"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Your Email</label>
+                                <input type="email" id="email" name="email" class="form-input" required>
+                                <span class="form-highlight"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" id="subject" name="subject" class="form-input" required>
+                            <span class="form-highlight"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea id="message" name="message" class="form-input form-textarea" rows="5" required></textarea>
+                            <span class="form-highlight"></span>
+                        </div>
+
+                        <button type="submit" class="btn-primary form-submit">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                        </button>
+                    </form>
+
+                    <div class="form-success" id="formSuccess">
+                        <div class="success-animation">
+                            <svg class="checkmark" viewBox="0 0 52 52">
+                                <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+                                <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                            </svg>
+                        </div>
+                        <h3>Message Sent!</h3>
+                        <p>Thank you for reaching out. I'll get back to you within 24 hours.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <a href="#" class="footer-logo">
+                        <span class="logo-bracket">{</span>
+                        <span class="logo-name">Satya</span>
+                        <span class="logo-bracket">}</span>
+                    </a>
+                    <p class="footer-text">
+                        Flutter developer crafting beautiful mobile experiences. 
+                        Let's build something amazing together.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://dribbble.com" target="_blank"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links-wrapper">
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#work">Work</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#">Flutter Development</a></li>
+                            <li><a href="#">Mobile App Design</a></li>
+                            <li><a href="#">UI/UX Design</a></li>
+                            <li><a href="#">App Maintenance</a></li>
+                            <li><a href="#">Consulting</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Satyaprakash Upadhyay. All rights reserved.</p>
+                <p>Designed & Built with <i class="fas fa-heart"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
