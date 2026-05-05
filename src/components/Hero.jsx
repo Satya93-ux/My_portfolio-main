@@ -130,14 +130,19 @@ const Hero = () => {
                 <div className="image-overlay"></div>
               </div>
               
-              <div className="floating-elements">
-                <div className="floating-tag tag-1">
-                  <i className="fab fa-flutter"></i>
-                  <span>Flutter</span>
+              {/* Brand Icons Orbiting */}
+              <div className="brand-orbit">
+                <div className="orbit-icon flutter">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" />
                 </div>
-                <div className="floating-tag tag-2">
-                  <i className="fas fa-mobile-alt"></i>
-                  <span>Mobile First</span>
+                <div className="orbit-icon dart">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart" />
+                </div>
+                <div className="orbit-icon firebase">
+                  <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="Firebase" />
+                </div>
+                <div className="orbit-icon mongodb">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" />
                 </div>
               </div>
 

@@ -34,7 +34,7 @@ function App() {
         <div className="preloader" id="preloader">
           <div className="preloader-inner">
             <div className="preloader-icon">
-              <span className="preloader-text">A</span>
+              <span className="preloader-text">Satya</span>
             </div>
             <div className="preloader-bar">
               <div className="preloader-progress"></div>
