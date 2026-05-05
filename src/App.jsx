@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -9,11 +9,13 @@ import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
+import usePortfolioScripts from './hooks/usePortfolioScripts';
 import './index.css';
 
 function App() {
   const [loading, setLoading] = useState(true);
 
+  // Hide preloader after 1.8 s, matching original script.js timing
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
@@ -22,8 +24,12 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
+  // Initialise all interactive behaviours once the page has rendered
+  usePortfolioScripts();
+
   return (
     <div className="app-wrapper">
+      {/* Preloader */}
       {loading && (
         <div className="preloader" id="preloader">
           <div className="preloader-inner">
@@ -42,6 +48,7 @@ function App() {
       <div className="noise-overlay"></div>
 
       <Header />
+
       <main>
         <Hero />
         <About />
@@ -51,11 +58,14 @@ function App() {
         <Testimonials />
         <Contact />
       </main>
+
       <Footer />
 
-      <button 
-        className="back-to-top" 
+      {/* Back to Top */}
+      <button
+        className="back-to-top"
         id="backToTop"
+        aria-label="Back to top"
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       >
         <i className="fas fa-arrow-up"></i>

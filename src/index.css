@@ -1160,14 +1160,16 @@ input, textarea {
     position: relative;
     aspect-ratio: 1 / 1; /* Perfect circle */
     border-radius: 50%;
-    border: 4px solid #fbbf24; /* Yellow border */
-    box-shadow: 0 0 30px rgba(251, 191, 36, 0.4);
+    overflow: hidden;
+    border: 4px solid #fbbf24;
+    box-shadow: 0 0 30px rgba(251, 191, 36, 0.45);
 }
 
 .hero-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 50%;
     transition: var(--transition-slow);
 }
 
@@ -1632,14 +1634,16 @@ input, textarea {
     position: relative;
     aspect-ratio: 1 / 1; /* Perfect circle */
     border-radius: 50%;
-    border: 4px solid #fbbf24; /* Yellow border */
-    box-shadow: 0 0 30px rgba(251, 191, 36, 0.4);
+    overflow: hidden;
+    border: 4px solid #fbbf24;
+    box-shadow: 0 0 30px rgba(251, 191, 36, 0.45);
 }
 
 .about-image-frame img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 50%;
     transition: var(--transition-slow);
 }
 
