@@ -7,12 +7,10 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-main">
             <a href="#" className="footer-logo">
-              <span className="logo-bracket">{'{'}</span>
-              <span className="logo-name">Satya</span>
-              <span className="logo-bracket">{'}'}</span>
+              <span className="logo-name">AKS.</span>
             </a>
             <p className="footer-text">
-              Flutter developer crafting beautiful mobile experiences. 
+              AI Web Developer and Flutter expert crafting beautiful digital experiences. 
               Let's build something amazing together.
             </p>
             <div className="footer-social">
@@ -30,7 +28,8 @@ const Footer = () => {
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#work">Work</a></li>
+                <li><a href="#work">Projects</a></li>
+                <li><a href="#videos">Showcase</a></li>
                 <li><a href="#contact">Contact</a></li>
               </ul>
             </div>
@@ -49,7 +48,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; 2026 Satyaprakash Upadhyay. All rights reserved.</p>
+          <p>&copy; 2026 Aman Kumar Singh. All rights reserved.</p>
           <p>Designed & Built with <i className="fas fa-heart"></i></p>
         </div>
       </div>

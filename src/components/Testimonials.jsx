@@ -4,7 +4,7 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      text: 'Satyaprakash delivered an exceptional e-commerce app that exceeded our expectations. His attention to detail and technical expertise made our vision come to life perfectly.',
+      text: 'Aman delivered an exceptional e-commerce app that exceeded our expectations. His attention to detail and technical expertise made our vision come to life perfectly.',
       author: 'John Smith',
       role: 'CEO, TechStart Inc.',
       avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face',
@@ -12,7 +12,7 @@ const Testimonials = () => {
     },
     {
       id: 2,
-      text: 'Working with Satyaprakash was an absolute pleasure. He understood our requirements quickly and delivered a beautiful, performant app ahead of schedule. Highly recommended!',
+      text: 'Working with Aman was an absolute pleasure. He understood our requirements quickly and delivered a beautiful, performant app ahead of schedule. Highly recommended!',
       author: 'Sarah Johnson',
       role: 'Product Manager, AppCo',
       avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face',
@@ -20,7 +20,7 @@ const Testimonials = () => {
     },
     {
       id: 3,
-      text: "Satyaprakash's expertise in Flutter is remarkable. He built our fitness app with complex features and smooth animations. The code quality was exceptional and well-documented.",
+      text: "Aman's expertise in Flutter is remarkable. He built our fitness app with complex features and smooth animations. The code quality was exceptional and well-documented.",
       author: 'Mike Chen',
       role: 'Founder, FitLife',
       avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face',
