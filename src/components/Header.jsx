@@ -13,6 +13,7 @@ const Header = () => {
   const [scrolled,    setScrolled]    = useState(false);
   const [menuActive,  setMenuActive]  = useState(false);
   const [activeLink,  setActiveLink]  = useState('#home');
+  const [theme,       setTheme]       = useState('dark');
 
   /* ── scroll: header style + active nav link ── */
   const handleScroll = useCallback(() => {
@@ -49,6 +50,17 @@ const Header = () => {
     document.body.classList.remove('no-scroll');
   };
 
+  /* ── theme toggle ── */
+  const toggleTheme = () => {
+    const newTheme = theme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+    if (newTheme === 'light') {
+      document.body.classList.add('light-mode');
+    } else {
+      document.body.classList.remove('light-mode');
+    }
+  };
+
   /* ── escape key closes menu ── */
   useEffect(() => {
     const onKey = (e) => { if (e.key === 'Escape') closeMenu(); };
@@ -58,14 +70,15 @@ const Header = () => {
 
   return (
     <header className={`header${scrolled ? ' scrolled' : ''}`} style={{ 
-      background: scrolled ? 'rgba(10, 10, 15, 0.9)' : 'transparent',
+      background: scrolled ? (theme === 'dark' ? 'rgba(10, 10, 15, 0.9)' : 'rgba(255, 255, 255, 0.9)') : 'transparent',
       backdropFilter: scrolled ? 'blur(10px)' : 'none',
       borderBottom: scrolled ? '1px solid rgba(255, 255, 255, 0.05)' : 'none',
-      padding: '20px 0'
+      padding: scrolled ? '12px 0' : '20px 0',
+      transition: '0.4s'
     }}>
       <nav className="nav" style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0 20px' }}>
         {/* Logo */}
-        <a href="#" className="nav-logo" onClick={closeMenu} style={{ fontSize: '1.5rem', fontWeight: '800', color: '#3b82f6', textDecoration: 'none' }}>
+        <a href="#" className="nav-logo" onClick={closeMenu} style={{ fontSize: '1.6rem', fontWeight: '800', color: '#3b82f6', textDecoration: 'none', letterSpacing: '-0.5px' }}>
           Satya<span style={{ color: '#ec4899' }}>.</span>
         </a>
 
@@ -80,13 +93,17 @@ const Header = () => {
                   onClick={closeMenu}
                   style={{ 
                     textDecoration: 'none', 
-                    fontSize: '0.9rem', 
-                    fontWeight: '500', 
-                    color: activeLink === item.href ? '#3b82f6' : 'rgba(255, 255, 255, 0.7)',
-                    transition: '0.3s'
+                    fontSize: '0.95rem', 
+                    fontWeight: '600', 
+                    color: activeLink === item.href ? '#3b82f6' : (theme === 'dark' ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.7)'),
+                    transition: '0.3s',
+                    position: 'relative'
                   }}
                 >
                   {item.text}
+                  {activeLink === item.href && (
+                    <span style={{ position: 'absolute', bottom: '-8px', left: '50%', transform: 'translateX(-50%)', width: '4px', height: '4px', background: '#3b82f6', borderRadius: '50%' }}></span>
+                  )}
                 </a>
               </li>
             ))}
@@ -94,19 +111,36 @@ const Header = () => {
         </div>
 
         {/* Actions */}
-        <div className="nav-actions" style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-          <button style={{ background: 'rgba(255, 255, 255, 0.05)', border: 'none', width: '40px', height: '40px', borderRadius: '50%', color: '#fff', cursor: 'pointer' }}>
-            <i className="fas fa-cog"></i>
+        <div className="nav-actions" style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+          <button 
+            onClick={toggleTheme}
+            style={{ 
+              background: 'rgba(255, 255, 255, 0.05)', 
+              border: '1px solid rgba(255, 255, 255, 0.1)', 
+              width: '42px', 
+              height: '42px', 
+              borderRadius: '12px', 
+              color: theme === 'dark' ? '#fff' : '#333', 
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              transition: '0.3s',
+              fontSize: '1.1rem'
+            }}
+          >
+            <i className={theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon'}></i>
           </button>
           <a href="#contact" className="nav-cta" onClick={closeMenu} style={{ 
             background: 'linear-gradient(90deg, #3b82f6, #06b6d4)', 
-            padding: '10px 25px', 
+            padding: '12px 28px', 
             borderRadius: '50px', 
             color: '#fff', 
-            fontWeight: '600', 
+            fontWeight: '700', 
             textDecoration: 'none',
-            fontSize: '0.9rem',
-            boxShadow: '0 10px 20px rgba(59, 130, 246, 0.3)'
+            fontSize: '0.95rem',
+            boxShadow: '0 10px 20px rgba(59, 130, 246, 0.3)',
+            transition: '0.3s'
           }}>
             Hire Me
           </a>
@@ -115,7 +149,7 @@ const Header = () => {
             id="navToggle"
             aria-label="Toggle Menu"
             onClick={toggleMenu}
-            style={{ display: 'none' }} // Assuming standard desktop view for now, usually handled by media queries in CSS
+            style={{ display: 'none' }}
           >
             <span className="toggle-line"></span>
             <span className="toggle-line"></span>

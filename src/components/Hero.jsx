@@ -145,34 +145,21 @@ const Hero = () => {
           </div>
 
           <div className="hero-right">
-            <div className="hero-image-container" style={{ position: 'relative', width: '450px', height: '450px' }}>
-              {/* Floating Icons */}
-              <div className="floating-icons" style={{ position: 'absolute', width: '100%', height: '100%', zIndex: '5' }}>
-                <div className="floating-icon" style={{ position: 'absolute', top: '20%', left: '0', background: '#1e293b', padding: '12px', borderRadius: '12px', boxShadow: '0 10px 25px rgba(0,0,0,0.3)' }}>
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" width="24" alt="flutter" />
-                </div>
-                <div className="floating-icon" style={{ position: 'absolute', top: '10%', right: '10%', background: '#1e293b', padding: '12px', borderRadius: '12px', boxShadow: '0 10px 25px rgba(0,0,0,0.3)' }}>
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" width="24" alt="dart" />
-                </div>
-                <div className="floating-icon" style={{ position: 'absolute', bottom: '20%', left: '0', background: '#1e293b', padding: '12px', borderRadius: '12px', boxShadow: '0 10px 25px rgba(0,0,0,0.3)' }}>
-                  <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" width="24" alt="firebase" />
-                </div>
-                <div className="floating-icon" style={{ position: 'absolute', bottom: '15%', right: '0', background: '#1e293b', padding: '12px', borderRadius: '12px', boxShadow: '0 10px 25px rgba(0,0,0,0.3)' }}>
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" width="24" alt="android" />
-                </div>
-              </div>
-
+            <div className="hero-image-container" style={{ position: 'relative', width: '380px', height: '380px', margin: '0 auto' }}>
               {/* Circular Image Frame */}
               <div className="image-wrapper" style={{ 
                 width: '100%', 
                 height: '100%', 
                 borderRadius: '50%', 
-                border: '8px solid #3b82f6',
-                padding: '10px',
+                border: '6px solid #3b82f6',
+                padding: '8px',
                 background: 'rgba(59, 130, 246, 0.1)',
-                boxShadow: '0 0 50px rgba(59, 130, 246, 0.3)',
+                boxShadow: '0 0 40px rgba(59, 130, 246, 0.2)',
                 position: 'relative',
-                overflow: 'hidden'
+                overflow: 'hidden',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
               }}>
                 <img 
                   src={myImage} 
@@ -182,7 +169,7 @@ const Hero = () => {
                     height: '100%', 
                     objectFit: 'cover', 
                     borderRadius: '50%',
-                    filter: 'contrast(1.1)'
+                    filter: 'contrast(1.05)'
                   }} 
                 />
               </div>
@@ -193,9 +180,9 @@ const Hero = () => {
                 top: '50%',
                 left: '50%',
                 transform: 'translate(-50%, -50%)',
-                width: '110%',
-                height: '110%',
-                border: '1px dashed rgba(59, 130, 246, 0.2)',
+                width: '115%',
+                height: '115%',
+                border: '1px dashed rgba(59, 130, 246, 0.15)',
                 borderRadius: '50%',
                 zIndex: '-1'
               }}></div>
