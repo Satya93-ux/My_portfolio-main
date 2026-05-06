@@ -66,7 +66,7 @@ const Header = () => {
       <nav className="nav" style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0 20px' }}>
         {/* Logo */}
         <a href="#" className="nav-logo" onClick={closeMenu} style={{ fontSize: '1.5rem', fontWeight: '800', color: '#3b82f6', textDecoration: 'none' }}>
-          AKS<span style={{ color: '#ec4899' }}>.</span>
+          <span style={{ color: '#ec4899' }}>.</span>
         </a>
 
         {/* Nav Menu */}
