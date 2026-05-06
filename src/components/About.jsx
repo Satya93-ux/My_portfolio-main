@@ -17,7 +17,6 @@ const About = () => {
               <div className="about-image-frame">
                 <img src={myImage} alt="Satyaprakash Upadhyay" />
               </div>
-              <div className="about-pattern"></div>
             </div>
           </div>
 
