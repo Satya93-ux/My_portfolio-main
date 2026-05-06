@@ -909,8 +909,8 @@ input, textarea {
 /* Hero Content */
 .hero-content {
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 80px;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
     align-items: center;
 }
 

@@ -9,10 +9,10 @@ const Hero = () => {
     if (!roleText) return;
     
     const roles = [
-      'Vibe ',
       'Flutter Developer ',
-      'Mobile Specialist ',
-      'Clean Coder '
+      'Creative Coder ',
+      'Prompt Engineer ',
+      'Vibe Coder '
     ];
     
     let roleIndex = 0;
@@ -63,31 +63,34 @@ const Hero = () => {
           <div className="hero-left">
             <div className="hero-badge" style={{ 
               maxWidth: 'fit-content', 
-              padding: '8px 16px', 
+              padding: '10px 20px', 
               borderRadius: '50px',
-              background: 'rgba(255, 255, 255, 0.05)',
+              background: 'rgba(0, 0, 0, 0.3)',
+              border: '1px solid rgba(255, 255, 255, 0.05)',
               display: 'flex',
               alignItems: 'center',
-              gap: '8px',
-              marginBottom: '20px'
+              gap: '10px',
+              marginBottom: '30px'
             }}>
-              <span className="badge-dot" style={{ width: '8px', height: '8px', background: '#10b981', borderRadius: '50%' }}></span>
-              <span style={{ fontWeight: 500, fontSize: '0.85rem' }}>Available for Work</span>
+              <span className="badge-dot" style={{ width: '10px', height: '10px', background: '#10b981', borderRadius: '50%', boxShadow: '0 0 10px #10b981' }}></span>
+              <span style={{ fontWeight: 600, fontSize: '0.9rem', color: 'rgba(255, 255, 255, 0.9)' }}>Available for Work</span>
             </div>
             
-            <p className="hero-hello" style={{ fontSize: '1.2rem', marginBottom: '10px' }}>Hello, I'm</p>
+            <p className="hero-hello" style={{ fontSize: '1.3rem', fontWeight: '500', marginBottom: '5px', color: 'rgba(255, 255, 255, 0.6)' }}>Hello, I'm</p>
             <h1 className="hero-name" style={{ 
-              fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', 
-              fontWeight: '800', 
-              marginBottom: '15px',
-              color: '#8b5cf6' 
+              fontSize: 'clamp(3rem, 7vw, 5rem)', 
+              fontWeight: '900', 
+              lineHeight: '1.1',
+              marginBottom: '10px',
+              color: '#8b5cf6',
+              letterSpacing: '-1px'
             }}>
               Satyaprakash Upadhyay
             </h1>
 
-            <h2 className="hero-typing" style={{ fontSize: '2rem', fontWeight: '700', marginBottom: '25px', display: 'flex', alignItems: 'center' }}>
-              I'm a <span className="highlight" ref={roleTextRef} style={{ marginLeft: '10px', color: '#fff' }}>Vibe </span>
-              <span className="role-cursor" style={{ color: '#8b5cf6' }}>|</span>
+            <h2 className="hero-typing" style={{ fontSize: '2.2rem', fontWeight: '800', marginBottom: '25px', display: 'flex', alignItems: 'center', color: '#fff' }}>
+              I'm a <span className="highlight" ref={roleTextRef} style={{ marginLeft: '12px', color: '#8b5cf6' }}></span>
+              <span className="role-cursor" style={{ color: '#8b5cf6', marginLeft: '5px' }}>|</span>
             </h2>
 
             <p className="hero-description" style={{ 
