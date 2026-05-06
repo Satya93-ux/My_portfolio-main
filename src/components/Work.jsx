@@ -69,7 +69,7 @@ const Work = () => {
       excerpt: 'Premium music player with glassmorphism UI.',
       year: '2024',
       type: 'Flutter App',
-      name: 'Neon Music Player',
+      name: ' Music Player',
       desc: 'A high-fidelity music streaming application featuring a stunning dark mode UI, real-time waveform visualization, and seamless playlist management.',
       tech: ['Flutter', 'Riverpod', 'Audio Service'],
       stats: { downloads: '3K+', rating: '4.9' }
