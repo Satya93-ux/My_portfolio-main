@@ -11,7 +11,7 @@ const Work = () => {
     {
       id: 1,
       category: 'web',
-      image: drivitAdminImg,
+      image: 'https://images.unsplash.com/photo-1763718528755-4bca23f82ac3?q=80&w=1574&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       bgColor: '#fdf8f1',
       title: 'Drivit Admin',
       excerpt: 'Comprehensive MERN stack web portal for ride system management.',
@@ -25,7 +25,7 @@ const Work = () => {
     {
       id: 4,
       category: 'app',
-      image: drivitDriverImg,
+      image: 'https://media.istockphoto.com/id/1470035625/photo/driver-transporting-a-business-man-on-a-crowdsourced-taxi.jpg?s=612x612&w=0&k=20&c=HbVWN87JGim9g0CDhh2NHPM8oZ1g4qVGx86vxJ5RM24=',
       bgColor: '#fdf8f1',
       title: 'Drivit Driver',
       excerpt: 'Dedicated mobile application for professional drivers.',
@@ -39,7 +39,7 @@ const Work = () => {
     {
       id: 5,
       category: 'app',
-      image: drivitRiderImg,
+      image: 'https://media.istockphoto.com/id/2198565905/photo/woman-boarding-a-crowdsourced-taxi-holding-her-cell-phone.jpg?s=612x612&w=0&k=20&c=rPmncyGuEjRg4bT9g49bsu-NZ-ZJvvnFI5nLhJS30jM=',
       bgColor: '#fdf8f1',
       title: 'Drivit Rider',
       excerpt: 'User-friendly mobile app for seamless ride booking.',
@@ -53,7 +53,7 @@ const Work = () => {
     {
       id: 6,
       category: 'app',
-      image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop',
+      image: 'https://media.istockphoto.com/id/1057168562/photo/man-hand-holding-phone-with-app-messenger-on-the-screen.jpg?s=612x612&w=0&k=20&c=v-QhV6VN6eAMmWqfiEf_glThaVErGmZN9Tn7L7BOJQg=',
       bgColor: '#1a1a1a',
       title: 'Chat App',
       excerpt: 'Real-time messaging platform with advanced features.',
@@ -67,7 +67,7 @@ const Work = () => {
     {
       id: 7,
       category: 'app',
-      image: musicImg,
+      image: 'https://media.istockphoto.com/id/2190971868/photo/wireless-music-listening-the-era-of-music-via-mobile-app-with-red-interface-wireless-earbuds.jpg?s=612x612&w=0&k=20&c=5tOeAg1R4vYDm3GB4kElJeI374gabnStzV5i1QfJPzk=',
       bgColor: '#0f172a',
       title: 'Music Player',
       excerpt: 'Premium music player with glassmorphism UI.',
