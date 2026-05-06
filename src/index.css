@@ -2007,18 +2007,18 @@ input, textarea {
 /* Project Image */
 .project-image {
     position: relative;
-    aspect-ratio: 1.1 / 1; 
+    aspect-ratio: 16 / 10; 
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 12px; 
+    background: var(--bg-card);
 }
 
 .project-image img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Shows full mockup */
+    object-fit: cover;
     transition: var(--transition-slow);
 }
 

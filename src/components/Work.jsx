@@ -1,8 +1,4 @@
 import React, { useState } from 'react';
-import drivitAdminImg from '../assets/projects/admin.png';
-import drivitDriverImg from '../assets/projects/driver.png';
-import drivitRiderImg from '../assets/projects/rider.png';
-import musicImg from '../assets/projects/music.png';
 
 const Work = () => {
   const [filter, setFilter] = useState('all');
