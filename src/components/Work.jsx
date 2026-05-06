@@ -13,6 +13,7 @@ const Work = () => {
       id: 1,
       category: 'web',
       image: drivitAdminImg,
+      bgColor: '#fdf8f1',
       title: 'Drivit Admin',
       excerpt: 'Comprehensive MERN stack web portal for ride system management.',
       year: '2024',
@@ -26,6 +27,7 @@ const Work = () => {
       id: 2,
       category: 'app',
       image: fastRideImg,
+      bgColor: '#ffffff',
       title: 'Fast Ride',
       excerpt: 'Full-featured ride-booking application similar to Ola/Uber.',
       year: '2024',
@@ -39,6 +41,7 @@ const Work = () => {
       id: 3,
       category: 'app',
       image: resqImg,
+      bgColor: '#12141d',
       title: 'ResQ',
       excerpt: 'SOS Emergency assistance app for immediate accident response.',
       year: '2024',
@@ -52,6 +55,7 @@ const Work = () => {
       id: 4,
       category: 'app',
       image: drivitDriverImg,
+      bgColor: '#fdf8f1',
       title: 'Drivit Driver',
       excerpt: 'Dedicated mobile application for professional drivers.',
       year: '2024',
@@ -65,6 +69,7 @@ const Work = () => {
       id: 5,
       category: 'app',
       image: drivitRiderImg,
+      bgColor: '#fdf8f1',
       title: 'Drivit Rider',
       excerpt: 'User-friendly mobile app for seamless ride booking.',
       year: '2024',
@@ -78,6 +83,7 @@ const Work = () => {
       id: 6,
       category: 'app',
       image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop',
+      bgColor: '#1a1a1a',
       title: 'Chat App',
       excerpt: 'Real-time messaging platform with advanced features.',
       year: '2024',
@@ -118,7 +124,7 @@ const Work = () => {
         <div className="projects-grid">
           {filteredProjects.map(project => (
             <article key={project.id} className="project-card" data-category={project.category}>
-              <div className="project-image">
+              <div className="project-image" style={{ background: project.bgColor }}>
                 <img src={project.image} alt={project.title} />
                 <div className="project-overlay">
                   <div className="overlay-content">

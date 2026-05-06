@@ -2007,24 +2007,23 @@ input, textarea {
 /* Project Image */
 .project-image {
     position: relative;
-    aspect-ratio: 16/11;
+    aspect-ratio: 1 / 1; /* Square for better balance between web/app */
     overflow: hidden;
-    background: #1a1a1a; /* Neutral dark background for gaps */
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px; /* Slight padding so the mockup doesn't touch edges */
+    padding: 15px; /* Elegant framing */
 }
 
 .project-image img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Full visibility of the mockup */
+    object-fit: contain; /* Shows full mockup */
     transition: var(--transition-slow);
 }
 
 .project-card:hover .project-image img {
-    transform: scale(1.02); /* Very subtle zoom to avoid edge clipping */
+    transform: scale(1.05);
 }
 
 .project-overlay {
