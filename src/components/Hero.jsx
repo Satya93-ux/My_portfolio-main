@@ -9,12 +9,12 @@ const Hero = () => {
     if (!roleText) return;
     
     const roles = [
-      'Vibe Coder ',
       'Flutter Developer ',
+      'AI Developer ',
       'Prompt Engineer ',
       'Creative Coder '
     ];
-    
+
     let roleIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
@@ -74,17 +74,17 @@ const Hero = () => {
             <p style={{ fontSize: '1.2rem', marginBottom: '10px', color: 'rgba(255, 255, 255, 0.8)' }}>Hello, I'm</p>
             
             <h1 style={{ 
-              fontSize: 'clamp(3.5rem, 8vw, 5rem)', 
+              fontSize: 'clamp(2.5rem, 6vw, 4rem)', 
               fontWeight: '900', 
               lineHeight: '1.1',
-              marginBottom: '20px',
+              marginBottom: '15px',
               color: '#8b5cf6',
               letterSpacing: '-1px'
             }}>
               Satyaprakash Upadhyay
             </h1>
 
-            <h2 style={{ fontSize: '2.2rem', fontWeight: '800', marginBottom: '30px', display: 'flex', alignItems: 'center', color: '#fff' }}>
+            <h2 style={{ fontSize: '2rem', fontWeight: '800', marginBottom: '30px', display: 'flex', alignItems: 'center', color: '#fff' }}>
               I'm a <span ref={roleTextRef} style={{ marginLeft: '12px', color: '#8b5cf6' }}></span>
               <span style={{ color: '#8b5cf6', marginLeft: '5px', animation: 'blink 1s infinite' }}>|</span>
             </h2>
@@ -146,34 +146,22 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="hero-right" style={{ position: 'relative' }}>
-            <div className="hero-image-container" style={{ position: 'relative', width: '450px', height: '450px', margin: '0 auto' }}>
-              
-              {/* Floating Icons */}
-              <div style={{ position: 'absolute', top: '15%', left: '0', background: '#1e293b', padding: '12px', borderRadius: '15px', zIndex: '10', boxShadow: '0 10px 20px rgba(0,0,0,0.5)' }}>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" width="28" alt="flutter" />
-              </div>
-              <div style={{ position: 'absolute', top: '10%', right: '0', background: '#1e293b', padding: '12px', borderRadius: '15px', zIndex: '10', boxShadow: '0 10px 20px rgba(0,0,0,0.5)' }}>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" width="28" alt="dart" />
-              </div>
-              <div style={{ position: 'absolute', bottom: '20%', left: '0', background: '#1e293b', padding: '12px', borderRadius: '15px', zIndex: '10', boxShadow: '0 10px 20px rgba(0,0,0,0.5)' }}>
-                <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" width="28" alt="firebase" />
-              </div>
-              <div style={{ position: 'absolute', bottom: '15%', right: '0', background: '#1e293b', padding: '12px', borderRadius: '15px', zIndex: '10', boxShadow: '0 10px 20px rgba(0,0,0,0.5)' }}>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" width="28" alt="android" />
-              </div>
-
+          <div className="hero-right">
+            <div className="hero-image-container" style={{ position: 'relative', width: '380px', height: '380px', margin: '0 auto' }}>
               {/* Circular Image Frame */}
               <div style={{ 
                 width: '100%', 
                 height: '100%', 
                 borderRadius: '50%', 
-                border: '8px solid #3b82f6',
-                padding: '12px',
+                border: '6px solid #3b82f6',
+                padding: '8px',
                 background: 'rgba(59, 130, 246, 0.1)',
-                boxShadow: '0 0 50px rgba(59, 130, 246, 0.2)',
+                boxShadow: '0 0 40px rgba(59, 130, 246, 0.2)',
                 position: 'relative',
-                overflow: 'hidden'
+                overflow: 'hidden',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
               }}>
                 <img 
                   src={myImage} 
@@ -181,9 +169,10 @@ const Hero = () => {
                   style={{ 
                     width: '100%', 
                     height: '100%', 
-                    objectFit: 'cover', 
+                    objectFit: 'cover',
+                    objectPosition: 'center 20%', // Adjusted to ensure face is visible
                     borderRadius: '50%',
-                    filter: 'contrast(1.1)'
+                    filter: 'contrast(1.05)'
                   }} 
                 />
               </div>
@@ -191,11 +180,11 @@ const Hero = () => {
               {/* Decorative dotted circle */}
               <div style={{
                 position: 'absolute',
-                top: '-5%',
-                left: '-5%',
-                width: '110%',
-                height: '110%',
-                border: '2px dashed rgba(59, 130, 246, 0.15)',
+                top: '-7%',
+                left: '-7%',
+                width: '114%',
+                height: '114%',
+                border: '1px dashed rgba(59, 130, 246, 0.2)',
                 borderRadius: '50%',
                 zIndex: '-1'
               }}></div>
