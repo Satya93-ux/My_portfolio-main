@@ -2009,18 +2009,22 @@ input, textarea {
     position: relative;
     aspect-ratio: 16/11;
     overflow: hidden;
+    background: #1a1a1a; /* Neutral dark background for gaps */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px; /* Slight padding so the mockup doesn't touch edges */
 }
 
 .project-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Fill the container */
-    object-position: center top; /* Focus on the top/center of the UI */
+    object-fit: contain; /* Full visibility of the mockup */
     transition: var(--transition-slow);
 }
 
 .project-card:hover .project-image img {
-    transform: scale(1.1);
+    transform: scale(1.02); /* Very subtle zoom to avoid edge clipping */
 }
 
 .project-overlay {
