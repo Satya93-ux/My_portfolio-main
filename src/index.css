@@ -1141,7 +1141,7 @@ input, textarea {
 .image-frame {
     position: relative;
     width: 100%;
-    max-width: 400px;
+    max-width: 350px; /* Reduced further for balance */
     margin: 0 auto;
 }
 
@@ -1163,7 +1163,7 @@ input, textarea {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 20%; /* Adjusted to center the face vertically */
+    object-position: center 10%; /* Moved further down to center the face */
     border-radius: 50%;
     transition: var(--transition-slow);
 }
@@ -1179,8 +1179,11 @@ input, textarea {
 /* Subtle Image Tagline */
 .image-tagline {
     position: absolute;
-    bottom: -30px;
-    right: 20px;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
     font-size: 0.9rem;
     font-family: var(--font-primary);
     color: var(--text-muted);
@@ -1557,6 +1560,9 @@ input, textarea {
 
 .about-image-frame {
     position: relative;
+    width: 100%;
+    max-width: 320px; /* Reduced for balance */
+    margin: 0 auto;
     aspect-ratio: 1 / 1; /* Perfect circle */
     border-radius: 50%;
     overflow: hidden;
@@ -1568,7 +1574,7 @@ input, textarea {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center; /* Enforce perfect centering */
+    object-position: center 10%; /* Adjusted to center the face */
     border-radius: 50%;
     transition: var(--transition-slow);
 }
