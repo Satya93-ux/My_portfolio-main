@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useCallback } from 'react';
 
 const navItems = [
-  { id: '01', text: 'Home',    href: '#home'    },
-  { id: '02', text: 'About',   href: '#about'   },
-  { id: '03', text: 'Skills',  href: '#skills'  },
-  { id: '04', text: 'Work',    href: '#work'     },
-  { id: '05', text: 'Videos',  href: '#videos'  },
-  { id: '06', text: 'Contact', href: '#contact' },
+  { id: '01', text: 'Home',     href: '#home'    },
+  { id: '02', text: 'About',    href: '#about'   },
+  { id: '03', text: 'Skills',   href: '#skills'  },
+  { id: '04', text: 'Projects', href: '#work'    },
+  { id: '05', text: 'Showcase', href: '#videos'  },
+  { id: '06', text: 'Contact',  href: '#contact' },
 ];
 
 const Header = () => {
@@ -57,54 +57,65 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`header${scrolled ? ' scrolled' : ''}`}>
-      <nav className="nav">
+    <header className={`header${scrolled ? ' scrolled' : ''}`} style={{ 
+      background: scrolled ? 'rgba(10, 10, 15, 0.9)' : 'transparent',
+      backdropFilter: scrolled ? 'blur(10px)' : 'none',
+      borderBottom: scrolled ? '1px solid rgba(255, 255, 255, 0.05)' : 'none',
+      padding: '20px 0'
+    }}>
+      <nav className="nav" style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0 20px' }}>
         {/* Logo */}
-        <a href="#" className="nav-logo" onClick={closeMenu}>
-          <span className="logo-bracket">{'{'}</span>
-          <span className="logo-name">Satya</span>
-          <span className="logo-bracket">{'}'}</span>
+        <a href="#" className="nav-logo" onClick={closeMenu} style={{ fontSize: '1.5rem', fontWeight: '800', color: '#3b82f6', textDecoration: 'none' }}>
+          AKS<span style={{ color: '#ec4899' }}>.</span>
         </a>
 
         {/* Nav Menu */}
         <div className={`nav-menu${menuActive ? ' active' : ''}`} id="navMenu">
-          <div className="nav-menu-bg"></div>
-          <ul className="nav-list">
+          <ul className="nav-list" style={{ display: 'flex', gap: '30px', listStyle: 'none', margin: 0, padding: 0 }}>
             {navItems.map((item) => (
               <li key={item.id} className="nav-item">
                 <a
                   href={item.href}
                   className={`nav-link${activeLink === item.href ? ' active' : ''}`}
-                  data-text={item.text}
                   onClick={closeMenu}
+                  style={{ 
+                    textDecoration: 'none', 
+                    fontSize: '0.9rem', 
+                    fontWeight: '500', 
+                    color: activeLink === item.href ? '#3b82f6' : 'rgba(255, 255, 255, 0.7)',
+                    transition: '0.3s'
+                  }}
                 >
-                  <span className="nav-link-number">{item.id}</span>
-                  <span className="nav-link-text">{item.text}</span>
+                  {item.text}
                 </a>
               </li>
             ))}
           </ul>
-          <div className="nav-footer">
-            <div className="nav-social">
-              <a href="https://github.com"    target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
-              <a href="https://linkedin.com"  target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a>
-              <a href="https://www.instagram.com/satyaa_9334?igsh=MW92bjNiOXpycHNwMw==" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
-              <a href="https://dribbble.com"  target="_blank" rel="noopener noreferrer"><i className="fab fa-dribbble"></i></a>
-            </div>
-          </div>
         </div>
 
         {/* Actions */}
-        <div className="nav-actions">
-          <a href="#contact" className="nav-cta" onClick={closeMenu}>
-            <span>Let's Talk</span>
-            <i className="fas fa-arrow-right"></i>
+        <div className="nav-actions" style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+          <button style={{ background: 'rgba(255, 255, 255, 0.05)', border: 'none', width: '40px', height: '40px', borderRadius: '50%', color: '#fff', cursor: 'pointer' }}>
+            <i className="fas fa-cog"></i>
+          </button>
+          <a href="#contact" className="nav-cta" onClick={closeMenu} style={{ 
+            background: 'linear-gradient(90deg, #3b82f6, #06b6d4)', 
+            padding: '10px 25px', 
+            borderRadius: '50px', 
+            color: '#fff', 
+            fontWeight: '600', 
+            textDecoration: 'none',
+            fontSize: '0.9rem',
+            boxShadow: '0 10px 20px rgba(59, 130, 246, 0.3)'
+          }}>
+            Hire Me
           </a>
           <button
             className={`nav-toggle${menuActive ? ' active' : ''}`}
             id="navToggle"
             aria-label="Toggle Menu"
             onClick={toggleMenu}
+            style={{ display: 'none' }} // Assuming standard desktop view for now, usually handled by media queries in CSS
           >
             <span className="toggle-line"></span>
             <span className="toggle-line"></span>
