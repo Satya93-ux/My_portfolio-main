@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import drivitImg from '../assets/projects/drivit.png';
-import fastRideImg from '../assets/projects/fast-ride.png';
+import drivitAdminImg from '../assets/projects/admin.png';
+import drivitDriverImg from '../assets/projects/driver.png';
+import drivitRiderImg from '../assets/projects/rider.png';
+import fastRideImg from '../assets/projects/fast.png';
 import resqImg from '../assets/projects/resq.png';
 
 const Work = () => {
@@ -10,15 +12,15 @@ const Work = () => {
     {
       id: 1,
       category: 'web',
-      image: drivitImg,
-      title: 'Drivit',
-      excerpt: 'Comprehensive 4-wheeler ride system with multi-platform support.',
+      image: drivitAdminImg,
+      title: 'Drivit Admin',
+      excerpt: 'Comprehensive MERN stack web portal for ride system management.',
       year: '2024',
-      type: 'MERN Stack & Flutter',
-      name: 'Drivit – Ride System',
-      desc: 'A complete mobility solution featuring dual Flutter apps for drivers and riders, integrated with a robust MERN stack web portal for administrative management and real-time tracking.',
-      tech: ['MERN Stack', 'Flutter', 'Socket.io', 'Google Maps'],
-      stats: { downloads: '5K+', rating: '4.8' }
+      type: 'MERN Stack Web',
+      name: 'Drivit Admin Portal',
+      desc: 'A robust administrative dashboard featuring real-time tracking, revenue analytics, driver management, and automated GST reporting for a complete ride-hailing ecosystem.',
+      tech: ['React', 'Node.js', 'MongoDB', 'Socket.io'],
+      stats: { users: 'Admin', rating: '5.0' }
     },
     {
       id: 2,
@@ -49,14 +51,40 @@ const Work = () => {
     {
       id: 4,
       category: 'app',
-      image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop',
-      title: 'Chatting Application',
-      excerpt: 'Real-time messaging platform with advanced features (In Progress).',
+      image: drivitDriverImg,
+      title: 'Drivit Driver',
+      excerpt: 'Dedicated mobile application for professional drivers.',
       year: '2024',
       type: 'Flutter App',
-      name: 'Real-time Chat App',
+      name: 'Drivit Driver App',
+      desc: 'Streamlined application for drivers to manage rides, track earnings, and navigate efficiently with integrated real-time location services and passenger communication.',
+      tech: ['Flutter', 'Firebase', 'Google Maps', 'State Management'],
+      stats: { downloads: '5K+', rating: '4.8' }
+    },
+    {
+      id: 5,
+      category: 'app',
+      image: drivitRiderImg,
+      title: 'Drivit Rider',
+      excerpt: 'User-friendly mobile app for seamless ride booking.',
+      year: '2024',
+      type: 'Flutter App',
+      name: 'Drivit Rider App',
+      desc: 'Intuitive passenger application featuring easy booking, multiple vehicle types, real-time tracking, and secure payment integration for a premium ride experience.',
+      tech: ['Flutter', 'Firebase', 'Maps API', 'GetX'],
+      stats: { downloads: '15K+', rating: '4.6' }
+    },
+    {
+      id: 6,
+      category: 'app',
+      image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop',
+      title: 'Chat App',
+      excerpt: 'Real-time messaging platform with advanced features.',
+      year: '2024',
+      type: 'Flutter App',
+      name: 'Chatting Application',
       desc: 'A modern chat application supporting real-time messaging, file sharing, and push notifications, currently in active development.',
-      tech: ['Flutter', 'Firebase', 'GetX'],
+      tech: ['Flutter', 'Firebase', 'Socket.io'],
       stats: { views: '1.2K' }
     }
   ];
