@@ -13,7 +13,7 @@ const Work = () => {
       excerpt: 'Comprehensive MERN stack web portal for ride system management.',
       year: '2024',
       type: 'MERN Stack Web',
-      name: 'Drivit Admin Portal',
+      name: 'Admin Portal',
       desc: 'A robust administrative dashboard featuring real-time tracking, revenue analytics, driver management, and automated GST reporting for a complete ride-hailing ecosystem.',
       tech: ['React', 'Node.js', 'MongoDB', 'Socket.io'],
       stats: { users: 'Admin', rating: '5.0' }
@@ -27,7 +27,7 @@ const Work = () => {
       excerpt: 'Dedicated mobile application for professional drivers.',
       year: '2024',
       type: 'Flutter App',
-      name: 'Drivit Driver App',
+      name: 'Driver App',
       desc: 'Streamlined application for drivers to manage rides, track earnings, and navigate efficiently with integrated real-time location services and passenger communication.',
       tech: ['Flutter', 'Firebase', 'Google Maps', 'State Management'],
       stats: { downloads: '5K+', rating: '4.8' }
@@ -37,11 +37,11 @@ const Work = () => {
       category: 'app',
       image: 'https://media.istockphoto.com/id/2198565905/photo/woman-boarding-a-crowdsourced-taxi-holding-her-cell-phone.jpg?s=612x612&w=0&k=20&c=rPmncyGuEjRg4bT9g49bsu-NZ-ZJvvnFI5nLhJS30jM=',
       bgColor: '#fdf8f1',
-      title: 'Rider App',
+      title: 'Customer App',
       excerpt: 'User-friendly mobile app for seamless ride booking.',
       year: '2024',
       type: 'Flutter App',
-      name: 'Drivit Rider App',
+      name: 'Customer App',
       desc: 'Intuitive passenger application featuring easy booking, multiple vehicle types, real-time tracking, and secure payment integration for a premium ride experience.',
       tech: ['Flutter', 'Firebase', 'Maps API', 'GetX'],
       stats: { downloads: '15K+', rating: '4.6' }
@@ -55,7 +55,7 @@ const Work = () => {
       excerpt: 'Real-time messaging platform with advanced features.',
       year: '2024',
       type: 'Flutter App',
-      name: 'Chatting Application',
+      name: 'Chatting App',
       desc: 'A modern chat application supporting real-time messaging, file sharing, and push notifications, currently in active development.',
       tech: ['Flutter', 'Firebase', 'Socket.io'],
       stats: { views: '1.2K' }
