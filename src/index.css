@@ -1163,7 +1163,7 @@ input, textarea {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center; /* Enforce perfect centering */
+    object-position: center 15%; /* Adjusted from center to bring face down */
     border-radius: 50%;
     transition: var(--transition-slow);
 }
@@ -1179,8 +1179,8 @@ input, textarea {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 105%; /* Reduced from 125% to bring icons closer */
-    height: 105%;
+    width: 115%; /* Increased to move icons outside the frame */
+    height: 115%;
     transform: translate(-50%, -50%);
     pointer-events: none;
     z-index: 10;
@@ -1188,8 +1188,8 @@ input, textarea {
 
 .orbit-icon {
     position: absolute;
-    width: 55px;
-    height: 55px;
+    width: 42px; /* Smaller icons for a cleaner look */
+    height: 42px;
     background: var(--bg-card);
     border-radius: 50%;
     display: flex;
@@ -1224,9 +1224,9 @@ input, textarea {
         height: 105%;
     }
     .orbit-icon {
-        width: 45px;
-        height: 45px;
-        padding: 8px;
+        width: 35px;
+        height: 35px;
+        padding: 7px;
     }
 }
 
@@ -1236,9 +1236,9 @@ input, textarea {
         height: 102%;
     }
     .orbit-icon {
-        width: 40px;
-        height: 40px;
-        padding: 6px;
+        width: 30px;
+        height: 30px;
+        padding: 5px;
     }
 }
 
@@ -1248,9 +1248,9 @@ input, textarea {
         height: 100%;
     }
     .orbit-icon {
-        width: 32px;
-        height: 32px;
-        padding: 5px;
+        width: 28px;
+        height: 28px;
+        padding: 4px;
     }
 }
 
