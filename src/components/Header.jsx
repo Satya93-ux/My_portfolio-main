@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useCallback } from 'react';
 
 const navItems = [
-  { id: '01', text: 'Home',    href: '#home'    },
-  { id: '02', text: 'About',   href: '#about'   },
-  { id: '03', text: 'Skills',  href: '#skills'  },
-  { id: '04', text: 'Work',    href: '#work'     },
-  { id: '05', text: 'Videos',  href: '#videos'  },
-  { id: '06', text: 'Contact', href: '#contact' },
+  { id: '01', text: 'Home',     href: '#home'    },
+  { id: '02', text: 'About',    href: '#about'   },
+  { id: '03', text: 'Skills',   href: '#skills'  },
+  { id: '04', text: 'Projects', href: '#work'    },
+  { id: '05', text: 'Showcase', href: '#videos'  },
+  { id: '06', text: 'Contact',  href: '#contact' },
 ];
 
 const Header = () => {
@@ -61,9 +61,7 @@ const Header = () => {
       <nav className="nav">
         {/* Logo */}
         <a href="#" className="nav-logo" onClick={closeMenu}>
-          <span className="logo-bracket">{'{'}</span>
-          <span className="logo-name">Satya</span>
-          <span className="logo-bracket">{'}'}</span>
+          <span className="logo-name">AKS.</span>
         </a>
 
         {/* Nav Menu */}
@@ -97,7 +95,7 @@ const Header = () => {
         {/* Actions */}
         <div className="nav-actions">
           <a href="#contact" className="nav-cta" onClick={closeMenu}>
-            <span>Let's Talk</span>
+            <span>Hire Me</span>
             <i className="fas fa-arrow-right"></i>
           </a>
           <button

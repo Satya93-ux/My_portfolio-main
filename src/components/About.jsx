@@ -15,59 +15,66 @@ const About = () => {
           <div className="about-left">
             <div className="about-image-wrapper">
               <div className="about-image-frame">
-                <img src={myImage} alt="Satyaprakash Upadhyay" />
+                <img src={myImage} alt="Aman Kumar Singh" />
               </div>
             </div>
           </div>
 
           <div className="about-right">
-            <h2 className="about-title">
-              Passionate about creating 
-              <span className="text-gradient"> impactful digital solutions</span>
-            </h2>
+            <div className="about-stats-cards" style={{ display: 'flex', gap: '20px', marginBottom: '30px' }}>
+              <div className="stat-card" style={{ flex: 1, background: '#12121a', padding: '20px', borderRadius: '12px', textAlign: 'center', border: '1px solid rgba(37, 99, 235, 0.1)' }}>
+                <i className="fas fa-medal" style={{ fontSize: '1.5rem', color: '#2563eb', marginBottom: '10px' }}></i>
+                <h3 style={{ fontSize: '1rem', fontWeight: 600, color: '#fff', marginBottom: '5px' }}>Experience</h3>
+                <p style={{ fontSize: '0.8rem', color: '#a0a0b0' }}>1+ Years Working</p>
+              </div>
+              <div className="stat-card" style={{ flex: 1, background: '#12121a', padding: '20px', borderRadius: '12px', textAlign: 'center', border: '1px solid rgba(37, 99, 235, 0.1)' }}>
+                <i className="fas fa-users" style={{ fontSize: '1.5rem', color: '#2563eb', marginBottom: '10px' }}></i>
+                <h3 style={{ fontSize: '1rem', fontWeight: 600, color: '#fff', marginBottom: '5px' }}>Clients</h3>
+                <p style={{ fontSize: '0.8rem', color: '#a0a0b0' }}>10+ Worldwide</p>
+              </div>
+              <div className="stat-card" style={{ flex: 1, background: '#12121a', padding: '20px', borderRadius: '12px', textAlign: 'center', border: '1px solid rgba(37, 99, 235, 0.1)' }}>
+                <i className="fas fa-folder" style={{ fontSize: '1.5rem', color: '#2563eb', marginBottom: '10px' }}></i>
+                <h3 style={{ fontSize: '1rem', fontWeight: 600, color: '#fff', marginBottom: '5px' }}>Projects</h3>
+                <p style={{ fontSize: '0.8rem', color: '#a0a0b0' }}>20+ Completed</p>
+              </div>
+            </div>
 
             <div className="about-text">
               <p>
-                Hello! I'm <strong>Satyaprakash Upadhyay</strong>. As a dedicated Flutter developer, I excel in building high‑quality mobile applications using Dart, Flutter, and Firebase, supported by advanced state management frameworks including Provider, Riverpod, BLoC, and GetX.
+                I'm a passionate Flutter Developer based in India, dedicated to creating exceptional mobile experiences. While my core expertise lies in Dart and Flutter, I am also a proficient "Vibe Coder" - leveraging AI to rapidly build and deploy full-stack websites and complex backend architectures.
               </p>
               <p>
-                I build professional websites and mobile apps as services — tailored to client needs.
-              </p>
-              <p>
-                My technical proficiency covers Java, REST APIs, Git, GitHub, MongoDB, and Railway for backend systems.
-              </p>
-              <p>
-                I am skilled in prompt engineering and AI‑driven development, leveraging tools such as Cursor and Antigravity to design modern, efficient, and intelligent solutions that merge creativity with technical precision.
+                My journey in mobile development started 3 years ago, and since then, I've had the privilege of working with startups and established companies alike. By combining traditional programming with modern AI assistance, I can accelerate development and transform complex ideas into elegant, highly functional applications across all platforms.
               </p>
             </div>
 
             <div className="about-info-grid">
               <div className="info-box">
+                <i className="fas fa-user"></i>
+                <div>
+                  <span className="info-box-label">Name</span>
+                  <span className="info-box-value">Aman Kumar Singh</span>
+                </div>
+              </div>
+              <div className="info-box">
                 <i className="fas fa-map-marker-alt"></i>
                 <div>
                   <span className="info-box-label">Location</span>
-                  <span className="info-box-value">Jaipur, Rajasthan, India</span>
+                  <span className="info-box-value">India</span>
                 </div>
               </div>
               <div className="info-box">
                 <i className="fas fa-envelope"></i>
                 <div>
                   <span className="info-box-label">Email</span>
-                  <span className="info-box-value">sk9334069077@gmail.com</span>
-                </div>
-              </div>
-              <div className="info-box">
-                <i className="fas fa-graduation-cap"></i>
-                <div>
-                  <span className="info-box-label">Education</span>
-                  <span className="info-box-value">B.Tech Computer Science</span>
+                  <span className="info-box-value">xaman282@gmail.com</span>
                 </div>
               </div>
               <div className="info-box">
                 <i className="fas fa-briefcase"></i>
                 <div>
-                  <span className="info-box-label">Employment</span>
-                  <span className="info-box-value">Open to Opportunities</span>
+                  <span className="info-box-label">Freelance</span>
+                  <span className="info-box-value" style={{color: '#10b981'}}>Available</span>
                 </div>
               </div>
             </div>

@@ -49,7 +49,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; 2024 Satyaprakash Upadhyay. All rights reserved.</p>
+          <p>&copy; 2026 Satyaprakash Upadhyay. All rights reserved.</p>
           <p>Designed & Built with <i className="fas fa-heart"></i></p>
         </div>
       </div>

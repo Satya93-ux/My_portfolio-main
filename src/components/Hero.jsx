@@ -9,10 +9,10 @@ const Hero = () => {
     if (!roleText) return;
     
     const roles = [
-      'Flutter Development',
-      'Mobile App Design',
-      'UI/UX Design',
-      'Cross-Platform Apps'
+      'AI Web Developer',
+      'Flutter Developer',
+      'Vibe Coder',
+      'Full-Stack Developer'
     ];
     
     let roleIndex = 0;
@@ -63,12 +63,12 @@ const Hero = () => {
           <div className="hero-left">
             <div className="hero-badge" style={{ maxWidth: '500px', padding: '10px 20px', textTransform: 'none', borderRadius: '50px' }}>
               <span className="badge-dot"></span>
-              <span style={{ fontWeight: 500, fontSize: '0.9rem' }}>I build clean, scalable mobile apps and premium websites — delivering complete digital solutions as services.</span>
+              <span style={{ fontWeight: 500, fontSize: '0.9rem' }}>Available for Work</span>
             </div>
             
             <h1 className="hero-title">
               <span className="title-line">
-                <span className="title-word">Flutter</span>
+                <span className="title-word">AI Web</span>
                 <span className="title-word highlight">Developer</span>
               </span>
             </h1>
@@ -76,20 +76,20 @@ const Hero = () => {
             <div className="hero-info">
               <div className="info-item">
                 <span className="info-label">I'm</span>
-                <h2 className="info-name">Satyaprakash Upadhyay</h2>
+                <h2 className="info-name">Aman Kumar Singh</h2>
               </div>
               <div className="info-divider"></div>
               <div className="info-item">
                 <span className="info-label">Specialized in</span>
                 <div className="info-role">
-                  <span className="role-text" ref={roleTextRef}>Flutter Development</span>
+                  <span className="role-text" ref={roleTextRef}>AI Web Developer</span>
                   <span className="role-cursor">|</span>
                 </div>
               </div>
             </div>
 
             <p className="hero-description">
-              Building clean, scalable mobile apps with modern architecture.
+              Passionate Flutter Developer and Vibe Coder crafting beautiful mobile applications. I also build full-stack websites and robust backend systems with the power of AI. Turning ideas into reality, one widget and prompt at a time.
             </p>
 
             <div className="hero-cta">
@@ -106,16 +106,16 @@ const Hero = () => {
 
             <div className="hero-stats">
               <div className="stat">
-                <span className="stat-value" data-value="5">5</span>
+                <span className="stat-value" data-value="21+">21+</span>
                 <span className="stat-label">Projects Completed</span>
               </div>
               <div className="stat">
-                <span className="stat-value" data-value="6">6</span>
-                <span className="stat-label">Months Experience</span>
+                <span className="stat-value" data-value="10+">10+</span>
+                <span className="stat-label">Happy Clients</span>
               </div>
               <div className="stat">
-                <span className="stat-value" data-value="10">10</span>
-                <span className="stat-label">Happy Clients</span>
+                <span className="stat-value" data-value="1+">1+</span>
+                <span className="stat-label">Years Experience</span>
               </div>
             </div>
           </div>
@@ -124,7 +124,7 @@ const Hero = () => {
             <div className="hero-image-container">
               <div className="image-frame">
                 <div className="image-wrapper">
-                  <img src={myImage} alt="Satyaprakash Upadhyay" className="hero-image" />
+                  <img src={myImage} alt="Aman Kumar Singh" className="hero-image" />
                 </div>
               </div>
               
