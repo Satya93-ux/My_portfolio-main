@@ -9,10 +9,10 @@ const Hero = () => {
     if (!roleText) return;
     
     const roles = [
+      'Vibe Coder ',
       'Flutter Developer ',
-      'Creative Coder ',
       'Prompt Engineer ',
-      'Vibe Coder '
+      'Creative Coder '
     ];
     
     let roleIndex = 0;
@@ -50,119 +50,130 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="hero">
-      <div className="hero-bg">
-        <div className="gradient-orb orb-1"></div>
-        <div className="gradient-orb orb-2"></div>
-        <div className="gradient-orb orb-3"></div>
-        <div className="grid-lines"></div>
-      </div>
-
+    <section id="home" className="hero" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', padding: '100px 0', position: 'relative', overflow: 'hidden' }}>
       <div className="container">
-        <div className="hero-content">
+        <div className="hero-content" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px', alignItems: 'center' }}>
+          
           <div className="hero-left">
+            {/* Available for Work Badge */}
             <div className="hero-badge" style={{ 
               maxWidth: 'fit-content', 
               padding: '10px 20px', 
               borderRadius: '50px',
-              background: 'rgba(0, 0, 0, 0.3)',
-              border: '1px solid rgba(255, 255, 255, 0.05)',
+              background: 'rgba(255, 255, 255, 0.05)',
+              border: '1px solid rgba(255, 255, 255, 0.1)',
               display: 'flex',
               alignItems: 'center',
               gap: '10px',
-              marginBottom: '30px'
+              marginBottom: '35px'
             }}>
               <span className="badge-dot" style={{ width: '10px', height: '10px', background: '#10b981', borderRadius: '50%', boxShadow: '0 0 10px #10b981' }}></span>
-              <span style={{ fontWeight: 600, fontSize: '0.9rem', color: 'rgba(255, 255, 255, 0.9)' }}>Available for Work</span>
+              <span style={{ fontWeight: 600, fontSize: '0.9rem', color: '#fff' }}>Available for Work</span>
             </div>
             
-            <p className="hero-hello" style={{ fontSize: '1.3rem', fontWeight: '500', marginBottom: '5px', color: 'rgba(255, 255, 255, 0.6)' }}>Hello, I'm</p>
-            <h1 className="hero-name" style={{ 
-              fontSize: 'clamp(3rem, 7vw, 5rem)', 
+            <p style={{ fontSize: '1.2rem', marginBottom: '10px', color: 'rgba(255, 255, 255, 0.8)' }}>Hello, I'm</p>
+            
+            <h1 style={{ 
+              fontSize: 'clamp(3.5rem, 8vw, 5rem)', 
               fontWeight: '900', 
               lineHeight: '1.1',
-              marginBottom: '10px',
+              marginBottom: '20px',
               color: '#8b5cf6',
               letterSpacing: '-1px'
             }}>
               Satyaprakash Upadhyay
             </h1>
 
-            <h2 className="hero-typing" style={{ fontSize: '2.2rem', fontWeight: '800', marginBottom: '25px', display: 'flex', alignItems: 'center', color: '#fff' }}>
-              I'm a <span className="highlight" ref={roleTextRef} style={{ marginLeft: '12px', color: '#8b5cf6' }}></span>
-              <span className="role-cursor" style={{ color: '#8b5cf6', marginLeft: '5px' }}>|</span>
+            <h2 style={{ fontSize: '2.2rem', fontWeight: '800', marginBottom: '30px', display: 'flex', alignItems: 'center', color: '#fff' }}>
+              I'm a <span ref={roleTextRef} style={{ marginLeft: '12px', color: '#8b5cf6' }}></span>
+              <span style={{ color: '#8b5cf6', marginLeft: '5px', animation: 'blink 1s infinite' }}>|</span>
             </h2>
 
-            <p className="hero-description" style={{ 
-              fontSize: '1.05rem', 
-              lineHeight: '1.6', 
-              maxWidth: '500px', 
-              color: 'rgba(255, 255, 255, 0.7)',
-              marginBottom: '40px'
+            <p style={{ 
+              fontSize: '1.1rem', 
+              lineHeight: '1.7', 
+              maxWidth: '550px', 
+              color: 'rgba(255, 255, 255, 0.6)',
+              marginBottom: '45px'
             }}>
-              Passionate Flutter Developer and Vibe Coder crafting beautiful mobile applications. I also build clean, scalable mobile apps and premium websites — delivering complete digital solutions as services.
+              Passionate Flutter Developer and Vibe Coder crafting beautiful mobile applications. I also build full-stack websites and robust backend systems with the power of AI. Turning ideas into reality, one widget and prompt at a time.
             </p>
 
-            <div className="hero-cta" style={{ display: 'flex', gap: '15px', marginBottom: '50px' }}>
-              <a href="#work" className="btn-primary" style={{ 
-                padding: '12px 28px', 
+            <div style={{ display: 'flex', gap: '20px', marginBottom: '60px' }}>
+              <a href="#work" style={{ 
+                padding: '16px 35px', 
                 borderRadius: '50px', 
                 background: 'linear-gradient(90deg, #3b82f6, #06b6d4)',
                 color: '#fff',
-                fontWeight: '600',
+                fontWeight: '700',
                 display: 'flex',
                 alignItems: 'center',
-                gap: '8px'
+                gap: '12px',
+                boxShadow: '0 10px 20px rgba(59, 130, 246, 0.3)',
+                textDecoration: 'none'
               }}>
                 View My Work <i className="fas fa-arrow-right"></i>
               </a>
-              <a href="#contact" className="btn-outline" style={{ 
-                padding: '12px 28px', 
+              <a href="#contact" style={{ 
+                padding: '16px 35px', 
                 borderRadius: '50px', 
-                border: '1px solid rgba(255, 255, 255, 0.1)',
+                border: '1px solid rgba(255, 255, 255, 0.2)',
                 background: 'rgba(255, 255, 255, 0.03)',
                 color: '#fff',
-                fontWeight: '600',
+                fontWeight: '700',
                 display: 'flex',
                 alignItems: 'center',
-                gap: '8px'
+                gap: '12px',
+                textDecoration: 'none'
               }}>
                 Let's Talk <i className="fas fa-comment-dots"></i>
               </a>
             </div>
 
-            <div className="hero-stats" style={{ display: 'flex', gap: '40px' }}>
-              <div className="stat">
-                <span className="stat-value" style={{ fontSize: '2rem', fontWeight: '800', color: '#3b82f6' }}>5+</span>
-                <p className="stat-label" style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.5)' }}>Projects Completed</p>
+            <div style={{ display: 'flex', gap: '50px' }}>
+              <div>
+                <span style={{ fontSize: '2.5rem', fontWeight: '900', color: '#3b82f6', display: 'block', lineHeight: '1' }}>5+</span>
+                <p style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.4)', marginTop: '10px' }}>Projects Completed</p>
               </div>
-              <div className="stat">
-                <span className="stat-value" style={{ fontSize: '2rem', fontWeight: '800', color: '#3b82f6' }}>10+</span>
-                <p className="stat-label" style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.5)' }}>Happy Clients</p>
+              <div>
+                <span style={{ fontSize: '2.5rem', fontWeight: '900', color: '#3b82f6', display: 'block', lineHeight: '1' }}>10+</span>
+                <p style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.4)', marginTop: '10px' }}>Happy Clients</p>
               </div>
-              <div className="stat">
-                <span className="stat-value" style={{ fontSize: '2rem', fontWeight: '800', color: '#3b82f6' }}>6+</span>
-                <p className="stat-label" style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.5)' }}>Months Experience</p>
+              <div>
+                <span style={{ fontSize: '2.5rem', fontWeight: '900', color: '#3b82f6', display: 'block', lineHeight: '1' }}>6+</span>
+                <p style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.4)', marginTop: '10px' }}>Months Experience</p>
               </div>
             </div>
           </div>
 
-          <div className="hero-right">
-            <div className="hero-image-container" style={{ position: 'relative', width: '380px', height: '380px', margin: '0 auto' }}>
+          <div className="hero-right" style={{ position: 'relative' }}>
+            <div className="hero-image-container" style={{ position: 'relative', width: '450px', height: '450px', margin: '0 auto' }}>
+              
+              {/* Floating Icons */}
+              <div style={{ position: 'absolute', top: '15%', left: '0', background: '#1e293b', padding: '12px', borderRadius: '15px', zIndex: '10', boxShadow: '0 10px 20px rgba(0,0,0,0.5)' }}>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" width="28" alt="flutter" />
+              </div>
+              <div style={{ position: 'absolute', top: '10%', right: '0', background: '#1e293b', padding: '12px', borderRadius: '15px', zIndex: '10', boxShadow: '0 10px 20px rgba(0,0,0,0.5)' }}>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" width="28" alt="dart" />
+              </div>
+              <div style={{ position: 'absolute', bottom: '20%', left: '0', background: '#1e293b', padding: '12px', borderRadius: '15px', zIndex: '10', boxShadow: '0 10px 20px rgba(0,0,0,0.5)' }}>
+                <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" width="28" alt="firebase" />
+              </div>
+              <div style={{ position: 'absolute', bottom: '15%', right: '0', background: '#1e293b', padding: '12px', borderRadius: '15px', zIndex: '10', boxShadow: '0 10px 20px rgba(0,0,0,0.5)' }}>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" width="28" alt="android" />
+              </div>
+
               {/* Circular Image Frame */}
-              <div className="image-wrapper" style={{ 
+              <div style={{ 
                 width: '100%', 
                 height: '100%', 
                 borderRadius: '50%', 
-                border: '6px solid #3b82f6',
-                padding: '8px',
+                border: '8px solid #3b82f6',
+                padding: '12px',
                 background: 'rgba(59, 130, 246, 0.1)',
-                boxShadow: '0 0 40px rgba(59, 130, 246, 0.2)',
+                boxShadow: '0 0 50px rgba(59, 130, 246, 0.2)',
                 position: 'relative',
-                overflow: 'hidden',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
+                overflow: 'hidden'
               }}>
                 <img 
                   src={myImage} 
@@ -172,33 +183,34 @@ const Hero = () => {
                     height: '100%', 
                     objectFit: 'cover', 
                     borderRadius: '50%',
-                    filter: 'contrast(1.05)'
+                    filter: 'contrast(1.1)'
                   }} 
                 />
               </div>
               
-              {/* Decorative circle */}
+              {/* Decorative dotted circle */}
               <div style={{
                 position: 'absolute',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-                width: '115%',
-                height: '115%',
-                border: '1px dashed rgba(59, 130, 246, 0.15)',
+                top: '-5%',
+                left: '-5%',
+                width: '110%',
+                height: '110%',
+                border: '2px dashed rgba(59, 130, 246, 0.15)',
                 borderRadius: '50%',
                 zIndex: '-1'
               }}></div>
             </div>
           </div>
+
         </div>
       </div>
 
-      <div className="scroll-down" style={{ position: 'absolute', bottom: '30px', left: '50%', transform: 'translateX(-50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px', opacity: '0.6' }}>
-        <div style={{ width: '20px', height: '35px', border: '2px solid #fff', borderRadius: '10px', position: 'relative' }}>
-          <div style={{ width: '4px', height: '8px', background: '#fff', position: 'absolute', top: '6px', left: '50%', transform: 'translateX(-50%)', borderRadius: '2px', animation: 'mouseScroll 1.5s infinite' }}></div>
+      {/* Scroll Down Mouse */}
+      <div style={{ position: 'absolute', bottom: '40px', left: '50%', transform: 'translateX(-50%)', textAlign: 'center', opacity: '0.6' }}>
+        <div style={{ width: '24px', height: '40px', border: '2px solid #fff', borderRadius: '12px', margin: '0 auto 8px', position: 'relative' }}>
+          <div style={{ width: '4px', height: '8px', background: '#fff', position: 'absolute', top: '8px', left: '50%', transform: 'translateX(-50%)', borderRadius: '2px', animation: 'mouseScroll 1.5s infinite' }}></div>
         </div>
-        <span style={{ fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '2px' }}>Scroll Down</span>
+        <span style={{ fontSize: '0.65rem', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: '700' }}>Scroll Down</span>
       </div>
     </section>
   );
