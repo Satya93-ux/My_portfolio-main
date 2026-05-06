@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import drivitAdminImg from '../assets/projects/admin.png';
 import drivitDriverImg from '../assets/projects/driver.png';
 import drivitRiderImg from '../assets/projects/rider.png';
-import fastRideImg from '../assets/projects/fast.png';
-import resqImg from '../assets/projects/resq.png';
+import musicImg from '../assets/projects/music.png';
 
 const Work = () => {
   const [filter, setFilter] = useState('all');
@@ -22,34 +21,6 @@ const Work = () => {
       desc: 'A robust administrative dashboard featuring real-time tracking, revenue analytics, driver management, and automated GST reporting for a complete ride-hailing ecosystem.',
       tech: ['React', 'Node.js', 'MongoDB', 'Socket.io'],
       stats: { users: 'Admin', rating: '5.0' }
-    },
-    {
-      id: 2,
-      category: 'app',
-      image: fastRideImg,
-      bgColor: '#ffffff',
-      title: 'Fast Ride',
-      excerpt: 'Full-featured ride-booking application similar to Ola/Uber.',
-      year: '2024',
-      type: 'Flutter App',
-      name: 'Fast Ride',
-      desc: 'A premium ride-hailing platform with real-time driver tracking, secure payments, and a seamless user experience, designed to scale for high-demand transport services.',
-      tech: ['Flutter', 'Firebase', 'Google Maps', 'Razorpay'],
-      stats: { downloads: '10K+', rating: '4.7' }
-    },
-    {
-      id: 3,
-      category: 'app',
-      image: resqImg,
-      bgColor: '#12141d',
-      title: 'ResQ',
-      excerpt: 'SOS Emergency assistance app for immediate accident response.',
-      year: '2024',
-      type: 'Flutter App',
-      name: 'ResQ Emergency App',
-      desc: 'An innovative emergency response app that connects accident victims with nearby help and medical services instantly, bypassing legal hurdles to prioritize life-saving assistance.',
-      tech: ['Flutter', 'Node.js', 'Socket.io', 'Geolocation'],
-      stats: { downloads: '2K+', rating: '4.9' }
     },
     {
       id: 4,
@@ -92,6 +63,20 @@ const Work = () => {
       desc: 'A modern chat application supporting real-time messaging, file sharing, and push notifications, currently in active development.',
       tech: ['Flutter', 'Firebase', 'Socket.io'],
       stats: { views: '1.2K' }
+    },
+    {
+      id: 7,
+      category: 'app',
+      image: musicImg,
+      bgColor: '#0f172a',
+      title: 'Music Player',
+      excerpt: 'Premium music player with glassmorphism UI.',
+      year: '2024',
+      type: 'Flutter App',
+      name: 'Neon Music Player',
+      desc: 'A high-fidelity music streaming application featuring a stunning dark mode UI, real-time waveform visualization, and seamless playlist management.',
+      tech: ['Flutter', 'Riverpod', 'Audio Service'],
+      stats: { downloads: '3K+', rating: '4.9' }
     }
   ];
 
@@ -132,9 +117,17 @@ const Work = () => {
                     <h3 className="project-title">{project.title}</h3>
                     <p className="project-excerpt">{project.excerpt}</p>
                     <div className="project-actions">
-                      <a href="#" className="action-btn" title="View Details"><i className="fas fa-eye"></i></a>
-                      <a href="#" className="action-btn" title="GitHub"><i className="fab fa-github"></i></a>
-                      <a href="#" className="action-btn" title="Live Demo"><i className="fas fa-external-link-alt"></i></a>
+                      {project.category === 'app' ? (
+                        <a href="#" className="action-btn" title="View Details"><i className="fas fa-eye"></i></a>
+                      ) : project.category === 'web' ? (
+                        <a href="#" className="action-btn" title="Live Demo"><i className="fas fa-external-link-alt"></i></a>
+                      ) : (
+                        <>
+                          <a href="#" className="action-btn" title="View Details"><i className="fas fa-eye"></i></a>
+                          <a href="#" className="action-btn" title="GitHub"><i className="fab fa-github"></i></a>
+                          <a href="#" className="action-btn" title="Live Demo"><i className="fas fa-external-link-alt"></i></a>
+                        </>
+                      )}
                     </div>
                   </div>
                 </div>

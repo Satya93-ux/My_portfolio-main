@@ -1982,7 +1982,7 @@ input, textarea {
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 24px;
 }
 
 /* Project Card */
@@ -2007,12 +2007,12 @@ input, textarea {
 /* Project Image */
 .project-image {
     position: relative;
-    aspect-ratio: 1 / 1; /* Square for better balance between web/app */
+    aspect-ratio: 1.1 / 1; 
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 15px; /* Elegant framing */
+    padding: 12px; 
 }
 
 .project-image img {
@@ -2065,7 +2065,7 @@ input, textarea {
 
 .overlay-content .project-title {
     font-family: var(--font-primary);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 600;
     color: var(--bg-dark);
     margin-bottom: 5px;
@@ -2103,7 +2103,7 @@ input, textarea {
 
 /* Project Info */
 .project-info {
-    padding: 25px;
+    padding: 20px;
 }
 
 .project-meta {
@@ -2130,10 +2130,10 @@ input, textarea {
 
 .project-name {
     font-family: var(--font-primary);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 600;
     color: var(--text-primary);
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .project-description {
