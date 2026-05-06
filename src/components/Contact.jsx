@@ -62,7 +62,7 @@ const Contact = () => {
                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon">
                   <i className="fab fa-linkedin-in"></i>
                 </a>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+                <a href="https://www.instagram.com/satyaa_9334?igsh=MW92bjNiOXpycHNwMw==" target="_blank" rel="noopener noreferrer" className="social-icon">
                   <i className="fab fa-instagram"></i>
                 </a>
                 <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" className="social-icon">
