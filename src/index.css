@@ -1141,7 +1141,7 @@ input, textarea {
 .image-frame {
     position: relative;
     width: 100%;
-    max-width: 450px;
+    max-width: 400px;
     margin: 0 auto;
 }
 
@@ -1163,7 +1163,7 @@ input, textarea {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center; /* Enforce perfect centering */
+    object-position: center 20%; /* Adjusted to center the face vertically */
     border-radius: 50%;
     transition: var(--transition-slow);
 }
@@ -1174,85 +1174,7 @@ input, textarea {
 
 /* image-overlay removed */
 
-/* Brand Orbit - Home Page */
-.brand-orbit {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 105%; /* Reduced from 125% to bring icons closer */
-    height: 105%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    z-index: 10;
-}
 
-.orbit-icon {
-    position: absolute;
-    width: 55px;
-    height: 55px;
-    background: var(--bg-card);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    animation: orbitFloat 4s ease-in-out infinite;
-}
-
-.orbit-icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-/* Positioned closer to the circle boundary */
-.orbit-icon.flutter { top: 0%; left: 50%; transform: translateX(-50%); animation-delay: 0s; }
-.orbit-icon.dart { top: 50%; right: 0%; transform: translateY(-50%); animation-delay: 1s; }
-.orbit-icon.firebase { bottom: 0%; left: 50%; transform: translateX(-50%); animation-delay: 2s; }
-.orbit-icon.mongodb { top: 50%; left: 0%; transform: translateY(-50%); animation-delay: 3s; }
-
-@keyframes orbitFloat {
-    0%, 100% { transform: translate(-50%, -50%) translateY(0); }
-    50% { transform: translate(-50%, -50%) translateY(-10px); }
-}
-
-@media (max-width: 1200px) {
-    .brand-orbit {
-        width: 105%;
-        height: 105%;
-    }
-    .orbit-icon {
-        width: 45px;
-        height: 45px;
-        padding: 8px;
-    }
-}
-
-@media (max-width: 992px) {
-    .brand-orbit {
-        width: 102%;
-        height: 102%;
-    }
-    .orbit-icon {
-        width: 40px;
-        height: 40px;
-        padding: 6px;
-    }
-}
-
-@media (max-width: 768px) {
-    .brand-orbit {
-        width: 100%;
-        height: 100%;
-    }
-    .orbit-icon {
-        width: 32px;
-        height: 32px;
-        padding: 5px;
-    }
-}
 
 /* Subtle Image Tagline */
 .image-tagline {
