@@ -65,7 +65,7 @@ const PremiumBackground = () => {
         color: "#ffffff",
         distance: 150,
         enable: true,
-        opacity: 0.15,
+        opacity: 0.05,
         width: 1,
       },
       move: {
@@ -75,7 +75,7 @@ const PremiumBackground = () => {
           default: "bounce",
         },
         random: true,
-        speed: 1,
+        speed: 0.4,
         straight: false,
       },
       number: {
@@ -83,13 +83,13 @@ const PremiumBackground = () => {
           enable: true,
           area: 800,
         },
-        value: 100,
+        value: 40,
       },
       opacity: {
-        value: { min: 0.3, max: 0.7 },
+        value: { min: 0.1, max: 0.4 },
         animation: {
           enable: true,
-          speed: 0.5,
+          speed: 0.3,
           sync: false,
         }
       },
@@ -97,10 +97,10 @@ const PremiumBackground = () => {
         type: "circle",
       },
       size: {
-        value: { min: 3, max: 8 },
+        value: { min: 2, max: 6 },
         animation: {
           enable: true,
-          speed: 2,
+          speed: 1,
           sync: false,
         }
       },
@@ -109,7 +109,7 @@ const PremiumBackground = () => {
         color: {
             value: ["#2563eb", "#9333ea", "#06b6d4", "#ec4899"]
         },
-        blur: 15
+        blur: 10
       }
     },
     detectRetina: true,

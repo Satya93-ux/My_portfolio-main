@@ -62,8 +62,140 @@ const Hero = () => {
           margin: '0 auto'
         }}>
           
-          {/* Profile Image on the Left */}
-          <div className="hero-left" style={{ order: window.innerWidth < 1024 ? 1 : 1 }}>
+          {/* Content on the Left */}
+          <div className="hero-left" style={{ order: 1, textAlign: window.innerWidth < 1024 ? 'center' : 'left' }}>
+            {/* Available for Work Badge */}
+            <div className="hero-badge" style={{ 
+              maxWidth: 'fit-content', 
+              padding: '6px 14px', 
+              borderRadius: '50px',
+              background: 'var(--border-color-muted)',
+              border: '1px solid var(--border-color)',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+              marginBottom: '15px',
+              margin: window.innerWidth < 1024 ? '0 auto 15px' : '0 0 15px'
+            }}>
+              <span className="badge-dot" style={{ width: '6px', height: '6px', background: 'var(--secondary)', borderRadius: '50%', boxShadow: '0 0 10px var(--secondary)' }}></span>
+              <span style={{ fontWeight: 600, fontSize: '0.75rem', color: 'var(--text-primary)' }}>Available for Work</span>
+            </div>
+            
+            <p style={{ fontSize: '1rem', marginBottom: '5px', color: 'var(--text-secondary)' }}>Hello, I'm</p>
+            
+            <h1 style={{ 
+              fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', 
+              fontWeight: '900', 
+              lineHeight: '1.2',
+              marginBottom: '8px',
+              color: 'var(--primary)',
+              letterSpacing: '-1px'
+            }}>
+              Satyaprakash Upadhyay
+            </h1>
+
+            <h2 style={{ 
+              fontSize: 'clamp(1.1rem, 3.5vw, 1.6rem)', 
+              fontWeight: '800', 
+              marginBottom: '20px', 
+              display: 'flex', 
+              alignItems: 'center', 
+              color: 'var(--text-primary)', 
+              flexWrap: 'wrap',
+              minHeight: '1.6em',
+              lineHeight: '1.4',
+              justifyContent: window.innerWidth < 1024 ? 'center' : 'flex-start'
+            }}>
+              I'm a <span ref={roleTextRef} style={{ 
+                marginLeft: '10px', 
+                color: 'var(--primary)', 
+                borderRight: '3px solid var(--primary)', 
+                paddingRight: '5px',
+                animation: 'blink-caret 0.75s step-end infinite'
+              }}></span>
+            </h2>
+
+            <p style={{ 
+              fontSize: '0.95rem', 
+              lineHeight: '1.6', 
+              maxWidth: '520px', 
+              color: 'var(--text-secondary)',
+              marginBottom: '35px',
+              margin: window.innerWidth < 1024 ? '0 auto 35px' : '0 0 35px'
+            }}>
+              Passionate Flutter Developer and Vibe Coder crafting beautiful mobile applications. I also build full-stack websites and robust backend systems with the power of AI. Turning ideas into reality, one widget and prompt at a time.
+            </p>
+
+            <div className="hero-actions" style={{ 
+              display: 'flex', 
+              gap: 'clamp(10px, 2vw, 20px)', 
+              marginBottom: '40px', 
+              flexWrap: 'wrap',
+              justifyContent: window.innerWidth < 1024 ? 'center' : 'flex-start'
+            }}>
+              <a href="#work" style={{ 
+                padding: '14px 30px', 
+                borderRadius: '50px', 
+                background: 'linear-gradient(90deg, #3b82f6, #06b6d4)',
+                color: '#fff',
+                fontWeight: '700',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '12px',
+                boxShadow: '0 10px 20px rgba(59, 130, 246, 0.3)',
+                textDecoration: 'none',
+                fontSize: '0.9rem',
+                flex: '0 1 auto',
+                minWidth: '160px'
+              }}>
+                View My Work <i className="fas fa-arrow-right"></i>
+              </a>
+              <a href="#contact" style={{ 
+                padding: '14px 30px', 
+                borderRadius: '50px', 
+                border: '1px solid var(--border-color)',
+                background: 'var(--border-color-muted)',
+                color: 'var(--text-primary)',
+                fontWeight: '700',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '12px',
+                textDecoration: 'none',
+                fontSize: '0.9rem',
+                flex: '0 1 auto',
+                minWidth: '160px'
+              }}>
+                Let's Talk <i className="fas fa-comment-dots"></i>
+              </a>
+            </div>
+
+            <div className="hero-stats" style={{ 
+              display: 'flex', 
+              gap: 'clamp(15px, 4vw, 35px)', 
+              alignItems: 'center',
+              justifyContent: window.innerWidth < 1024 ? 'center' : 'flex-start'
+            }}>
+              <div style={{ textAlign: 'center' }}>
+                <span style={{ fontSize: '1.8rem', fontWeight: '900', color: 'var(--primary)', display: 'block', lineHeight: '1' }}>5+</span>
+                <p style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '8px', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700' }}>Projects</p>
+              </div>
+              <div style={{ width: '1px', height: '30px', background: 'rgba(255, 255, 255, 0.1)' }}></div>
+              <div style={{ textAlign: 'center' }}>
+                <span style={{ fontSize: '1.8rem', fontWeight: '900', color: 'var(--primary)', display: 'block', lineHeight: '1' }}>10+</span>
+                <p style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '8px', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700' }}>Clients</p>
+              </div>
+              <div style={{ width: '1px', height: '30px', background: 'rgba(255, 255, 255, 0.1)' }}></div>
+              <div style={{ textAlign: 'center' }}>
+                <span style={{ fontSize: '1.8rem', fontWeight: '900', color: 'var(--primary)', display: 'block', lineHeight: '1' }}>6+</span>
+                <p style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '8px', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700' }}>Months Exp</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Profile Image on the Right */}
+          <div className="hero-right" style={{ order: window.innerWidth < 1024 ? 1 : 2 }}>
             <div className="hero-image-container" style={{ position: 'relative', width: 'clamp(200px, 30vw, 320px)', height: 'clamp(200px, 30vw, 320px)', margin: '0 auto' }}>
               {/* Circular Image Frame */}
               <div style={{ 
@@ -107,12 +239,11 @@ const Hero = () => {
               }}></div>
             </div>
             
-            {/* Scroll Down Indicator below image (Desktop) */}
-            <div className="desktop-only" style={{ 
+            {/* Scroll Down Indicator below image */}
+            <div style={{ 
               marginTop: '20px', 
               textAlign: 'center', 
-              opacity: '0.6',
-              display: window.innerWidth < 1024 ? 'none' : 'block'
+              opacity: '0.6'
             }}>
               <span style={{ 
                 fontSize: '0.65rem', 
@@ -122,138 +253,6 @@ const Hero = () => {
                 color: 'var(--text-primary)' 
               }}>Scroll Down</span>
             </div>
-          </div>
-
-          {/* Content on the Right */}
-          <div className="hero-right" style={{ order: window.innerWidth < 1024 ? 2 : 2, textAlign: window.innerWidth < 1024 ? 'center' : 'left' }}>
-            {/* Available for Work Badge */}
-            <div className="hero-badge" style={{ 
-              maxWidth: 'fit-content', 
-              padding: '6px 14px', 
-              borderRadius: '50px',
-              background: 'var(--border-color-muted)',
-              border: '1px solid var(--border-color)',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '8px',
-              marginBottom: '15px',
-              margin: window.innerWidth < 1024 ? '0 auto 15px' : '0 0 15px'
-            }}>
-              <span className="badge-dot" style={{ width: '6px', height: '6px', background: 'var(--secondary)', borderRadius: '50%', boxShadow: '0 0 10px var(--secondary)' }}></span>
-              <span style={{ fontWeight: 600, fontSize: '0.75rem', color: 'var(--text-primary)' }}>Available for Work</span>
-            </div>
-            
-            <p style={{ fontSize: '1rem', marginBottom: '5px', color: 'var(--text-secondary)' }}>Hello, I'm</p>
-            
-            <h1 style={{ 
-              fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', 
-              fontWeight: '900', 
-              lineHeight: '1.2',
-              marginBottom: '8px',
-              color: 'var(--primary)',
-              letterSpacing: '-1px'
-            }}>
-              Satyaprakash Upadhyay
-            </h1>
-
-            <h2 style={{ 
-              fontSize: 'clamp(1.1rem, 3.5vw, 1.6rem)', 
-              fontWeight: '800', 
-              marginBottom: '20px', 
-              display: 'flex', 
-              alignItems: 'center', 
-              color: 'var(--text-primary)', 
-              flexWrap: 'wrap',
-              minHeight: '1.6em',
-              lineHeight: '1.4'
-            }}>
-              I'm a <span ref={roleTextRef} style={{ 
-                marginLeft: '10px', 
-                color: 'var(--primary)', 
-                borderRight: '3px solid var(--primary)', 
-                paddingRight: '5px',
-                animation: 'blink-caret 0.75s step-end infinite'
-              }}></span>
-            </h2>
-
-            <p style={{ 
-              fontSize: '0.95rem', 
-              lineHeight: '1.6', 
-              maxWidth: '520px', 
-              color: 'var(--text-secondary)',
-              marginBottom: '35px'
-            }}>
-              Passionate Flutter Developer and Vibe Coder crafting beautiful mobile applications. I also build full-stack websites and robust backend systems with the power of AI. Turning ideas into reality, one widget and prompt at a time.
-            </p>
-
-            <div className="hero-actions" style={{ display: 'flex', gap: 'clamp(10px, 2vw, 20px)', marginBottom: '40px', flexWrap: 'wrap' }}>
-              <a href="#work" style={{ 
-                padding: '14px 30px', 
-                borderRadius: '50px', 
-                background: 'linear-gradient(90deg, #3b82f6, #06b6d4)',
-                color: '#fff',
-                fontWeight: '700',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '12px',
-                boxShadow: '0 10px 20px rgba(59, 130, 246, 0.3)',
-                textDecoration: 'none',
-                fontSize: '0.9rem',
-                flex: '1 1 auto',
-                minWidth: '160px'
-              }}>
-                View My Work <i className="fas fa-arrow-right"></i>
-              </a>
-              <a href="#contact" style={{ 
-                padding: '14px 30px', 
-                borderRadius: '50px', 
-                border: '1px solid var(--border-color)',
-                background: 'var(--border-color-muted)',
-                color: 'var(--text-primary)',
-                fontWeight: '700',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '12px',
-                textDecoration: 'none',
-                fontSize: '0.9rem',
-                flex: '1 1 auto',
-                minWidth: '160px'
-              }}>
-                Let's Talk <i className="fas fa-comment-dots"></i>
-              </a>
-            </div>
-
-            <div className="hero-stats" style={{ 
-              display: 'flex', 
-              gap: 'clamp(15px, 4vw, 35px)', 
-              alignItems: 'center',
-              justifyContent: window.innerWidth < 1024 ? 'center' : 'flex-start'
-            }}>
-              <div style={{ textAlign: 'center' }}>
-                <span style={{ fontSize: '1.8rem', fontWeight: '900', color: 'var(--primary)', display: 'block', lineHeight: '1' }}>5+</span>
-                <p style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '8px', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700' }}>Projects</p>
-              </div>
-              <div style={{ width: '1px', height: '30px', background: 'rgba(255, 255, 255, 0.1)' }}></div>
-              <div style={{ textAlign: 'center' }}>
-                <span style={{ fontSize: '1.8rem', fontWeight: '900', color: 'var(--primary)', display: 'block', lineHeight: '1' }}>10+</span>
-                <p style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '8px', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700' }}>Clients</p>
-              </div>
-              <div style={{ width: '1px', height: '30px', background: 'rgba(255, 255, 255, 0.1)' }}></div>
-              <div style={{ textAlign: 'center' }}>
-                <span style={{ fontSize: '1.8rem', fontWeight: '900', color: 'var(--primary)', display: 'block', lineHeight: '1' }}>6+</span>
-                <p style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '8px', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700' }}>Months Exp</p>
-              </div>
-            </div>
-
-            {/* Scroll Down Mouse (Mobile) */}
-            <a href="#about" className="scroll-indicator mobile-only" style={{ display: 'none', marginTop: '50px', textAlign: 'center', opacity: '0.8', textDecoration: 'none', cursor: 'pointer', transition: '0.3s' }}>
-              <div style={{ width: '24px', height: '40px', border: '2px solid var(--text-primary)', borderRadius: '12px', margin: '0 auto 8px', position: 'relative' }}>
-                <div style={{ width: '4px', height: '8px', background: 'var(--text-primary)', position: 'absolute', top: '8px', left: '50%', transform: 'translateX(-50%)', borderRadius: '2px', animation: 'mouseScroll 1.5s infinite' }}></div>
-              </div>
-              <span style={{ fontSize: '0.65rem', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: '700', color: 'var(--text-primary)' }}>Scroll Down</span>
-            </a>
           </div>
         </div>
       </div>
