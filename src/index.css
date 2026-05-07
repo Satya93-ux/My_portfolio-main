@@ -1996,7 +1996,7 @@ input, textarea {
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 25px;
 }
 
 /* Project Card */
@@ -2021,7 +2021,7 @@ input, textarea {
 /* Project Image */
 .project-image {
     position: relative;
-    aspect-ratio: 16 / 10; 
+    aspect-ratio: 16 / 6; 
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -2117,14 +2117,14 @@ input, textarea {
 
 /* Project Info */
 .project-info {
-    padding: 20px;
+    padding: 10px 12px;
 }
 
 .project-meta {
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 15px;
+    gap: 8px;
+    margin-bottom: 6px;
 }
 
 .meta-year {
@@ -2144,38 +2144,38 @@ input, textarea {
 
 .project-name {
     font-family: var(--font-primary);
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     font-weight: 600;
     color: var(--text-primary);
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 .project-description {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: var(--text-secondary);
-    line-height: 1.6;
-    margin-bottom: 20px;
+    line-height: 1.5;
+    margin-bottom: 10px;
 }
 
 .project-tech {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 20px;
+    gap: 6px;
+    margin-bottom: 10px;
 }
 
 .project-tech span {
-    padding: 5px 12px;
+    padding: 3px 10px;
     background: rgba(var(--primary-rgb), 0.1);
     border-radius: var(--radius-xl);
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color: var(--primary);
 }
 
 .project-stats-bar {
     display: flex;
-    gap: 20px;
-    padding-top: 20px;
+    gap: 12px;
+    padding-top: 10px;
     border-top: 1px solid rgba(var(--primary-rgb), 0.1);
 }
 
@@ -2195,7 +2195,7 @@ input, textarea {
 /* Work CTA */
 .work-cta {
     text-align: center;
-    margin-top: 60px;
+    margin-top: 35px;
 }
 
 /* Work Responsive */
@@ -2273,7 +2273,7 @@ input, textarea {
 
 .video-embed {
     position: relative;
-    padding-bottom: 56.25%;
+    padding-bottom: 40%;
     height: 0;
     overflow: hidden;
 }
@@ -2289,13 +2289,13 @@ input, textarea {
 
 /* Video Info */
 .video-info {
-    padding: 25px;
+    padding: 10px 12px;
 }
 
 .video-meta {
     display: flex;
-    gap: 20px;
-    margin-bottom: 15px;
+    gap: 12px;
+    margin-bottom: 8px;
 }
 
 .video-meta span {
@@ -2312,18 +2312,18 @@ input, textarea {
 
 .video-title {
     font-family: var(--font-primary);
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--text-primary);
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     line-height: 1.4;
 }
 
 .video-description {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: var(--text-secondary);
-    line-height: 1.6;
-    margin-bottom: 20px;
+    line-height: 1.5;
+    margin-bottom: 15px;
 }
 
 .video-tags {
@@ -2333,17 +2333,17 @@ input, textarea {
 }
 
 .video-tags span {
-    padding: 5px 14px;
+    padding: 4px 10px;
     background: rgba(var(--primary-rgb), 0.1);
     border-radius: var(--radius-xl);
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color: var(--primary);
 }
 
 /* Videos CTA */
 .videos-cta {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 /* Videos Responsive */
