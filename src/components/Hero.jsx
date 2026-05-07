@@ -50,34 +50,34 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="hero" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', padding: '100px 0', position: 'relative', overflow: 'hidden' }}>
+    <section id="home" className="hero" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', padding: '60px 0', position: 'relative', overflow: 'hidden' }}>
       <div className="container">
-        <div className="hero-content" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px', alignItems: 'center' }}>
+        <div className="hero-content" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(20px, 4vw, 40px)', alignItems: 'center' }}>
           
           <div className="hero-left">
             {/* Available for Work Badge */}
             <div className="hero-badge" style={{ 
               maxWidth: 'fit-content', 
-              padding: '10px 20px', 
+              padding: '8px 16px', 
               borderRadius: '50px',
               background: 'rgba(255, 255, 255, 0.05)',
               border: '1px solid rgba(255, 255, 255, 0.1)',
               display: 'flex',
               alignItems: 'center',
-              gap: '10px',
-              marginBottom: '35px'
+              gap: '8px',
+              marginBottom: '20px'
             }}>
-              <span className="badge-dot" style={{ width: '10px', height: '10px', background: '#10b981', borderRadius: '50%', boxShadow: '0 0 10px #10b981' }}></span>
-              <span style={{ fontWeight: 600, fontSize: '0.9rem', color: '#fff' }}>Available for Work</span>
+              <span className="badge-dot" style={{ width: '8px', height: '8px', background: '#10b981', borderRadius: '50%', boxShadow: '0 0 10px #10b981' }}></span>
+              <span style={{ fontWeight: 600, fontSize: '0.85rem', color: '#fff' }}>Available for Work</span>
             </div>
             
-            <p style={{ fontSize: '1.2rem', marginBottom: '10px', color: 'rgba(255, 255, 255, 0.8)' }}>Hello, I'm</p>
+            <p style={{ fontSize: '1.1rem', marginBottom: '8px', color: 'rgba(255, 255, 255, 0.8)' }}>Hello, I'm</p>
             
             <h1 style={{ 
               fontSize: 'clamp(1.8rem, 5vw, 3.2rem)', 
               fontWeight: '900', 
               lineHeight: '1.1',
-              marginBottom: '15px',
+              marginBottom: '10px',
               color: '#8b5cf6',
               letterSpacing: '-1px',
               whiteSpace: 'nowrap'
@@ -85,22 +85,22 @@ const Hero = () => {
               Satyaprakash Upadhyay
             </h1>
 
-            <h2 style={{ fontSize: 'clamp(1.3rem, 4vw, 1.8rem)', fontWeight: '800', marginBottom: '30px', display: 'flex', alignItems: 'center', color: '#fff', flexWrap: 'wrap' }}>
-              I'm a <span ref={roleTextRef} style={{ marginLeft: '12px', color: '#8b5cf6' }}></span>
+            <h2 style={{ fontSize: 'clamp(1.2rem, 3.5vw, 1.6rem)', fontWeight: '800', marginBottom: '20px', display: 'flex', alignItems: 'center', color: '#fff', flexWrap: 'wrap' }}>
+              I'm a <span ref={roleTextRef} style={{ marginLeft: '10px', color: '#8b5cf6' }}></span>
               <span style={{ color: '#8b5cf6', marginLeft: '5px', animation: 'blink 1s infinite' }}>|</span>
             </h2>
 
             <p style={{ 
-              fontSize: '1rem', 
-              lineHeight: '1.7', 
-              maxWidth: '550px', 
+              fontSize: '0.95rem', 
+              lineHeight: '1.6', 
+              maxWidth: '520px', 
               color: 'rgba(255, 255, 255, 0.6)',
-              marginBottom: '45px'
+              marginBottom: '35px'
             }}>
               Passionate Flutter Developer and Vibe Coder crafting beautiful mobile applications. I also build full-stack websites and robust backend systems with the power of AI. Turning ideas into reality, one widget and prompt at a time.
             </p>
 
-            <div className="hero-actions" style={{ display: 'flex', gap: '15px', marginBottom: '60px' }}>
+            <div className="hero-actions" style={{ display: 'flex', gap: '15px', marginBottom: '40px' }}>
               <a href="#work" style={{ 
                 padding: '14px 30px', 
                 borderRadius: '50px', 
