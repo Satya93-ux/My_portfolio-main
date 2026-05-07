@@ -2,16 +2,16 @@ import React from 'react';
 
 const Skills = () => {
   const technicalSkills = [
-    { name: 'Flutter', percent: '85%', icon: "https://cdn.iconscout.com/icon/free/png-256/free-flutter-logo-icon-svg-download-png-3030139.png" },
-    { name: 'Dart', percent: '80%', icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOZdMC_FB3iUt9yQZujx9L8Etp5FdbP75UJQ&s" },
-    { name: 'Firebase', percent: '85%', icon: "https://toppng.com/uploads/preview/firebase-logo-11609361103azdpszm85x.png" },
-    { name: 'Android', percent: '75%', icon: "https://pngimg.com/uploads/android_logo/android_logo_PNG27.png" },
-    { name: 'Git', percent: '85%', icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9gcK7Go3mcVhvMExOd9mEr1cOzS1Il6AvIw&s" },
-    { name: 'Java', percent: '80%', icon: "https://cdn-icons-png.flaticon.com/512/5968/5968282.png" },
-    { name: 'Gemini', percent: '90%', icon: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/google-gemini-icon.png" },
-    { name: 'Copilot', percent: '85%', icon: "https://upload.wikimedia.org/wikipedia/it/thumb/5/5c/Logo_Microsoft_Copilot.png/500px-Logo_Microsoft_Copilot.png" },
-    { name: 'Railway', percent: '80%', icon: "https://upload.wikimedia.org/wikipedia/commons/5/51/Railway_Logo.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" },
-    { name: 'MongoDB', percent: '85%', icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-mongo-db-3d-icon-png-download-7577996.png" },
+    { name: 'Flutter', icon: "https://cdn.iconscout.com/icon/free/png-256/free-flutter-logo-icon-svg-download-png-3030139.png" },
+    { name: 'Dart', icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOZdMC_FB3iUt9yQZujx9L8Etp5FdbP75UJQ&s" },
+    { name: 'Firebase', icon: "https://toppng.com/uploads/preview/firebase-logo-11609361103azdpszm85x.png" },
+    { name: 'Android', icon: "https://pngimg.com/uploads/android_logo/android_logo_PNG27.png" },
+    { name: 'Git', icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9gcK7Go3mcVhvMExOd9mEr1cOzS1Il6AvIw&s" },
+    { name: 'Java', icon: "https://cdn-icons-png.flaticon.com/512/5968/5968282.png" },
+    { name: 'Gemini', icon: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/google-gemini-icon.png" },
+    { name: 'Copilot', icon: "https://upload.wikimedia.org/wikipedia/it/thumb/5/5c/Logo_Microsoft_Copilot.png/500px-Logo_Microsoft_Copilot.png" },
+    { name: 'Railway', icon: "https://upload.wikimedia.org/wikipedia/commons/5/51/Railway_Logo.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" },
+    { name: 'MongoDB', icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-mongo-db-3d-icon-png-download-7577996.png" },
   ];
 
   const tools = [
@@ -41,15 +41,11 @@ const Skills = () => {
           </h3>
           <div className="skills-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(clamp(130px, 45%, 150px), 1fr))', gap: '12px' }}>
             {technicalSkills.map((skill) => (
-              <div key={skill.name} className="skill-card" style={{ background: '#12121a', padding: '15px 10px', borderRadius: '12px', textAlign: 'center', border: '1px solid rgba(255, 255, 255, 0.03)', transition: 'transform 0.3s ease' }}>
+              <div key={skill.name} className="skill-card" style={{ background: '#12121a', padding: '15px 10px', borderRadius: '12px', textAlign: 'center', border: '1px solid rgba(255, 255, 255, 0.03)', transition: '0.3s ease' }}>
                 <div style={{ marginBottom: '10px', display: 'flex', justifyContent: 'center', height: '30px', alignItems: 'center' }}>
                   <img src={skill.icon} alt={skill.name} style={{ width: '24px', height: '24px', objectFit: 'contain', filter: skill.name === 'GitHub' || skill.name === 'Railway' ? 'brightness(0) invert(1)' : 'none' }} />
                 </div>
-                <h4 style={{ fontSize: '0.85rem', fontWeight: '600', marginBottom: '10px', color: '#fff', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{skill.name}</h4>
-                <div style={{ width: '100%', height: '4px', background: 'rgba(255, 255, 255, 0.05)', borderRadius: '2px', marginBottom: '6px', position: 'relative', overflow: 'hidden' }}>
-                  <div style={{ width: skill.percent, height: '100%', background: 'linear-gradient(90deg, #3b82f6, #a855f7)', borderRadius: '2px' }}></div>
-                </div>
-                <span style={{ fontSize: '0.7rem', color: '#3b82f6', fontWeight: '700' }}>{skill.percent}</span>
+                <h4 style={{ fontSize: '0.85rem', fontWeight: '600', color: '#fff', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{skill.name}</h4>
               </div>
             ))}
           </div>
