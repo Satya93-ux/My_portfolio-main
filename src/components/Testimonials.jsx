@@ -40,33 +40,18 @@ const Testimonials = () => {
         <div className="testimonials-content">
           <h2 className="section-title">What clients say about me</h2>
 
-          <div className="testimonials-slider" id="testimonialSlider">
+          <div className="testimonials-slider-container" id="testimonialSlider">
             <div className="testimonials-track">
               {testimonials.map((t) => (
                 <div key={t.id} className="testimonial-item">
-                  <div className="testimonial-card">
-                    <div className="testimonial-rating">
-                      {[1, 2, 3, 4, 5].map((star) => (
-                        <i
-                          key={star}
-                          className={
-                            star <= Math.floor(t.rating)
-                              ? 'fas fa-star'
-                              : star <= t.rating
-                              ? 'fas fa-star-half-alt'
-                              : 'far fa-star'
-                          }
-                        ></i>
-                      ))}
-                    </div>
-                    <blockquote className="testimonial-text">"{t.text}"</blockquote>
-                    <div className="testimonial-author">
-                      <div className="author-avatar">
-                        <img src={t.avatar} alt={t.author} />
-                      </div>
-                      <div className="author-info">
-                        <h4 className="author-name">{t.author}</h4>
-                        <span className="author-role">{t.role}</span>
+                  <div className="testimonial-card-main glass-card reveal">
+                    <i className="fas fa-quote-left quote-icon"></i>
+                    <blockquote className="testimonial-text-content">"{t.text}"</blockquote>
+                    <div className="testimonial-user-profile">
+                      <img src={t.avatar} alt={t.author} className="user-avatar-img" />
+                      <div className="user-details-text">
+                        <span className="user-name-title">{t.author}</span>
+                        <span className="user-job-role">{t.role}</span>
                       </div>
                     </div>
                   </div>
@@ -74,7 +59,6 @@ const Testimonials = () => {
               ))}
             </div>
 
-            {/* Navigation — wired up by usePortfolioScripts */}
             <div className="testimonials-nav">
               <button className="nav-arrow prev" id="prevTestimonial">
                 <i className="fas fa-arrow-left"></i>

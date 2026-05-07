@@ -73,7 +73,7 @@ const Header = () => {
       <nav className="nav">
         {/* Logo */}
         <a href="#" className="nav-logo" onClick={closeMenu}>
-          Satya<span style={{ color: '#ec4899' }}>.</span>
+          Satya<span style={{ color: 'var(--primary)' }}>.</span>
         </a>
 
         {/* Nav Menu */}

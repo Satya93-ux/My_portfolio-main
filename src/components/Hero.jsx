@@ -50,193 +50,73 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="hero" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', padding: 'clamp(80px, 10vh, 120px) 0 60px', position: 'relative', overflow: 'hidden' }}>
+    <section id="home" className="hero">
       <div className="container">
-        <div className="hero-content" style={{ 
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))', 
-          gap: 'clamp(30px, 5vw, 60px)', 
-          alignItems: 'center',
-          justifyContent: 'center',
-          maxWidth: '1200px',
-          margin: '0 auto'
-        }}>
+        <div className="hero-content">
           
           {/* Content on the Left */}
-          <div className="hero-left" style={{ order: 1, textAlign: window.innerWidth < 1024 ? 'center' : 'left' }}>
+          <div className="hero-left">
             {/* Available for Work Badge */}
-            <div className="hero-badge" style={{ 
-              maxWidth: 'fit-content', 
-              padding: '6px 14px', 
-              borderRadius: '50px',
-              background: 'var(--border-color-muted)',
-              border: '1px solid var(--border-color)',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '8px',
-              marginBottom: '15px',
-              margin: window.innerWidth < 1024 ? '0 auto 15px' : '0 0 15px'
-            }}>
-              <span className="badge-dot" style={{ width: '6px', height: '6px', background: 'var(--secondary)', borderRadius: '50%', boxShadow: '0 0 10px var(--secondary)' }}></span>
-              <span style={{ fontWeight: 600, fontSize: '0.75rem', color: 'var(--text-primary)' }}>Available for Work</span>
+            <div className="hero-badge-premium">
+              <span className="badge-dot"></span>
+              <span className="badge-text">Available for Work</span>
             </div>
             
-            <p style={{ fontSize: '1rem', marginBottom: '5px', color: 'var(--text-secondary)' }}>Hello, I'm</p>
+            <p className="hero-greeting">Hello, I'm</p>
             
-            <h1 style={{ 
-              fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', 
-              fontWeight: '900', 
-              lineHeight: '1.2',
-              marginBottom: '8px',
-              color: 'var(--primary)',
-              letterSpacing: '-1px'
-            }}>
+            <h1 className="hero-name-title">
               Satyaprakash Upadhyay
             </h1>
 
-            <h2 style={{ 
-              fontSize: 'clamp(1.1rem, 3.5vw, 1.6rem)', 
-              fontWeight: '800', 
-              marginBottom: '20px', 
-              display: 'flex', 
-              alignItems: 'center', 
-              color: 'var(--text-primary)', 
-              flexWrap: 'wrap',
-              minHeight: '1.6em',
-              lineHeight: '1.4',
-              justifyContent: window.innerWidth < 1024 ? 'center' : 'flex-start'
-            }}>
-              I'm a <span ref={roleTextRef} style={{ 
-                marginLeft: '10px', 
-                color: 'var(--primary)', 
-                borderRight: '3px solid var(--primary)', 
-                paddingRight: '5px',
-                animation: 'blink-caret 0.75s step-end infinite'
-              }}></span>
+            <h2 className="hero-role-subtitle">
+              I'm a <span ref={roleTextRef} className="role-typing"></span>
             </h2>
 
-            <p style={{ 
-              fontSize: '0.95rem', 
-              lineHeight: '1.6', 
-              maxWidth: '520px', 
-              color: 'var(--text-secondary)',
-              marginBottom: '35px',
-              margin: window.innerWidth < 1024 ? '0 auto 35px' : '0 0 35px'
-            }}>
+            <p className="hero-main-description">
               Passionate Flutter Developer and Vibe Coder crafting beautiful mobile applications. I also build full-stack websites and robust backend systems with the power of AI. Turning ideas into reality, one widget and prompt at a time.
             </p>
 
-            <div className="hero-actions" style={{ 
-              display: 'flex', 
-              gap: 'clamp(10px, 2vw, 20px)', 
-              marginBottom: '40px', 
-              flexWrap: 'wrap',
-              justifyContent: window.innerWidth < 1024 ? 'center' : 'flex-start'
-            }}>
-              <a href="#work" style={{ 
-                padding: '14px 30px', 
-                borderRadius: '50px', 
-                background: 'linear-gradient(90deg, #3b82f6, #06b6d4)',
-                color: '#fff',
-                fontWeight: '700',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '12px',
-                boxShadow: '0 10px 20px rgba(59, 130, 246, 0.3)',
-                textDecoration: 'none',
-                fontSize: '0.9rem',
-                flex: '0 1 auto',
-                minWidth: '160px'
-              }}>
+            <div className="hero-actions-group">
+              <a href="#work" className="btn-primary-gradient">
                 View My Work <i className="fas fa-arrow-right"></i>
               </a>
-              <a href="#contact" style={{ 
-                padding: '14px 30px', 
-                borderRadius: '50px', 
-                border: '1px solid var(--border-color)',
-                background: 'var(--border-color-muted)',
-                color: 'var(--text-primary)',
-                fontWeight: '700',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '12px',
-                textDecoration: 'none',
-                fontSize: '0.9rem',
-                flex: '0 1 auto',
-                minWidth: '160px'
-              }}>
+              <a href="#contact" className="btn-outline-premium">
                 Let's Talk <i className="fas fa-comment-dots"></i>
               </a>
             </div>
 
-            <div className="hero-stats" style={{ 
-              display: 'flex', 
-              gap: 'clamp(15px, 4vw, 35px)', 
-              alignItems: 'center',
-              justifyContent: window.innerWidth < 1024 ? 'center' : 'flex-start'
-            }}>
-              <div style={{ textAlign: 'center' }}>
-                <span style={{ fontSize: '1.8rem', fontWeight: '900', color: 'var(--primary)', display: 'block', lineHeight: '1' }}>5+</span>
-                <p style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '8px', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700' }}>Projects</p>
+            <div className="hero-stats-row">
+              <div className="hero-stat-item">
+                <span className="stat-num">5+</span>
+                <p className="stat-desc">Projects</p>
               </div>
-              <div style={{ width: '1px', height: '30px', background: 'rgba(255, 255, 255, 0.1)' }}></div>
-              <div style={{ textAlign: 'center' }}>
-                <span style={{ fontSize: '1.8rem', fontWeight: '900', color: 'var(--primary)', display: 'block', lineHeight: '1' }}>10+</span>
-                <p style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '8px', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700' }}>Clients</p>
+              <div className="stat-divider"></div>
+              <div className="hero-stat-item">
+                <span className="stat-num">10+</span>
+                <p className="stat-desc">Clients</p>
               </div>
-              <div style={{ width: '1px', height: '30px', background: 'rgba(255, 255, 255, 0.1)' }}></div>
-              <div style={{ textAlign: 'center' }}>
-                <span style={{ fontSize: '1.8rem', fontWeight: '900', color: 'var(--primary)', display: 'block', lineHeight: '1' }}>6+</span>
-                <p style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '8px', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700' }}>Months Exp</p>
+              <div className="stat-divider"></div>
+              <div className="hero-stat-item">
+                <span className="stat-num">6+</span>
+                <p className="stat-desc">Months Exp</p>
               </div>
             </div>
           </div>
 
           {/* Profile Image on the Right */}
-          <div className="hero-right" style={{ order: window.innerWidth < 1024 ? 1 : 2 }}>
-            <div className="hero-image-container" style={{ position: 'relative', width: 'clamp(200px, 30vw, 320px)', height: 'clamp(200px, 30vw, 320px)', margin: '0 auto' }}>
+          <div className="hero-right">
+            <div className="hero-image-frame-container">
               {/* Circular Image Frame */}
-              <div style={{ 
-                width: '100%', 
-                height: '100%', 
-                borderRadius: '50%', 
-                border: '4px solid var(--primary)',
-                padding: '6px',
-                background: 'rgba(var(--primary-rgb), 0.1)',
-                boxShadow: 'var(--glow-primary)',
-                position: 'relative',
-                overflow: 'hidden',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
-              }}>
+              <div className="hero-profile-circle">
                 <img 
                   src={myImage} 
                   alt="Satyaprakash Upadhyay" 
-                  style={{ 
-                    width: '100%', 
-                    height: '100%', 
-                    objectFit: 'cover',
-                    objectPosition: 'center 20%',
-                    borderRadius: '50%',
-                    filter: 'contrast(1.05)'
-                  }} 
+                  className="hero-profile-img"
                 />
               </div>
               
               {/* Decorative dotted circle */}
-              <div style={{
-                position: 'absolute',
-                top: '-5%',
-                left: '-5%',
-                width: '110%',
-                height: '110%',
-                border: '1px dashed rgba(var(--primary-rgb), 0.3)',
-                borderRadius: '50%',
-                zIndex: '-1'
-              }}></div>
+              <div className="hero-decorative-circle"></div>
             </div>
           </div>
         </div>
