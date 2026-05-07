@@ -69,13 +69,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`header${scrolled ? ' scrolled' : ''}`} style={{ 
-      background: scrolled ? (theme === 'dark' ? 'rgba(10, 10, 15, 0.9)' : 'rgba(255, 255, 255, 0.9)') : 'transparent',
-      backdropFilter: scrolled ? 'blur(10px)' : 'none',
-      borderBottom: scrolled ? '1px solid rgba(255, 255, 255, 0.05)' : 'none',
-      padding: scrolled ? '12px 0' : '20px 0',
-      transition: '0.4s'
-    }}>
+    <header className={`header${scrolled ? ' scrolled' : ''}`}>
       <nav className="nav">
         {/* Logo */}
         <a href="#" className="nav-logo" onClick={closeMenu}>

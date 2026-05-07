@@ -190,22 +190,38 @@ function initTestimonialsSlider() {
   function update() {
     if (!track) return;
     track.style.transform = `translateX(-${current * 100}%)`;
+
+    // Update button states
+    if (prevBtn) {
+      prevBtn.disabled = current === 0;
+      prevBtn.classList.toggle('disabled', current === 0);
+    }
+    if (nextBtn) {
+      nextBtn.disabled = current === total - 1;
+      nextBtn.classList.toggle('disabled', current === total - 1);
+    }
   }
 
   function goTo(index) {
-    current = index;
+    current = Math.max(0, Math.min(index, total - 1));
     update();
     reset();
   }
 
   function next() {
-    current = (current + 1) % total;
-    update();
+    if (current < total - 1) {
+      current++;
+      update();
+    } else {
+      stop(); // Stop autoplay at the end
+    }
   }
 
   function prev() {
-    current = (current - 1 + total) % total;
-    update();
+    if (current > 0) {
+      current--;
+      update();
+    }
   }
 
   function start() {
@@ -266,6 +282,7 @@ function initTestimonialsSlider() {
     }
   }, { passive: true });
 
+  update(); // Initial update to set button states
   start();
 }
 

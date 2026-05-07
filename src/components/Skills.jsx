@@ -35,33 +35,33 @@ const Skills = () => {
           <span className="label-line"></span>
         </div>
 
-        <div className="skills-container" style={{ background: 'rgba(255, 255, 255, 0.02)', border: '1px solid rgba(255, 255, 255, 0.05)', borderRadius: '20px', padding: '20px 20px', marginBottom: '25px', overflow: 'hidden' }}>
-          <h3 style={{ display: 'flex', alignItems: 'center', gap: '12px', fontSize: '1.1rem', fontWeight: '700', marginBottom: '20px', color: '#fff' }}>
-            <span style={{ color: '#3b82f6' }}>{`</>`}</span> Technical Skills
+        <div className="skills-container" style={{ background: 'var(--border-color-muted)', border: '1px solid var(--border-color)', borderRadius: '20px', padding: '20px 20px', marginBottom: '25px', overflow: 'hidden' }}>
+          <h3 style={{ display: 'flex', alignItems: 'center', gap: '12px', fontSize: '1.1rem', fontWeight: '700', marginBottom: '20px', color: 'var(--text-primary)' }}>
+            <span style={{ color: 'var(--primary)' }}>{`</>`}</span> Technical Skills
           </h3>
-          <div className="skills-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(clamp(130px, 45%, 150px), 1fr))', gap: '12px' }}>
+          <div className="skills-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(clamp(140px, 45%, 170px), 1fr))', gap: '16px' }}>
             {technicalSkills.map((skill) => (
-              <div key={skill.name} className="skill-card" style={{ background: '#12121a', padding: '15px 10px', borderRadius: '12px', textAlign: 'center', border: '1px solid rgba(255, 255, 255, 0.03)', transition: '0.3s ease' }}>
-                <div style={{ marginBottom: '10px', display: 'flex', justifyContent: 'center', height: '30px', alignItems: 'center' }}>
-                  <img src={skill.icon} alt={skill.name} style={{ width: '24px', height: '24px', objectFit: 'contain', filter: skill.name === 'GitHub' || skill.name === 'Railway' ? 'brightness(0) invert(1)' : 'none' }} />
+              <div key={skill.name} className="skill-card" style={{ background: 'var(--bg-card)', padding: '20px 15px', borderRadius: '12px', textAlign: 'center', border: '1px solid var(--border-color)', transition: '0.3s ease' }}>
+                <div style={{ marginBottom: '12px', display: 'flex', justifyContent: 'center', height: '40px', alignItems: 'center' }}>
+                  <img src={skill.icon} alt={skill.name} className={skill.name === 'GitHub' || skill.name === 'Railway' ? 'theme-icon-invert' : ''} style={{ width: '32px', height: '32px', objectFit: 'contain' }} />
                 </div>
-                <h4 style={{ fontSize: '0.85rem', fontWeight: '600', color: '#fff', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{skill.name}</h4>
+                <h4 style={{ fontSize: '0.95rem', fontWeight: '600', color: 'var(--text-primary)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{skill.name}</h4>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="tools-container" style={{ background: 'rgba(255, 255, 255, 0.02)', border: '1px solid rgba(255, 255, 255, 0.05)', borderRadius: '20px', padding: '20px 20px', overflow: 'hidden' }}>
-          <h3 style={{ display: 'flex', alignItems: 'center', gap: '12px', fontSize: '1.1rem', fontWeight: '700', marginBottom: '20px', color: '#fff' }}>
-            <i className="fas fa-tools" style={{ color: '#3b82f6' }}></i> Tools & Technologies
+        <div className="tools-container" style={{ background: 'var(--border-color-muted)', border: '1px solid var(--border-color)', borderRadius: '20px', padding: '20px 20px', overflow: 'hidden' }}>
+          <h3 style={{ display: 'flex', alignItems: 'center', gap: '12px', fontSize: '1.1rem', fontWeight: '700', marginBottom: '20px', color: 'var(--text-primary)' }}>
+            <i className="fas fa-tools" style={{ color: 'var(--primary)' }}></i> Tools & Technologies
           </h3>
-          <div className="tools-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(clamp(90px, 30%, 100px), 1fr))', gap: '10px' }}>
+          <div className="tools-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(clamp(110px, 30%, 125px), 1fr))', gap: '14px' }}>
             {tools.map((tool) => (
-              <div key={tool.name} className="tool-card" style={{ background: '#12121a', padding: '12px 8px', borderRadius: '12px', textAlign: 'center', border: '1px solid rgba(255, 255, 255, 0.03)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '80px', transition: 'transform 0.3s ease' }}>
-                <div style={{ marginBottom: '8px', height: '24px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <img src={tool.icon} alt={tool.name} style={{ width: '20px', height: '20px', objectFit: 'contain', filter: tool.name === 'GitHub' || tool.name === 'Cursor' ? 'brightness(0) invert(1)' : 'none' }} />
+              <div key={tool.name} className="tool-card" style={{ background: 'var(--bg-card)', padding: '18px 12px', borderRadius: '12px', textAlign: 'center', border: '1px solid var(--border-color)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100px', transition: 'transform 0.3s ease' }}>
+                <div style={{ marginBottom: '10px', height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <img src={tool.icon} alt={tool.name} className={tool.name === 'GitHub' || tool.name === 'Cursor' ? 'theme-icon-invert' : ''} style={{ width: '28px', height: '28px', objectFit: 'contain' }} />
                 </div>
-                <h4 style={{ fontSize: '0.75rem', color: 'rgba(255, 255, 255, 0.6)', fontWeight: '500', width: '100%', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{tool.name}</h4>
+                <h4 style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', fontWeight: '500', width: '100%', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{tool.name}</h4>
               </div>
             ))}
           </div>

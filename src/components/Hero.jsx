@@ -60,41 +60,41 @@ const Hero = () => {
               maxWidth: 'fit-content', 
               padding: '8px 16px', 
               borderRadius: '50px',
-              background: 'rgba(255, 255, 255, 0.05)',
-              border: '1px solid rgba(255, 255, 255, 0.1)',
+              background: 'var(--border-color-muted)',
+              border: '1px solid var(--border-color)',
               display: 'flex',
               alignItems: 'center',
               gap: '8px',
               marginBottom: '20px'
             }}>
-              <span className="badge-dot" style={{ width: '8px', height: '8px', background: '#10b981', borderRadius: '50%', boxShadow: '0 0 10px #10b981' }}></span>
-              <span style={{ fontWeight: 600, fontSize: '0.85rem', color: '#fff' }}>Available for Work</span>
+              <span className="badge-dot" style={{ width: '8px', height: '8px', background: 'var(--secondary)', borderRadius: '50%', boxShadow: '0 0 10px var(--secondary)' }}></span>
+              <span style={{ fontWeight: 600, fontSize: '0.85rem', color: 'var(--text-primary)' }}>Available for Work</span>
             </div>
             
-            <p style={{ fontSize: '1.1rem', marginBottom: '8px', color: 'rgba(255, 255, 255, 0.8)' }}>Hello, I'm</p>
+            <p style={{ fontSize: '1.1rem', marginBottom: '8px', color: 'var(--text-secondary)' }}>Hello, I'm</p>
             
             <h1 style={{ 
               fontSize: 'clamp(1.8rem, 5vw, 3.2rem)', 
               fontWeight: '900', 
               lineHeight: '1.1',
               marginBottom: '10px',
-              color: '#8b5cf6',
+              color: 'var(--primary)',
               letterSpacing: '-1px',
               whiteSpace: 'nowrap'
             }}>
               Satyaprakash Upadhyay
             </h1>
 
-            <h2 style={{ fontSize: 'clamp(1.2rem, 3.5vw, 1.6rem)', fontWeight: '800', marginBottom: '20px', display: 'flex', alignItems: 'center', color: '#fff', flexWrap: 'wrap' }}>
-              I'm a <span ref={roleTextRef} style={{ marginLeft: '10px', color: '#8b5cf6' }}></span>
-              <span style={{ color: '#8b5cf6', marginLeft: '5px', animation: 'blink 1s infinite' }}>|</span>
+            <h2 style={{ fontSize: 'clamp(1.2rem, 3.5vw, 1.6rem)', fontWeight: '800', marginBottom: '20px', display: 'flex', alignItems: 'center', color: 'var(--text-primary)', flexWrap: 'wrap' }}>
+              I'm a <span ref={roleTextRef} style={{ marginLeft: '10px', color: 'var(--primary)' }}></span>
+              <span style={{ color: 'var(--primary)', marginLeft: '5px', animation: 'blink 1s infinite' }}>|</span>
             </h2>
 
             <p style={{ 
               fontSize: '0.95rem', 
               lineHeight: '1.6', 
               maxWidth: '520px', 
-              color: 'rgba(255, 255, 255, 0.6)',
+              color: 'var(--text-secondary)',
               marginBottom: '35px'
             }}>
               Passionate Flutter Developer and Vibe Coder crafting beautiful mobile applications. I also build full-stack websites and robust backend systems with the power of AI. Turning ideas into reality, one widget and prompt at a time.
@@ -120,9 +120,9 @@ const Hero = () => {
               <a href="#contact" style={{ 
                 padding: '14px 30px', 
                 borderRadius: '50px', 
-                border: '1px solid rgba(255, 255, 255, 0.2)',
-                background: 'rgba(255, 255, 255, 0.03)',
-                color: '#fff',
+                border: '1px solid var(--border-color)',
+                background: 'var(--border-color-muted)',
+                color: 'var(--text-primary)',
                 fontWeight: '700',
                 display: 'flex',
                 alignItems: 'center',
@@ -137,27 +137,27 @@ const Hero = () => {
 
             <div className="hero-stats" style={{ display: 'flex', gap: 'clamp(15px, 4vw, 35px)', alignItems: 'center' }}>
               <div style={{ textAlign: 'center' }}>
-                <span style={{ fontSize: '1.8rem', fontWeight: '900', color: '#3b82f6', display: 'block', lineHeight: '1' }}>5+</span>
-                <p style={{ fontSize: '0.7rem', color: 'rgba(255, 255, 255, 0.4)', marginTop: '8px', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700' }}>Projects</p>
+                <span style={{ fontSize: '1.8rem', fontWeight: '900', color: 'var(--primary)', display: 'block', lineHeight: '1' }}>5+</span>
+                <p style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '8px', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700' }}>Projects</p>
               </div>
               <div style={{ width: '1px', height: '30px', background: 'rgba(255, 255, 255, 0.1)' }}></div>
               <div style={{ textAlign: 'center' }}>
-                <span style={{ fontSize: '1.8rem', fontWeight: '900', color: '#3b82f6', display: 'block', lineHeight: '1' }}>10+</span>
-                <p style={{ fontSize: '0.7rem', color: 'rgba(255, 255, 255, 0.4)', marginTop: '8px', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700' }}>Clients</p>
+                <span style={{ fontSize: '1.8rem', fontWeight: '900', color: 'var(--primary)', display: 'block', lineHeight: '1' }}>10+</span>
+                <p style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '8px', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700' }}>Clients</p>
               </div>
               <div style={{ width: '1px', height: '30px', background: 'rgba(255, 255, 255, 0.1)' }}></div>
               <div style={{ textAlign: 'center' }}>
-                <span style={{ fontSize: '1.8rem', fontWeight: '900', color: '#3b82f6', display: 'block', lineHeight: '1' }}>6+</span>
-                <p style={{ fontSize: '0.7rem', color: 'rgba(255, 255, 255, 0.4)', marginTop: '8px', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700' }}>Months Exp</p>
+                <span style={{ fontSize: '1.8rem', fontWeight: '900', color: 'var(--primary)', display: 'block', lineHeight: '1' }}>6+</span>
+                <p style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '8px', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700' }}>Months Exp</p>
               </div>
             </div>
 
             {/* Scroll Down Mouse (Mobile) */}
             <a href="#about" className="scroll-indicator mobile-only" style={{ display: 'none', marginTop: '50px', textAlign: 'center', opacity: '0.8', textDecoration: 'none', cursor: 'pointer', transition: '0.3s' }}>
-              <div style={{ width: '24px', height: '40px', border: '2px solid #fff', borderRadius: '12px', margin: '0 auto 8px', position: 'relative' }}>
-                <div style={{ width: '4px', height: '8px', background: '#fff', position: 'absolute', top: '8px', left: '50%', transform: 'translateX(-50%)', borderRadius: '2px', animation: 'mouseScroll 1.5s infinite' }}></div>
+              <div style={{ width: '24px', height: '40px', border: '2px solid var(--text-primary)', borderRadius: '12px', margin: '0 auto 8px', position: 'relative' }}>
+                <div style={{ width: '4px', height: '8px', background: 'var(--text-primary)', position: 'absolute', top: '8px', left: '50%', transform: 'translateX(-50%)', borderRadius: '2px', animation: 'mouseScroll 1.5s infinite' }}></div>
               </div>
-              <span style={{ fontSize: '0.65rem', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: '700', color: '#fff' }}>Scroll Down</span>
+              <span style={{ fontSize: '0.65rem', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: '700', color: 'var(--text-primary)' }}>Scroll Down</span>
             </a>
           </div>
 
@@ -168,10 +168,10 @@ const Hero = () => {
                 width: '100%', 
                 height: '100%', 
                 borderRadius: '50%', 
-                border: '6px solid #3b82f6',
+                border: '6px solid var(--primary)',
                 padding: '8px',
-                background: 'rgba(59, 130, 246, 0.1)',
-                boxShadow: '0 0 40px rgba(59, 130, 246, 0.2)',
+                background: 'rgba(var(--primary-rgb), 0.1)',
+                boxShadow: 'var(--glow-primary)',
                 position: 'relative',
                 overflow: 'hidden',
                 display: 'flex',
@@ -211,10 +211,10 @@ const Hero = () => {
 
       {/* Scroll Down Mouse (Desktop) */}
       <a href="#about" className="scroll-indicator desktop-only" style={{ position: 'absolute', bottom: '40px', left: '50%', transform: 'translateX(-50%)', textAlign: 'center', opacity: '0.8', textDecoration: 'none', cursor: 'pointer', transition: '0.3s' }}>
-        <div style={{ width: '24px', height: '40px', border: '2px solid #fff', borderRadius: '12px', margin: '0 auto 8px', position: 'relative' }}>
-          <div style={{ width: '4px', height: '8px', background: '#fff', position: 'absolute', top: '8px', left: '50%', transform: 'translateX(-50%)', borderRadius: '2px', animation: 'mouseScroll 1.5s infinite' }}></div>
+        <div style={{ width: '24px', height: '40px', border: '2px solid var(--text-primary)', borderRadius: '12px', margin: '0 auto 8px', position: 'relative' }}>
+          <div style={{ width: '4px', height: '8px', background: 'var(--text-primary)', position: 'absolute', top: '8px', left: '50%', transform: 'translateX(-50%)', borderRadius: '2px', animation: 'mouseScroll 1.5s infinite' }}></div>
         </div>
-        <span style={{ fontSize: '0.65rem', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: '700', color: '#fff' }}>Scroll Down</span>
+        <span style={{ fontSize: '0.65rem', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: '700', color: 'var(--text-primary)' }}>Scroll Down</span>
       </a>
     </section>
   );
