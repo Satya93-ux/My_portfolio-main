@@ -3,27 +3,27 @@ import React from 'react';
 const Skills = () => {
   const technicalSkills = [
     { name: 'Flutter', percent: '85%', icon: "https://cdn.iconscout.com/icon/free/png-256/free-flutter-logo-icon-svg-download-png-3030139.png" },
-    { name: 'Dart', percent: '80%', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" },
-    { name: 'Firebase', percent: '85%', icon: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" },
-    { name: 'Android', percent: '75%', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" },
-    { name: 'Git', percent: '85%', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
-    { name: 'Java', percent: '80%', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
-    { name: 'Gemini', percent: '90%', icon: "https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d473530437e92265e04ca.svg" },
-    { name: 'Copilot', percent: '85%', icon: "https://github.githubassets.com/images/modules/site/copilot/copilot-logo.svg" },
-    { name: 'Railway', percent: '80%', icon: "https://railway.app/brand/logo-light.svg" },
-    { name: 'MongoDB', percent: '85%', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+    { name: 'Dart', percent: '80%', icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOZdMC_FB3iUt9yQZujx9L8Etp5FdbP75UJQ&s" },
+    { name: 'Firebase', percent: '85%', icon: "https://toppng.com/uploads/preview/firebase-logo-11609361103azdpszm85x.png" },
+    { name: 'Android', percent: '75%', icon: "https://pngimg.com/uploads/android_logo/android_logo_PNG27.png" },
+    { name: 'Git', percent: '85%', icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9gcK7Go3mcVhvMExOd9mEr1cOzS1Il6AvIw&s" },
+    { name: 'Java', percent: '80%', icon: "https://cdn-icons-png.flaticon.com/512/5968/5968282.png" },
+    { name: 'Gemini', percent: '90%', icon: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/google-gemini-icon.png" },
+    { name: 'Copilot', percent: '85%', icon: "https://upload.wikimedia.org/wikipedia/it/thumb/5/5c/Logo_Microsoft_Copilot.png/500px-Logo_Microsoft_Copilot.png" },
+    { name: 'Railway', percent: '80%', icon: "https://upload.wikimedia.org/wikipedia/commons/5/51/Railway_Logo.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" },
+    { name: 'MongoDB', percent: '85%', icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-mongo-db-3d-icon-png-download-7577996.png" },
   ];
 
   const tools = [
     { name: 'VS Code', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
-    { name: 'Android Studio', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg" },
-    { name: 'Figma', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
-    { name: 'GitHub', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
-    { name: 'Postman', icon: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" },
-    { name: 'Slack', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg" },
-    { name: 'Cursor', icon: "https://mintlify.s3-us-west-1.amazonaws.com/cursor/logo/light.svg" },
-    { name: 'Antigravity', icon: "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/rocket.svg" },
-    { name: 'Windsurf', icon: "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/water.svg" },
+    { name: 'Android Studio', icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7vd09Q4RrVjlqGHjf22dM4_vjEA6X3Q5KqQ&s" },
+    { name: 'Figma', icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9IQCea8hSpiYjBajC-OQu3h1fXr4qesFAog&s" },
+    { name: 'GitHub', icon: "https://pngimg.com/uploads/github/github_PNG83.png" },
+    { name: 'Postman', icon: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/postman-icon.png" },
+    { name: 'Slack', icon: "https://img.icons8.com/color/1200/slack-new.jpg" },
+    { name: 'Cursor', icon: "https://svgstack.com/media/img/cursor-ai-logo-LPdV165213.webp" },
+    { name: 'Antigravity', icon: "https://brandlogos.net/wp-content/uploads/2025/12/google_antigravity-logo_brandlogos.net_qu4jc.png" },
+    { name: 'Windsurf', icon: "https://images.seeklogo.com/logo-png/65/1/windsurf-logo-png_seeklogo-653228.png" },
   ];
 
   return (
