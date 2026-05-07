@@ -84,7 +84,7 @@ const Hero = () => {
               Satyaprakash Upadhyay
             </h1>
 
-            <h2 style={{ fontSize: '2rem', fontWeight: '800', marginBottom: '30px', display: 'flex', alignItems: 'center', color: '#fff' }}>
+            <h2 style={{ fontSize: 'clamp(1.5rem, 4vw, 2rem)', fontWeight: '800', marginBottom: '30px', display: 'flex', alignItems: 'center', color: '#fff', flexWrap: 'wrap' }}>
               I'm a <span ref={roleTextRef} style={{ marginLeft: '12px', color: '#8b5cf6' }}></span>
               <span style={{ color: '#8b5cf6', marginLeft: '5px', animation: 'blink 1s infinite' }}>|</span>
             </h2>
@@ -99,7 +99,7 @@ const Hero = () => {
               Passionate Flutter Developer and Vibe Coder crafting beautiful mobile applications. I also build full-stack websites and robust backend systems with the power of AI. Turning ideas into reality, one widget and prompt at a time.
             </p>
 
-            <div style={{ display: 'flex', gap: '20px', marginBottom: '60px' }}>
+            <div className="hero-actions" style={{ display: 'flex', gap: '20px', marginBottom: '60px' }}>
               <a href="#work" style={{ 
                 padding: '16px 35px', 
                 borderRadius: '50px', 
@@ -108,6 +108,7 @@ const Hero = () => {
                 fontWeight: '700',
                 display: 'flex',
                 alignItems: 'center',
+                justifyContent: 'center',
                 gap: '12px',
                 boxShadow: '0 10px 20px rgba(59, 130, 246, 0.3)',
                 textDecoration: 'none'
@@ -123,6 +124,7 @@ const Hero = () => {
                 fontWeight: '700',
                 display: 'flex',
                 alignItems: 'center',
+                justifyContent: 'center',
                 gap: '12px',
                 textDecoration: 'none'
               }}>
@@ -130,7 +132,7 @@ const Hero = () => {
               </a>
             </div>
 
-            <div style={{ display: 'flex', gap: '50px' }}>
+            <div className="hero-stats" style={{ display: 'flex', gap: '50px' }}>
               <div>
                 <span style={{ fontSize: '2.5rem', fontWeight: '900', color: '#3b82f6', display: 'block', lineHeight: '1' }}>5+</span>
                 <p style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.4)', marginTop: '10px' }}>Projects Completed</p>

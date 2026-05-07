@@ -3685,3 +3685,194 @@ img[loading="lazy"].loaded {
 /* ============================================
    End of Styles
 ============================================ */
+/* ============================================
+   Responsive Utility Classes & Overrides
+   ============================================ */
+
+/* Hero Section Mobile Fixes */
+@media (max-width: 992px) {
+    .hero {
+        padding: 80px 0 !important;
+        text-align: center;
+    }
+    .hero-content {
+        grid-template-columns: 1fr !important;
+        gap: 60px !important;
+    }
+    .hero-left {
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-right {
+        order: 1;
+    }
+    .hero-image-container {
+        width: clamp(250px, 60vw, 350px) !important;
+        height: clamp(250px, 60vw, 350px) !important;
+    }
+    .hero-left h1 {
+        font-size: clamp(2rem, 8vw, 3.5rem) !important;
+    }
+    .hero-left h2 {
+        font-size: 1.5rem !important;
+        justify-content: center;
+    }
+    .hero-left p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hero-stats {
+        gap: 30px !important;
+        justify-content: center !important;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px !important;
+    }
+    .hero-actions a {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* About Section Mobile Fixes */
+@media (max-width: 992px) {
+    .about {
+        padding: 80px 0 !important;
+    }
+    .about-content {
+        grid-template-columns: 1fr !important;
+        gap: 50px !important;
+    }
+    .about-left {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .about-right {
+        text-align: center;
+    }
+    .about-stats {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+    }
+    .about-info-grid {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+        text-align: left;
+    }
+    .about-header h2 {
+        font-size: 2rem !important;
+    }
+}
+
+/* Section Label Mobile Fixes */
+@media (max-width: 768px) {
+    .section-label {
+        margin-bottom: 40px !important;
+    }
+    .label-line {
+        display: none;
+    }
+}
+
+/* Skills/Tools Grid Adjustments */
+@media (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)) !important;
+    }
+    .tools-grid {
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)) !important;
+    }
+}
+
+/* Container padding fine-tuning */
+@media (max-width: 380px) {
+    .container {
+        padding: 0 15px !important;
+    }
+}
+
+/* Footer Mobile Fixes */
+@media (max-width: 992px) {
+    .footer-content {
+        grid-template-columns: 1fr !important;
+        gap: 60px !important;
+        text-align: center;
+    }
+    .footer-main {
+        max-width: 100% !important;
+        margin: 0 auto;
+    }
+    .footer-social {
+        justify-content: center;
+    }
+    .footer-links h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-links-wrapper {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+
+/* Theme Toggle & Active Dot */
+.theme-toggle {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    color: var(--text-primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    font-size: 1.1rem;
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--primary);
+}
+
+.active-dot {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 4px;
+    background: var(--primary);
+    border-radius: 50%;
+}
+
+/* Nav Logo Base */
+.nav-logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--primary);
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+/* Nav Actions Base */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}

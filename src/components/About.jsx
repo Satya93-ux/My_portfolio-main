@@ -5,9 +5,9 @@ const About = () => {
     <section id="about" className="about" style={{ padding: '120px 0', background: '#0a0a0f' }}>
       <div className="container">
         {/* Section Header with Line */}
-        <div style={{ textAlign: 'center', marginBottom: '80px' }}>
+        <div className="about-header" style={{ textAlign: 'center', marginBottom: '80px' }}>
           <div style={{ width: '80px', height: '4px', background: 'linear-gradient(90deg, #3b82f6, #06b6d4)', margin: '0 auto 20px', borderRadius: '2px' }}></div>
-          <h2 style={{ fontSize: '2.8rem', fontWeight: '800', color: '#fff', textTransform: 'uppercase', letterSpacing: '2px' }}>About Me</h2>
+          <h2 style={{ fontSize: 'clamp(2rem, 5vw, 2.8rem)', fontWeight: '800', color: '#fff', textTransform: 'uppercase', letterSpacing: '2px' }}>About Me</h2>
         </div>
 
         <div className="about-content" style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: '80px', alignItems: 'center' }}>
@@ -27,14 +27,14 @@ const About = () => {
                 bottom: '30px', 
                 right: '30px', 
                 background: 'linear-gradient(135deg, #3b82f6, #06b6d4)', 
-                padding: '20px 25px', 
+                padding: 'clamp(10px, 4vw, 20px) clamp(15px, 5vw, 25px)', 
                 borderRadius: '20px',
                 textAlign: 'center',
                 boxShadow: '0 15px 30px rgba(59, 130, 246, 0.4)',
                 border: '4px solid #0a0a0f'
               }}>
-                <span style={{ fontSize: '1.8rem', fontWeight: '900', display: 'block', color: '#fff', lineHeight: '1' }}>6+</span>
-                <span style={{ fontSize: '0.75rem', fontWeight: '700', color: '#fff', textTransform: 'uppercase', letterSpacing: '1px' }}>Years of Experience</span>
+                <span style={{ fontSize: 'clamp(1.2rem, 5vw, 1.8rem)', fontWeight: '900', display: 'block', color: '#fff', lineHeight: '1' }}>6+</span>
+                <span style={{ fontSize: '0.65rem', fontWeight: '700', color: '#fff', textTransform: 'uppercase', letterSpacing: '1px' }}>Months of Experience</span>
               </div>
             </div>
           </div>
@@ -42,7 +42,7 @@ const About = () => {
           {/* Right Side: Content */}
           <div className="about-right">
             {/* Stat Cards */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px', marginBottom: '45px' }}>
+            <div className="about-stats" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px', marginBottom: '45px' }}>
               <div style={{ background: 'rgba(255, 255, 255, 0.03)', padding: '25px 15px', borderRadius: '20px', textAlign: 'center', border: '1px solid rgba(255, 255, 255, 0.05)', transition: '0.3s' }}>
                 <i className="fas fa-certificate" style={{ fontSize: '1.6rem', color: '#8b5cf6', marginBottom: '15px' }}></i>
                 <h3 style={{ fontSize: '1rem', fontWeight: '700', color: '#fff', marginBottom: '5px' }}>Experience</h3>
@@ -69,14 +69,14 @@ const About = () => {
             </p>
 
             {/* Info Grid */}
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: '25px 40px', marginBottom: '50px' }}>
+            <div className="about-info-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: '25px 40px', marginBottom: '50px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
                 <span style={{ fontWeight: '800', color: '#fff', minWidth: '85px' }}>Name:</span>
                 <span style={{ color: 'rgba(255, 255, 255, 0.8)', fontWeight: '500' }}>Satyaprakash Upadhyay</span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
                 <span style={{ fontWeight: '800', color: '#fff', minWidth: '85px' }}>Email:</span>
-                <span style={{ color: 'rgba(255, 255, 255, 0.8)', fontWeight: '500' }}>sk9334069077@gmail.com</span>
+                <span style={{ color: 'rgba(255, 255, 255, 0.8)', fontWeight: '500', fontSize: 'clamp(0.8rem, 3.5vw, 1rem)', wordBreak: 'break-all' }}>sk9334069077@gmail.com</span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
                 <span style={{ fontWeight: '800', color: '#fff', minWidth: '85px' }}>Location:</span>

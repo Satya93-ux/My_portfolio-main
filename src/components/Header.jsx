@@ -76,33 +76,25 @@ const Header = () => {
       padding: scrolled ? '12px 0' : '20px 0',
       transition: '0.4s'
     }}>
-      <nav className="nav" style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0 20px' }}>
+      <nav className="nav">
         {/* Logo */}
-        <a href="#" className="nav-logo" onClick={closeMenu} style={{ fontSize: '1.6rem', fontWeight: '800', color: '#3b82f6', textDecoration: 'none', letterSpacing: '-0.5px' }}>
+        <a href="#" className="nav-logo" onClick={closeMenu}>
           Satya<span style={{ color: '#ec4899' }}>.</span>
         </a>
 
         {/* Nav Menu */}
         <div className={`nav-menu${menuActive ? ' active' : ''}`} id="navMenu">
-          <ul className="nav-list" style={{ display: 'flex', gap: '30px', listStyle: 'none', margin: 0, padding: 0 }}>
+          <ul className="nav-list">
             {navItems.map((item) => (
               <li key={item.id} className="nav-item">
                 <a
                   href={item.href}
                   className={`nav-link${activeLink === item.href ? ' active' : ''}`}
                   onClick={closeMenu}
-                  style={{ 
-                    textDecoration: 'none', 
-                    fontSize: '0.95rem', 
-                    fontWeight: '600', 
-                    color: activeLink === item.href ? '#3b82f6' : (theme === 'dark' ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.7)'),
-                    transition: '0.3s',
-                    position: 'relative'
-                  }}
                 >
                   {item.text}
                   {activeLink === item.href && (
-                    <span style={{ position: 'absolute', bottom: '-8px', left: '50%', transform: 'translateX(-50%)', width: '4px', height: '4px', background: '#3b82f6', borderRadius: '50%' }}></span>
+                    <span className="active-dot"></span>
                   )}
                 </a>
               </li>
@@ -111,37 +103,15 @@ const Header = () => {
         </div>
 
         {/* Actions */}
-        <div className="nav-actions" style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+        <div className="nav-actions">
           <button 
             onClick={toggleTheme}
-            style={{ 
-              background: 'rgba(255, 255, 255, 0.05)', 
-              border: '1px solid rgba(255, 255, 255, 0.1)', 
-              width: '42px', 
-              height: '42px', 
-              borderRadius: '12px', 
-              color: theme === 'dark' ? '#fff' : '#333', 
-              cursor: 'pointer',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              transition: '0.3s',
-              fontSize: '1.1rem'
-            }}
+            className="theme-toggle"
+            aria-label="Toggle Theme"
           >
             <i className={theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon'}></i>
           </button>
-          <a href="#contact" className="nav-cta" onClick={closeMenu} style={{ 
-            background: 'linear-gradient(90deg, #3b82f6, #06b6d4)', 
-            padding: '12px 28px', 
-            borderRadius: '50px', 
-            color: '#fff', 
-            fontWeight: '700', 
-            textDecoration: 'none',
-            fontSize: '0.95rem',
-            boxShadow: '0 10px 20px rgba(59, 130, 246, 0.3)',
-            transition: '0.3s'
-          }}>
+          <a href="#contact" className="nav-cta" onClick={closeMenu}>
             Hire Me
           </a>
           <button
@@ -149,7 +119,6 @@ const Header = () => {
             id="navToggle"
             aria-label="Toggle Menu"
             onClick={toggleMenu}
-            style={{ display: 'none' }}
           >
             <span className="toggle-line"></span>
             <span className="toggle-line"></span>
