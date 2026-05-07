@@ -27,51 +27,139 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="skills">
+    <section id="skills" className="skills" style={{ padding: 'var(--section-padding) 0' }}>
       <div className="container">
-        <div className="section-label">
-          <span className="label-number">03</span>
-          <span className="label-text">Skills</span>
-          <span className="label-line"></span>
+        <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+          <div style={{ 
+            display: 'inline-block', 
+            padding: '6px 20px', 
+            background: 'rgba(var(--primary-rgb), 0.1)', 
+            borderRadius: '50px', 
+            color: 'var(--primary)',
+            fontSize: '0.75rem',
+            fontWeight: '700',
+            textTransform: 'uppercase',
+            letterSpacing: '2px',
+            marginBottom: '15px'
+          }}>
+            What I Know
+          </div>
+          <div style={{ width: '60px', height: '4px', background: 'var(--gradient-primary)', margin: '0 auto', borderRadius: '2px' }}></div>
         </div>
 
-        <div className="skills-container" style={{ background: 'var(--border-color-muted)', border: '1px solid var(--border-color)', borderRadius: '20px', padding: '20px 20px', marginBottom: '25px', overflow: 'hidden' }}>
-          <h3 style={{ display: 'flex', alignItems: 'center', gap: '12px', fontSize: '1.1rem', fontWeight: '700', marginBottom: '20px', color: 'var(--text-primary)' }}>
-            <span style={{ color: 'var(--primary)' }}>{`</>`}</span> Technical Skills
-          </h3>
-          <div className="skills-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(clamp(140px, 45%, 170px), 1fr))', gap: '16px' }}>
-            {technicalSkills.map((skill, index) => (
-              <div key={skill.name} className="skill-card glass-card" style={{ padding: '20px 15px', textAlign: 'center', transition: '0.3s ease', '--delay': index, position: 'relative', overflow: 'hidden' }}>
-                <div style={{ marginBottom: '12px', display: 'flex', justifyContent: 'center', height: '40px', alignItems: 'center' }}>
-                  <img src={skill.icon} alt={skill.name} className={skill.name === 'GitHub' || skill.name === 'Railway' ? 'theme-icon-invert' : ''} style={{ width: '32px', height: '32px', objectFit: 'contain' }} />
+        <div className="skills-layout" style={{ 
+          background: 'var(--bg-card)', 
+          border: '1px solid var(--border-color)', 
+          borderRadius: 'var(--radius-xl)', 
+          padding: '40px clamp(20px, 5vw, 60px)',
+          boxShadow: 'var(--shadow-lg)'
+        }}>
+          
+          {/* Technical Skill Section */}
+          <div className="skills-section" style={{ marginBottom: '60px' }}>
+            <h3 style={{ 
+              display: 'flex', 
+              alignItems: 'center', 
+              gap: '12px', 
+              fontSize: '1.4rem', 
+              fontWeight: '800', 
+              marginBottom: '35px', 
+              color: 'var(--text-primary)' 
+            }}>
+              <span style={{ color: 'var(--primary)', fontSize: '1.2rem' }}>{`</>`}</span> Technical Skill
+            </h3>
+            
+            <div className="skills-grid" style={{ 
+              display: 'grid', 
+              gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', 
+              gap: '20px' 
+            }}>
+              {technicalSkills.map((skill, index) => (
+                <div key={skill.name} className="skill-card glass-card" style={{ 
+                  padding: '24px 16px', 
+                  display: 'flex', 
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  gap: '12px',
+                  background: 'var(--bg-card)',
+                  border: '1px solid var(--border-color)',
+                  borderRadius: 'var(--radius-md)',
+                  transition: 'var(--transition-normal)'
+                }}>
+                  <div style={{ 
+                    width: '32px', 
+                    height: '32px', 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center'
+                  }}>
+                    <img src={skill.icon} alt={skill.name} className={skill.name === 'GitHub' || skill.name === 'Railway' ? 'theme-icon-invert' : ''} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                  </div>
+                  
+                  <h4 style={{ fontSize: '0.95rem', fontWeight: '700', color: 'var(--text-primary)', marginBottom: '4px' }}>{skill.name}</h4>
+                  
+                  <div style={{ width: '100%', marginTop: 'auto' }}>
+                    <div style={{ width: '100%', height: '5px', background: 'var(--border-color-muted)', borderRadius: '10px', overflow: 'hidden', marginBottom: '8px' }}>
+                      <div style={{ 
+                        width: `${skill.level}%`, 
+                        height: '100%', 
+                        background: 'var(--gradient-primary)', 
+                        borderRadius: '10px'
+                      }}></div>
+                    </div>
+                    <span style={{ fontSize: '0.75rem', color: 'var(--primary)', fontWeight: '800', display: 'block', textAlign: 'center' }}>{skill.level}%</span>
+                  </div>
                 </div>
-                <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'baseline', gap: '5px', marginBottom: '10px' }}>
-                  <h4 style={{ fontSize: '0.95rem', fontWeight: '600', color: 'var(--text-primary)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{skill.name}</h4>
-                  <span style={{ fontSize: '0.7rem', color: 'var(--primary)', fontWeight: '700' }}>{skill.level}%</span>
-                </div>
-                {/* Progress Bar */}
-                <div style={{ width: '100%', height: '4px', background: 'var(--border-color-muted)', borderRadius: '2px', marginTop: 'auto' }}>
-                  <div style={{ width: `${skill.level}%`, height: '100%', background: 'var(--gradient-primary)', borderRadius: '2px', boxShadow: '0 0 10px rgba(var(--primary-rgb), 0.3)' }}></div>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
 
-        <div className="tools-container" style={{ background: 'var(--border-color-muted)', border: '1px solid var(--border-color)', borderRadius: '20px', padding: '20px 20px', overflow: 'hidden' }}>
-          <h3 style={{ display: 'flex', alignItems: 'center', gap: '12px', fontSize: '1.1rem', fontWeight: '700', marginBottom: '20px', color: 'var(--text-primary)' }}>
-            <i className="fas fa-tools" style={{ color: 'var(--primary)' }}></i> Tools & Technologies
-          </h3>
-          <div className="tools-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(clamp(110px, 30%, 125px), 1fr))', gap: '14px' }}>
-            {tools.map((tool, index) => (
-              <div key={tool.name} className="tool-card glass-card" style={{ padding: '18px 12px', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100px', transition: 'transform 0.3s ease', '--delay': index }}>
-                <div style={{ marginBottom: '10px', height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <img src={tool.icon} alt={tool.name} className={tool.name === 'GitHub' || tool.name === 'Cursor' ? 'theme-icon-invert' : ''} style={{ width: '28px', height: '28px', objectFit: 'contain' }} />
+          {/* Tools & Technology Section */}
+          <div className="tools-section">
+            <h3 style={{ 
+              display: 'flex', 
+              alignItems: 'center', 
+              gap: '12px', 
+              fontSize: '1.4rem', 
+              fontWeight: '800', 
+              marginBottom: '35px', 
+              color: 'var(--text-primary)' 
+            }}>
+              <i className="fas fa-tools" style={{ color: 'var(--primary)', fontSize: '1.2rem' }}></i> Tools & Technology
+            </h3>
+
+            <div className="tools-grid" style={{ 
+              display: 'grid', 
+              gridTemplateColumns: 'repeat(auto-fill, minmax(130px, 1fr))', 
+              gap: '16px' 
+            }}>
+              {tools.map((tool, index) => (
+                <div key={tool.name} className="tool-card glass-card" style={{ 
+                  padding: '20px 12px', 
+                  textAlign: 'center', 
+                  display: 'flex', 
+                  flexDirection: 'column', 
+                  alignItems: 'center', 
+                  gap: '10px',
+                  background: 'var(--bg-card)',
+                  border: '1px solid var(--border-color)',
+                  borderRadius: 'var(--radius-md)'
+                }}>
+                  <div style={{ 
+                    width: '32px', 
+                    height: '32px', 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center'
+                  }}>
+                    <img src={tool.icon} alt={tool.name} className={tool.name === 'GitHub' || tool.name === 'Cursor' ? 'theme-icon-invert' : ''} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                  </div>
+                  <h4 style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', fontWeight: '600' }}>{tool.name}</h4>
                 </div>
-                <h4 style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', fontWeight: '500', width: '100%', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{tool.name}</h4>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
+
         </div>
       </div>
     </section>

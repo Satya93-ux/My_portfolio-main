@@ -69,11 +69,19 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`header${scrolled ? ' scrolled' : ''}`}>
+    <header className={`header${scrolled ? ' scrolled' : ''}`} style={{
+      background: scrolled ? 'var(--overlay-dark)' : 'transparent',
+      backdropFilter: scrolled ? 'blur(20px)' : 'none',
+      borderBottom: scrolled ? '1px solid var(--border-color)' : 'none'
+    }}>
       <nav className="nav">
         {/* Logo */}
-        <a href="#" className="nav-logo" onClick={closeMenu}>
-          Satya<span style={{ color: '#ec4899' }}>.</span>
+        <a href="#" className="nav-logo" onClick={closeMenu} style={{
+          fontSize: '1.6rem',
+          fontWeight: '800',
+          letterSpacing: '-1px'
+        }}>
+          <span className="text-gradient">Satya</span><span style={{ color: 'var(--primary)' }}>.</span>
         </a>
 
         {/* Nav Menu */}
@@ -85,11 +93,18 @@ const Header = () => {
                   href={item.href}
                   className={`nav-link${activeLink === item.href ? ' active' : ''}`}
                   onClick={closeMenu}
+                  style={{
+                    color: activeLink === item.href ? 'var(--text-primary)' : 'var(--text-secondary)',
+                    fontWeight: activeLink === item.href ? '600' : '500'
+                  }}
                 >
+                  <span style={{ 
+                    fontSize: '0.7rem', 
+                    color: 'var(--primary)', 
+                    marginRight: '6px',
+                    opacity: activeLink === item.href ? 1 : 0.6
+                  }}>{item.id}.</span>
                   {item.text}
-                  {activeLink === item.href && (
-                    <span className="active-dot"></span>
-                  )}
                 </a>
               </li>
             ))}
@@ -102,17 +117,44 @@ const Header = () => {
             onClick={toggleTheme}
             className="theme-toggle"
             aria-label="Toggle Theme"
+            style={{
+              width: '40px',
+              height: '40px',
+              borderRadius: '50%',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              background: 'rgba(var(--primary-rgb), 0.1)',
+              color: 'var(--primary)',
+              transition: 'var(--transition-normal)'
+            }}
           >
             <i className={theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon'}></i>
           </button>
-          <a href="#contact" className="nav-cta" onClick={closeMenu}>
+          
+          <a href="#contact" className="nav-cta" onClick={closeMenu} style={{
+            padding: '10px 24px',
+            borderRadius: 'var(--radius-full)',
+            background: 'var(--gradient-primary)',
+            color: '#fff',
+            fontWeight: '600',
+            fontSize: '0.9rem',
+            boxShadow: 'var(--glow-primary)',
+            display: window.innerWidth < 1024 ? 'none' : 'flex'
+          }}>
             Hire Me
           </a>
+
           <button
             className={`nav-toggle${menuActive ? ' active' : ''}`}
             id="navToggle"
             aria-label="Toggle Menu"
             onClick={toggleMenu}
+            style={{
+              background: 'rgba(var(--primary-rgb), 0.1)',
+              padding: '8px',
+              borderRadius: '8px'
+            }}
           >
             <span className="toggle-line"></span>
             <span className="toggle-line"></span>

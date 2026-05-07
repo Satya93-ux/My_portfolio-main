@@ -4,90 +4,102 @@ const Videos = () => {
   const videos = [
     {
       id: 1,
-      title: 'E-Commerce App - Complete Demo',
-      duration: '12:45',
-      views: '5.2K',
-      desc: 'Full walkthrough of the ShopEase app showing all features including product browsing, cart, checkout, and order tracking.',
-      tags: ['Flutter', 'Demo', 'E-Commerce'],
+      title: "Landing Page for a Company 'Hafor Tech'",
+      duration: '30 sec',
+      views: '2.5K views',
+      desc: "This is a landing page for a company 'Hafor Tech'. It is built using HTML, CSS, and JavaScript.",
       url: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
     },
     {
       id: 2,
-      title: 'Real-time Chat Implementation',
-      duration: '15:30',
-      views: '3.8K',
-      desc: 'Learn how I implemented real-time chat, stories, and video calling in the ConnectHub social media app.',
-      tags: ['Flutter', 'Socket.io', 'Chat'],
-      url: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
-    },
-    {
-      id: 3,
-      title: 'Flutter Animation Masterclass',
-      duration: '20:15',
-      views: '8.5K',
-      desc: 'Deep dive into creating stunning animations using AnimationController, Tween, and custom curves in Flutter.',
-      tags: ['Flutter', 'Tutorial', 'Animation'],
-      url: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
-    },
-    {
-      id: 4,
-      title: 'GetX State Management Guide',
-      duration: '25:00',
-      views: '12K',
-      desc: 'Complete guide to GetX state management - from basics to advanced patterns used in production apps.',
-      tags: ['Flutter', 'GetX', 'Tutorial'],
+      title: 'Aksient Chatting App',
+      duration: '1 min+',
+      views: '1.8K views',
+      desc: 'This chatting app is built using Flutter and Node.js. It is a real-time chatting app with features like messaging, group chatting, and file sharing.',
       url: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
     }
   ];
 
   return (
-    <section id="videos" className="videos">
+    <section id="videos" className="videos" style={{ padding: 'var(--section-padding) 0', background: 'var(--bg-dark)' }}>
       <div className="container">
-        <div className="section-label">
-          <span className="label-number">05</span>
-          <span className="label-text">Video Showcase</span>
-          <span className="label-line"></span>
-        </div>
-
-        <div className="videos-header">
-          <h2 className="section-title">Project Demos & Tutorials</h2>
-          <p className="section-subtitle">
-            Watch my project demonstrations and Flutter development tutorials
+        <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+          <div style={{ 
+            display: 'inline-block', 
+            padding: '6px 20px', 
+            background: 'rgba(var(--primary-rgb), 0.1)', 
+            borderRadius: '50px', 
+            color: 'var(--primary)',
+            fontSize: '0.75rem',
+            fontWeight: '700',
+            textTransform: 'uppercase',
+            letterSpacing: '2px',
+            marginBottom: '15px'
+          }}>
+            WATCH
+          </div>
+          <div style={{ width: '60px', height: '4px', background: 'var(--gradient-primary)', margin: '0 auto 40px', borderRadius: '2px' }}></div>
+          <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', maxWidth: '800px', margin: '0 auto' }}>
+            Watch detailed walkthroughs and demos of my featured projects
           </p>
         </div>
 
-        <div className="videos-grid">
+        <div className="videos-grid" style={{ 
+          display: 'grid', 
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 450px), 1fr))', 
+          gap: '30px' 
+        }}>
           {videos.map(video => (
-            <div key={video.id} className="video-card">
-              <div className="video-thumbnail">
-                <div className="video-embed">
-                  <iframe 
-                    src={video.url} 
-                    title={video.title}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowFullScreen>
-                  </iframe>
-                </div>
+            <div key={video.id} className="video-card glass-card" style={{ 
+              background: 'var(--bg-card)', 
+              borderRadius: 'var(--radius-lg)', 
+              overflow: 'hidden',
+              border: '1px solid var(--border-color)',
+              display: 'flex',
+              flexDirection: 'column'
+            }}>
+              <div className="video-thumbnail" style={{ position: 'relative', width: '100%', aspectRatio: '16/9' }}>
+                <iframe 
+                  src={video.url} 
+                  title={video.title}
+                  style={{ width: '100%', height: '100%', border: 'none' }}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowFullScreen>
+                </iframe>
               </div>
-              <div className="video-info">
-                <div className="video-meta">
-                  <span className="video-duration"><i className="fas fa-clock"></i> {video.duration}</span>
-                  <span className="video-views"><i className="fas fa-eye"></i> {video.views} views</span>
-                </div>
-                <h3 className="video-title">{video.title}</h3>
-                <p className="video-description">{video.desc}</p>
-                <div className="video-tags">
-                  {video.tags.map(tag => <span key={tag}>{tag}</span>)}
+              <div className="video-info" style={{ padding: '25px', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+                <h3 className="video-title" style={{ fontSize: '1.3rem', fontWeight: '800', color: 'var(--text-primary)', marginBottom: '12px' }}>{video.title}</h3>
+                <p className="video-description" style={{ fontSize: '0.95rem', color: 'var(--text-secondary)', lineHeight: '1.6', marginBottom: '20px' }}>{video.desc}</p>
+                
+                <div className="video-meta" style={{ marginTop: 'auto', display: 'flex', gap: '20px', paddingTop: '15px', borderTop: '1px solid var(--border-color-muted)' }}>
+                  <span className="video-duration" style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.85rem', color: 'var(--text-muted)', fontWeight: '600' }}>
+                    <i className="fas fa-clock" style={{ color: 'var(--primary)' }}></i> {video.duration}
+                  </span>
+                  <span className="video-views" style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.85rem', color: 'var(--text-muted)', fontWeight: '600' }}>
+                    <i className="fas fa-eye" style={{ color: 'var(--primary)' }}></i> {video.views}
+                  </span>
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="videos-cta">
-          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="btn-outline">
+        <div className="videos-cta" style={{ marginTop: '50px', textAlign: 'center' }}>
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{
+            padding: '14px 32px',
+            borderRadius: 'var(--radius-full)',
+            background: 'var(--bg-card)',
+            color: 'var(--text-primary)',
+            border: '1px solid var(--border-color)',
+            fontWeight: '700',
+            fontSize: '0.9rem',
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '12px',
+            transition: 'var(--transition-normal)'
+          }}>
             <span className="btn-text">Watch More on YouTube</span>
-            <span className="btn-icon"><i className="fab fa-youtube"></i></span>
+            <span className="btn-icon"><i className="fab fa-youtube" style={{ color: '#ff0000' }}></i></span>
           </a>
         </div>
       </div>

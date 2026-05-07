@@ -2,119 +2,211 @@ import React from 'react';
 
 const Contact = () => {
   return (
-    <section id="contact" className="contact">
+    <section id="contact" className="contact" style={{ padding: 'var(--section-padding) 0', position: 'relative' }}>
       <div className="container">
         <div className="section-label">
           <span className="label-number">06</span>
-          <span className="label-text">Get In Touch</span>
+          <span className="label-text">Contact</span>
           <span className="label-line"></span>
         </div>
 
-        <div className="contact-content">
+        <div className="contact-content" style={{ 
+          display: 'grid', 
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))', 
+          gap: 'clamp(40px, 6vw, 80px)',
+          alignItems: 'start'
+        }}>
+          
           <div className="contact-left">
-            <h2 className="contact-title">
-              Let's work together on your next project
-            </h2>
-            <p className="contact-text">
-              Have a project in mind? I'd love to hear about it. Let's discuss 
-              how I can help you build an amazing mobile application that your 
-              users will love.
+            <h2 className="section-title" style={{ marginBottom: '25px' }}>Let's Build Something <span className="text-gradient">Extraordinary</span></h2>
+            <p className="section-subtitle" style={{ marginBottom: '40px' }}>
+              Have a visionary project in mind? I'd love to hear about it. Let's discuss 
+              how we can transform your ideas into a high-performance digital reality.
             </p>
 
-            <div className="contact-info-list">
-              <div className="contact-info-item">
-                <div className="info-icon">
+            <div className="contact-info-list" style={{ display: 'flex', flexDirection: 'column', gap: '30px', marginBottom: '50px' }}>
+              <div className="contact-info-item" style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                <div style={{ 
+                  width: '60px', 
+                  height: '60px', 
+                  background: 'rgba(var(--primary-rgb), 0.1)', 
+                  border: '1px solid rgba(var(--primary-rgb), 0.2)', 
+                  borderRadius: '16px', 
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  justifyContent: 'center',
+                  color: 'var(--primary)',
+                  fontSize: '1.4rem'
+                }}>
                   <i className="fas fa-envelope"></i>
                 </div>
-                <div className="info-content">
-                  <span className="info-label">Email</span>
-                  <a href="mailto:sk9334069077@gmail.com" className="info-value">sk9334069077@gmail.com</a>
+                <div>
+                  <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700', display: 'block', marginBottom: '4px' }}>Email Me</span>
+                  <a href="mailto:sk9334069077@gmail.com" style={{ fontSize: '1.1rem', fontWeight: '600', color: 'var(--text-primary)', transition: 'var(--transition-normal)' }} onMouseOver={e => e.currentTarget.style.color = 'var(--primary)'} onMouseOut={e => e.currentTarget.style.color = 'var(--text-primary)'}>sk9334069077@gmail.com</a>
                 </div>
               </div>
 
-              <div className="contact-info-item">
-                <div className="info-icon">
+              <div className="contact-info-item" style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                <div style={{ 
+                  width: '60px', 
+                  height: '60px', 
+                  background: 'rgba(var(--primary-rgb), 0.1)', 
+                  border: '1px solid rgba(var(--primary-rgb), 0.2)', 
+                  borderRadius: '16px', 
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  justifyContent: 'center',
+                  color: 'var(--primary)',
+                  fontSize: '1.4rem'
+                }}>
                   <i className="fas fa-phone-alt"></i>
                 </div>
-                <div className="info-content">
-                  <span className="info-label">Phone</span>
-                  <a href="tel:+919504875565" className="info-value">+91 9504875565</a>
+                <div>
+                  <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700', display: 'block', marginBottom: '4px' }}>Call Me</span>
+                  <a href="tel:+919504875565" style={{ fontSize: '1.1rem', fontWeight: '600', color: 'var(--text-primary)', transition: 'var(--transition-normal)' }} onMouseOver={e => e.currentTarget.style.color = 'var(--primary)'} onMouseOut={e => e.currentTarget.style.color = 'var(--text-primary)'}>+91 9504875565</a>
                 </div>
               </div>
 
-              <div className="contact-info-item">
-                <div className="info-icon">
+              <div className="contact-info-item" style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                <div style={{ 
+                  width: '60px', 
+                  height: '60px', 
+                  background: 'rgba(var(--primary-rgb), 0.1)', 
+                  border: '1px solid rgba(var(--primary-rgb), 0.2)', 
+                  borderRadius: '16px', 
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  justifyContent: 'center',
+                  color: 'var(--primary)',
+                  fontSize: '1.4rem'
+                }}>
                   <i className="fas fa-map-marker-alt"></i>
                 </div>
-                <div className="info-content">
-                  <span className="info-label">Location</span>
-                  <span className="info-value">Jaipur, Rajasthan, India</span>
+                <div>
+                  <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700', display: 'block', marginBottom: '4px' }}>Location</span>
+                  <span style={{ fontSize: '1.1rem', fontWeight: '600', color: 'var(--text-primary)' }}>Jaipur, Rajasthan, India</span>
                 </div>
               </div>
             </div>
 
-            <div className="contact-social">
-              <span className="social-label">Connect with me</span>
-              <div className="social-icons">
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-                  <i className="fab fa-github"></i>
-                </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-                  <i className="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://www.instagram.com/satyaa_9334?igsh=MW92bjNiOXpycHNwMw==" target="_blank" rel="noopener noreferrer" className="social-icon">
-                  <i className="fab fa-instagram"></i>
-                </a>
-                <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-                  <i className="fab fa-dribbble"></i>
-                </a>
+            <div className="contact-social" style={{ borderTop: '1px solid var(--border-color)', paddingTop: '35px' }}>
+              <span style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginBottom: '20px', display: 'block', fontWeight: '600' }}>Social Profiles</span>
+              <div style={{ display: 'flex', gap: '15px' }}>
+                {[
+                  { icon: 'fab fa-github', url: 'https://github.com' },
+                  { icon: 'fab fa-linkedin-in', url: 'https://linkedin.com' },
+                  { icon: 'fab fa-instagram', url: 'https://www.instagram.com/satyaa_9334' },
+                  { icon: 'fab fa-twitter', url: 'https://twitter.com' }
+                ].map((item, i) => (
+                  <a key={i} href={item.url} target="_blank" rel="noopener noreferrer" style={{ 
+                    width: '50px', 
+                    height: '50px', 
+                    borderRadius: '50%', 
+                    background: 'var(--bg-card)', 
+                    border: '1px solid var(--border-color)', 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center',
+                    color: 'var(--text-secondary)',
+                    fontSize: '1.2rem',
+                    transition: 'var(--transition-normal)'
+                  }} onMouseOver={e => {
+                    e.currentTarget.style.background = 'var(--primary)';
+                    e.currentTarget.style.color = '#fff';
+                    e.currentTarget.style.transform = 'translateY(-5px)';
+                  }} onMouseOut={e => {
+                    e.currentTarget.style.background = 'var(--bg-card)';
+                    e.currentTarget.style.color = 'var(--text-secondary)';
+                    e.currentTarget.style.transform = 'translateY(0)';
+                  }}>
+                    <i className={item.icon}></i>
+                  </a>
+                ))}
               </div>
             </div>
           </div>
 
           <div className="contact-right">
-            <form className="contact-form" id="contactForm">
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="name" className="form-label">Your Name</label>
-                  <input type="text" id="name" name="name" className="form-input" required />
-                  <span className="form-highlight"></span>
+            <form className="contact-form glass-card" style={{ 
+              padding: '45px', 
+              background: 'var(--bg-card)', 
+              borderRadius: 'var(--radius-xl)',
+              border: '1px solid var(--border-color)',
+              boxShadow: 'var(--shadow-xl)'
+            }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '20px', marginBottom: '25px' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  <label style={{ fontSize: '0.85rem', fontWeight: '600', color: 'var(--text-secondary)' }}>Full Name</label>
+                  <input type="text" placeholder="John Doe" style={{ 
+                    padding: '16px 20px', 
+                    background: 'var(--bg-darker)', 
+                    border: '1px solid var(--border-color)', 
+                    borderRadius: '12px', 
+                    color: 'var(--text-primary)',
+                    fontSize: '1rem',
+                    outline: 'none'
+                  }} onFocus={e => e.target.style.borderColor = 'var(--primary)'} onBlur={e => e.target.style.borderColor = 'var(--border-color)'} />
                 </div>
-                <div className="form-group">
-                  <label htmlFor="email" className="form-label">Your Email</label>
-                  <input type="email" id="email" name="email" className="form-input" required />
-                  <span className="form-highlight"></span>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  <label style={{ fontSize: '0.85rem', fontWeight: '600', color: 'var(--text-secondary)' }}>Email Address</label>
+                  <input type="email" placeholder="john@example.com" style={{ 
+                    padding: '16px 20px', 
+                    background: 'var(--bg-darker)', 
+                    border: '1px solid var(--border-color)', 
+                    borderRadius: '12px', 
+                    color: 'var(--text-primary)',
+                    fontSize: '1rem',
+                    outline: 'none'
+                  }} onFocus={e => e.target.style.borderColor = 'var(--primary)'} onBlur={e => e.target.style.borderColor = 'var(--border-color)'} />
                 </div>
               </div>
 
-              <div className="form-group">
-                <label htmlFor="subject" className="form-label">Subject</label>
-                <input type="text" id="subject" name="subject" className="form-input" required />
-                <span className="form-highlight"></span>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '25px' }}>
+                <label style={{ fontSize: '0.85rem', fontWeight: '600', color: 'var(--text-secondary)' }}>Subject</label>
+                <input type="text" placeholder="Project Inquiry" style={{ 
+                  padding: '16px 20px', 
+                  background: 'var(--bg-darker)', 
+                  border: '1px solid var(--border-color)', 
+                  borderRadius: '12px', 
+                  color: 'var(--text-primary)',
+                  fontSize: '1rem',
+                  outline: 'none'
+                }} onFocus={e => e.target.style.borderColor = 'var(--primary)'} onBlur={e => e.target.style.borderColor = 'var(--border-color)'} />
               </div>
 
-              <div className="form-group">
-                <label htmlFor="message" className="form-label">Your Message</label>
-                <textarea id="message" name="message" className="form-input form-textarea" rows="5" required></textarea>
-                <span className="form-highlight"></span>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '35px' }}>
+                <label style={{ fontSize: '0.85rem', fontWeight: '600', color: 'var(--text-secondary)' }}>Message</label>
+                <textarea placeholder="Tell me about your project..." rows="5" style={{ 
+                  padding: '16px 20px', 
+                  background: 'var(--bg-darker)', 
+                  border: '1px solid var(--border-color)', 
+                  borderRadius: '12px', 
+                  color: 'var(--text-primary)',
+                  fontSize: '1rem',
+                  outline: 'none',
+                  resize: 'none'
+                }} onFocus={e => e.target.style.borderColor = 'var(--primary)'} onBlur={e => e.target.style.borderColor = 'var(--border-color)'}></textarea>
               </div>
 
-              <button type="submit" className="btn-primary form-submit">
-                <span className="btn-text">Send Message</span>
-                <span className="btn-icon"><i className="fas fa-paper-plane"></i></span>
+              <button type="submit" className="btn-primary" style={{ 
+                width: '100%', 
+                padding: '18px', 
+                borderRadius: '14px', 
+                background: 'var(--gradient-primary)', 
+                color: '#fff', 
+                fontWeight: '700', 
+                fontSize: '1rem',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '12px',
+                boxShadow: 'var(--glow-primary)',
+                transition: 'var(--transition-normal)'
+              }}>
+                <span>Send Message</span>
+                <i className="fas fa-paper-plane" style={{ fontSize: '0.9rem' }}></i>
               </button>
             </form>
-
-            <div className="form-success" id="formSuccess">
-              <div className="success-animation">
-                <svg className="checkmark" viewBox="0 0 52 52">
-                  <circle className="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
-                  <path className="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
-                </svg>
-              </div>
-              <h3>Message Sent!</h3>
-              <p>Thank you for reaching out. I'll get back to you within 24 hours.</p>
-            </div>
           </div>
         </div>
       </div>

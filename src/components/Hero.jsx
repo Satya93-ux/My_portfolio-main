@@ -42,7 +42,8 @@ const Hero = () => {
         typingSpeed = 500;
       }
       
-      setTimeout(type, typingSpeed);
+      const timeoutId = setTimeout(type, typingSpeed);
+      return timeoutId;
     }
     
     const timeoutId = setTimeout(type, 1000);
@@ -55,7 +56,7 @@ const Hero = () => {
         <div className="hero-content" style={{ 
           display: 'grid', 
           gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))', 
-          gap: 'clamp(30px, 5vw, 60px)', 
+          gap: 'clamp(40px, 6vw, 80px)', 
           alignItems: 'center',
           justifyContent: 'center',
           maxWidth: '1200px',
@@ -67,95 +68,95 @@ const Hero = () => {
             {/* Available for Work Badge */}
             <div className="hero-badge" style={{ 
               maxWidth: 'fit-content', 
-              padding: '6px 14px', 
-              borderRadius: '50px',
-              background: 'var(--border-color-muted)',
-              border: '1px solid var(--border-color)',
+              padding: '8px 16px', 
+              borderRadius: 'var(--radius-full)',
+              background: 'rgba(var(--primary-rgb), 0.1)',
+              border: '1px solid rgba(var(--primary-rgb), 0.2)',
               display: 'flex',
               alignItems: 'center',
-              gap: '8px',
-              marginBottom: '15px',
-              margin: window.innerWidth < 1024 ? '0 auto 15px' : '0 0 15px'
+              gap: '10px',
+              marginBottom: '20px',
+              margin: window.innerWidth < 1024 ? '0 auto 20px' : '0 0 20px'
             }}>
-              <span className="badge-dot" style={{ width: '6px', height: '6px', background: 'var(--secondary)', borderRadius: '50%', boxShadow: '0 0 10px var(--secondary)' }}></span>
-              <span style={{ fontWeight: 600, fontSize: '0.75rem', color: 'var(--text-primary)' }}>Available for Work</span>
+              <span className="badge-dot" style={{ width: '8px', height: '8px', background: 'var(--success)', borderRadius: '50%', boxShadow: '0 0 10px var(--success)' }}></span>
+              <span style={{ fontWeight: 600, fontSize: '0.8rem', color: 'var(--text-primary)', letterSpacing: '0.5px' }}>Available for New Projects</span>
             </div>
             
-            <p style={{ fontSize: '1rem', marginBottom: '5px', color: 'var(--text-secondary)' }}>Hello, I'm</p>
+            <p style={{ fontSize: '1.1rem', marginBottom: '10px', color: 'var(--text-secondary)', fontWeight: '500' }}>Hello, I'm</p>
             
             <h1 style={{ 
-              fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', 
+              fontSize: 'clamp(2rem, 5vw, 3.5rem)', 
               fontWeight: '900', 
-              lineHeight: '1.2',
-              marginBottom: '8px',
-              color: 'var(--primary)',
-              letterSpacing: '-1px'
+              lineHeight: '1.1',
+              marginBottom: '15px',
+              color: 'var(--text-primary)',
+              letterSpacing: '-1.5px'
             }}>
-              Satyaprakash Upadhyay
+              Satyaprakash <span className="text-gradient">Upadhyay</span>
             </h1>
 
             <h2 style={{ 
-              fontSize: 'clamp(1.1rem, 3.5vw, 1.6rem)', 
-              fontWeight: '800', 
-              marginBottom: '20px', 
+              fontSize: 'clamp(1.2rem, 4vw, 1.8rem)', 
+              fontWeight: '700', 
+              marginBottom: '25px', 
               display: 'flex', 
               alignItems: 'center', 
-              color: 'var(--text-primary)', 
+              color: 'var(--text-secondary)', 
               flexWrap: 'wrap',
               minHeight: '1.6em',
               lineHeight: '1.4',
               justifyContent: window.innerWidth < 1024 ? 'center' : 'flex-start'
             }}>
               I'm a <span ref={roleTextRef} style={{ 
-                marginLeft: '10px', 
+                marginLeft: '12px', 
                 color: 'var(--primary)', 
                 borderRight: '3px solid var(--primary)', 
-                paddingRight: '5px',
+                paddingRight: '8px',
                 animation: 'blink-caret 0.75s step-end infinite'
               }}></span>
             </h2>
 
             <p style={{ 
-              fontSize: '0.95rem', 
-              lineHeight: '1.6', 
-              maxWidth: '520px', 
+              fontSize: '1.05rem', 
+              lineHeight: '1.7', 
+              maxWidth: '560px', 
               color: 'var(--text-secondary)',
-              marginBottom: '35px',
-              margin: window.innerWidth < 1024 ? '0 auto 35px' : '0 0 35px'
+              marginBottom: '40px',
+              margin: window.innerWidth < 1024 ? '0 auto 40px' : '0 0 40px'
             }}>
-              Passionate Flutter Developer and Vibe Coder crafting beautiful mobile applications. I also build full-stack websites and robust backend systems with the power of AI. Turning ideas into reality, one widget and prompt at a time.
+              Passionate Flutter Developer and Vibe Coder crafting elegant mobile experiences. Specialized in building full-stack applications and intelligent systems powered by cutting-edge AI.
             </p>
 
             <div className="hero-actions" style={{ 
               display: 'flex', 
-              gap: 'clamp(10px, 2vw, 20px)', 
-              marginBottom: '40px', 
+              gap: '16px', 
+              marginBottom: '50px', 
               flexWrap: 'wrap',
               justifyContent: window.innerWidth < 1024 ? 'center' : 'flex-start'
             }}>
-              <a href="#work" style={{ 
-                padding: '14px 30px', 
-                borderRadius: '50px', 
-                background: 'linear-gradient(90deg, #3b82f6, #06b6d4)',
+              <a href="#work" className="btn-primary" style={{ 
+                padding: '16px 36px', 
+                borderRadius: 'var(--radius-full)', 
+                background: 'var(--gradient-primary)',
                 color: '#fff',
                 fontWeight: '700',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 gap: '12px',
-                boxShadow: '0 10px 20px rgba(59, 130, 246, 0.3)',
+                boxShadow: 'var(--glow-primary)',
                 textDecoration: 'none',
-                fontSize: '0.9rem',
-                flex: '0 1 auto',
-                minWidth: '160px'
+                fontSize: '0.95rem',
+                minWidth: '180px',
+                transition: 'var(--transition-normal)'
               }}>
-                View My Work <i className="fas fa-arrow-right"></i>
+                View My Work <i className="fas fa-arrow-right" style={{ fontSize: '0.8rem' }}></i>
               </a>
               <a href="#contact" style={{ 
-                padding: '14px 30px', 
-                borderRadius: '50px', 
+                padding: '16px 36px', 
+                borderRadius: 'var(--radius-full)', 
                 border: '1px solid var(--border-color)',
-                background: 'var(--border-color-muted)',
+                background: 'var(--bg-card)',
                 color: 'var(--text-primary)',
                 fontWeight: '700',
                 display: 'flex',
@@ -163,79 +164,94 @@ const Hero = () => {
                 justifyContent: 'center',
                 gap: '12px',
                 textDecoration: 'none',
-                fontSize: '0.9rem',
-                flex: '0 1 auto',
-                minWidth: '160px'
+                fontSize: '0.95rem',
+                minWidth: '180px',
+                transition: 'var(--transition-normal)'
+              }} onMouseOver={e => {
+                e.currentTarget.style.borderColor = 'var(--primary)';
+                e.currentTarget.style.background = 'rgba(var(--primary-rgb), 0.05)';
+              }} onMouseOut={e => {
+                e.currentTarget.style.borderColor = 'var(--border-color)';
+                e.currentTarget.style.background = 'var(--bg-card)';
               }}>
-                Let's Talk <i className="fas fa-comment-dots"></i>
+                Let's Connect <i className="fas fa-comment-dots" style={{ fontSize: '0.8rem' }}></i>
               </a>
             </div>
 
             <div className="hero-stats" style={{ 
               display: 'flex', 
-              gap: 'clamp(15px, 4vw, 35px)', 
+              gap: 'clamp(20px, 5vw, 45px)', 
               alignItems: 'center',
               justifyContent: window.innerWidth < 1024 ? 'center' : 'flex-start'
             }}>
               <div style={{ textAlign: 'center' }}>
-                <span style={{ fontSize: '1.8rem', fontWeight: '900', color: 'var(--primary)', display: 'block', lineHeight: '1' }}>5+</span>
-                <p style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '8px', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700' }}>Projects</p>
+                <span className="text-gradient" style={{ fontSize: '2.2rem', fontWeight: '900', display: 'block', lineHeight: '1' }}>5+</span>
+                <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '10px', textTransform: 'uppercase', letterSpacing: '1.5px', fontWeight: '700' }}>Projects</p>
               </div>
-              <div style={{ width: '1px', height: '30px', background: 'rgba(255, 255, 255, 0.1)' }}></div>
+              <div style={{ width: '1px', height: '40px', background: 'var(--border-color)' }}></div>
               <div style={{ textAlign: 'center' }}>
-                <span style={{ fontSize: '1.8rem', fontWeight: '900', color: 'var(--primary)', display: 'block', lineHeight: '1' }}>10+</span>
-                <p style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '8px', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700' }}>Clients</p>
+                <span className="text-gradient" style={{ fontSize: '2.2rem', fontWeight: '900', display: 'block', lineHeight: '1' }}>10+</span>
+                <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '10px', textTransform: 'uppercase', letterSpacing: '1.5px', fontWeight: '700' }}>Clients</p>
               </div>
-              <div style={{ width: '1px', height: '30px', background: 'rgba(255, 255, 255, 0.1)' }}></div>
+              <div style={{ width: '1px', height: '40px', background: 'var(--border-color)' }}></div>
               <div style={{ textAlign: 'center' }}>
-                <span style={{ fontSize: '1.8rem', fontWeight: '900', color: 'var(--primary)', display: 'block', lineHeight: '1' }}>6+</span>
-                <p style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '8px', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700' }}>Months Exp</p>
+                <span className="text-gradient" style={{ fontSize: '2.2rem', fontWeight: '900', display: 'block', lineHeight: '1' }}>6+</span>
+                <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '10px', textTransform: 'uppercase', letterSpacing: '1.5px', fontWeight: '700' }}>Experience</p>
               </div>
             </div>
           </div>
 
           {/* Profile Image on the Right */}
           <div className="hero-right" style={{ order: window.innerWidth < 1024 ? 1 : 2 }}>
-            <div className="hero-image-container" style={{ position: 'relative', width: 'clamp(200px, 30vw, 320px)', height: 'clamp(200px, 30vw, 320px)', margin: '0 auto' }}>
+            <div className="hero-image-container" style={{ position: 'relative', width: 'clamp(240px, 35vw, 380px)', height: 'clamp(240px, 35vw, 380px)', margin: '0 auto' }}>
               {/* Circular Image Frame */}
               <div style={{ 
                 width: '100%', 
                 height: '100%', 
                 borderRadius: '50%', 
-                border: '4px solid var(--primary)',
-                padding: '6px',
-                background: 'rgba(var(--primary-rgb), 0.1)',
-                boxShadow: 'var(--glow-primary)',
+                border: '1px solid rgba(var(--primary-rgb), 0.3)',
+                padding: '12px',
+                background: 'rgba(var(--primary-rgb), 0.03)',
                 position: 'relative',
-                overflow: 'hidden',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center'
+                justifyContent: 'center',
+                boxShadow: 'var(--shadow-xl)'
               }}>
-                <img 
-                  src={myImage} 
-                  alt="Satyaprakash Upadhyay" 
-                  style={{ 
-                    width: '100%', 
-                    height: '100%', 
-                    objectFit: 'cover',
-                    objectPosition: 'center 20%',
-                    borderRadius: '50%',
-                    filter: 'contrast(1.05)'
-                  }} 
-                />
+                <div style={{
+                  width: '100%',
+                  height: '100%',
+                  borderRadius: '50%',
+                  overflow: 'hidden',
+                  border: '4px solid var(--primary)',
+                  boxShadow: 'var(--glow-primary)',
+                }}>
+                  <img 
+                    src={myImage} 
+                    alt="Satyaprakash Upadhyay" 
+                    style={{ 
+                      width: '100%', 
+                      height: '100%', 
+                      objectFit: 'cover',
+                      objectPosition: 'center 20%',
+                      borderRadius: '50%',
+                      filter: 'contrast(1.05) brightness(1.02)'
+                    }} 
+                  />
+                </div>
               </div>
               
-              {/* Decorative dotted circle */}
+              {/* Decorative elements */}
               <div style={{
                 position: 'absolute',
-                top: '-5%',
-                left: '-5%',
-                width: '110%',
-                height: '110%',
-                border: '1px dashed rgba(var(--primary-rgb), 0.3)',
+                top: '-8%',
+                left: '-8%',
+                width: '116%',
+                height: '116%',
+                border: '1px dashed rgba(var(--primary-rgb), 0.2)',
                 borderRadius: '50%',
-                zIndex: '-1'
+                zIndex: '-1',
+                animation: 'spin 60s linear infinite'
               }}></div>
             </div>
           </div>
