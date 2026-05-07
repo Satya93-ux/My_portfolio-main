@@ -188,6 +188,7 @@ function initTestimonialsSlider() {
 
 
   function update() {
+    if (!track) return;
     track.style.transform = `translateX(-${current * 100}%)`;
   }
 
@@ -197,26 +198,72 @@ function initTestimonialsSlider() {
     reset();
   }
 
-  function next() { current = (current + 1) % total; update(); }
-  function prev() { current = (current - 1 + total) % total; update(); }
+  function next() {
+    current = (current + 1) % total;
+    update();
+  }
 
-  function start() { autoplay = setInterval(next, 5000); }
-  function stop()  { clearInterval(autoplay); }
-  function reset() { stop(); start(); }
+  function prev() {
+    current = (current - 1 + total) % total;
+    update();
+  }
 
-  if (prevBtn) prevBtn.addEventListener('click', () => { prev(); reset(); });
-  if (nextBtn) nextBtn.addEventListener('click', () => { next(); reset(); });
+  function start() {
+    stop(); // Always stop before starting to avoid leaks
+    autoplay = setInterval(next, 5000);
+  }
+
+  function stop() {
+    if (autoplay) {
+      clearInterval(autoplay);
+      autoplay = null;
+    }
+  }
+
+  function reset() {
+    stop();
+    start();
+  }
+
+  if (prevBtn) {
+    prevBtn.onclick = (e) => {
+      e.preventDefault();
+      prev();
+      reset();
+    };
+  }
+  
+  if (nextBtn) {
+    nextBtn.onclick = (e) => {
+      e.preventDefault();
+      next();
+      reset();
+    };
+  }
 
   slider.addEventListener('mouseenter', stop);
   slider.addEventListener('mouseleave', start);
 
-  // Touch
+  // Touch support for mobile devices
   let touchStart = 0;
-  track.addEventListener('touchstart', (e) => { touchStart = e.changedTouches[0].screenX; stop(); }, { passive: true });
+  let touchEnd = 0;
+
+  track.addEventListener('touchstart', (e) => {
+    touchStart = e.changedTouches[0].screenX;
+    stop();
+  }, { passive: true });
+
   track.addEventListener('touchend', (e) => {
-    const diff = touchStart - e.changedTouches[0].screenX;
-    if (Math.abs(diff) > 50) diff > 0 ? next() : prev();
-    start();
+    touchEnd = e.changedTouches[0].screenX;
+    const diff = touchStart - touchEnd;
+    
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) next();
+      else prev();
+      reset();
+    } else {
+      start();
+    }
   }, { passive: true });
 
   start();
