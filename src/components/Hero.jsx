@@ -54,36 +54,102 @@ const Hero = () => {
       <div className="container">
         <div className="hero-content" style={{ 
           display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))', 
-          gap: 'clamp(40px, 6vw, 80px)', 
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))', 
+          gap: 'clamp(30px, 5vw, 60px)', 
           alignItems: 'center',
-          justifyContent: 'center'
+          justifyContent: 'center',
+          maxWidth: '1200px',
+          margin: '0 auto'
         }}>
           
-          <div className="hero-left">
+          {/* Profile Image on the Left */}
+          <div className="hero-left" style={{ order: window.innerWidth < 1024 ? 1 : 1 }}>
+            <div className="hero-image-container" style={{ position: 'relative', width: 'clamp(200px, 30vw, 320px)', height: 'clamp(200px, 30vw, 320px)', margin: '0 auto' }}>
+              {/* Circular Image Frame */}
+              <div style={{ 
+                width: '100%', 
+                height: '100%', 
+                borderRadius: '50%', 
+                border: '4px solid var(--primary)',
+                padding: '6px',
+                background: 'rgba(var(--primary-rgb), 0.1)',
+                boxShadow: 'var(--glow-primary)',
+                position: 'relative',
+                overflow: 'hidden',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}>
+                <img 
+                  src={myImage} 
+                  alt="Satyaprakash Upadhyay" 
+                  style={{ 
+                    width: '100%', 
+                    height: '100%', 
+                    objectFit: 'cover',
+                    objectPosition: 'center 20%',
+                    borderRadius: '50%',
+                    filter: 'contrast(1.05)'
+                  }} 
+                />
+              </div>
+              
+              {/* Decorative dotted circle */}
+              <div style={{
+                position: 'absolute',
+                top: '-5%',
+                left: '-5%',
+                width: '110%',
+                height: '110%',
+                border: '1px dashed rgba(var(--primary-rgb), 0.3)',
+                borderRadius: '50%',
+                zIndex: '-1'
+              }}></div>
+            </div>
+            
+            {/* Scroll Down Indicator below image (Desktop) */}
+            <div className="desktop-only" style={{ 
+              marginTop: '20px', 
+              textAlign: 'center', 
+              opacity: '0.6',
+              display: window.innerWidth < 1024 ? 'none' : 'block'
+            }}>
+              <span style={{ 
+                fontSize: '0.65rem', 
+                textTransform: 'uppercase', 
+                letterSpacing: '2px', 
+                fontWeight: '700', 
+                color: 'var(--text-primary)' 
+              }}>Scroll Down</span>
+            </div>
+          </div>
+
+          {/* Content on the Right */}
+          <div className="hero-right" style={{ order: window.innerWidth < 1024 ? 2 : 2, textAlign: window.innerWidth < 1024 ? 'center' : 'left' }}>
             {/* Available for Work Badge */}
             <div className="hero-badge" style={{ 
               maxWidth: 'fit-content', 
-              padding: '8px 16px', 
+              padding: '6px 14px', 
               borderRadius: '50px',
               background: 'var(--border-color-muted)',
               border: '1px solid var(--border-color)',
               display: 'flex',
               alignItems: 'center',
               gap: '8px',
-              marginBottom: '20px'
+              marginBottom: '15px',
+              margin: window.innerWidth < 1024 ? '0 auto 15px' : '0 0 15px'
             }}>
-              <span className="badge-dot" style={{ width: '8px', height: '8px', background: 'var(--secondary)', borderRadius: '50%', boxShadow: '0 0 10px var(--secondary)' }}></span>
-              <span style={{ fontWeight: 600, fontSize: '0.85rem', color: 'var(--text-primary)' }}>Available for Work</span>
+              <span className="badge-dot" style={{ width: '6px', height: '6px', background: 'var(--secondary)', borderRadius: '50%', boxShadow: '0 0 10px var(--secondary)' }}></span>
+              <span style={{ fontWeight: 600, fontSize: '0.75rem', color: 'var(--text-primary)' }}>Available for Work</span>
             </div>
             
-            <p style={{ fontSize: '1.1rem', marginBottom: '8px', color: 'var(--text-secondary)' }}>Hello, I'm</p>
+            <p style={{ fontSize: '1rem', marginBottom: '5px', color: 'var(--text-secondary)' }}>Hello, I'm</p>
             
             <h1 style={{ 
-              fontSize: 'clamp(1.8rem, 5vw, 3.2rem)', 
+              fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', 
               fontWeight: '900', 
-              lineHeight: '1.1',
-              marginBottom: '10px',
+              lineHeight: '1.2',
+              marginBottom: '8px',
               color: 'var(--primary)',
               letterSpacing: '-1px'
             }}>
@@ -159,7 +225,12 @@ const Hero = () => {
               </a>
             </div>
 
-            <div className="hero-stats" style={{ display: 'flex', gap: 'clamp(15px, 4vw, 35px)', alignItems: 'center' }}>
+            <div className="hero-stats" style={{ 
+              display: 'flex', 
+              gap: 'clamp(15px, 4vw, 35px)', 
+              alignItems: 'center',
+              justifyContent: window.innerWidth < 1024 ? 'center' : 'flex-start'
+            }}>
               <div style={{ textAlign: 'center' }}>
                 <span style={{ fontSize: '1.8rem', fontWeight: '900', color: 'var(--primary)', display: 'block', lineHeight: '1' }}>5+</span>
                 <p style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '8px', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700' }}>Projects</p>
@@ -184,52 +255,6 @@ const Hero = () => {
               <span style={{ fontSize: '0.65rem', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: '700', color: 'var(--text-primary)' }}>Scroll Down</span>
             </a>
           </div>
-
-          <div className="hero-right">
-            <div className="hero-image-container" style={{ position: 'relative', width: 'clamp(240px, 35vw, 380px)', height: 'clamp(240px, 35vw, 380px)', margin: '0 auto' }}>
-              {/* Circular Image Frame */}
-              <div style={{ 
-                width: '100%', 
-                height: '100%', 
-                borderRadius: '50%', 
-                border: '6px solid var(--primary)',
-                padding: '8px',
-                background: 'rgba(var(--primary-rgb), 0.1)',
-                boxShadow: 'var(--glow-primary)',
-                position: 'relative',
-                overflow: 'hidden',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
-              }}>
-                <img 
-                  src={myImage} 
-                  alt="Satyaprakash Upadhyay" 
-                  style={{ 
-                    width: '100%', 
-                    height: '100%', 
-                    objectFit: 'cover',
-                    objectPosition: 'center 20%', // Adjusted to ensure face is visible
-                    borderRadius: '50%',
-                    filter: 'contrast(1.05)'
-                  }} 
-                />
-              </div>
-              
-              {/* Decorative dotted circle */}
-              <div style={{
-                position: 'absolute',
-                top: '-7%',
-                left: '-7%',
-                width: '114%',
-                height: '114%',
-                border: '1px dashed rgba(59, 130, 246, 0.2)',
-                borderRadius: '50%',
-                zIndex: '-1'
-              }}></div>
-            </div>
-          </div>
-
         </div>
       </div>
 
