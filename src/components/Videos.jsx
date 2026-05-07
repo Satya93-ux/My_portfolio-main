@@ -12,7 +12,7 @@ const Videos = () => {
     },
     {
       id: 2,
-      title: 'Aksient Chatting App',
+      title: 'Chatting App',
       duration: '1 min+',
       views: '1.8K views',
       desc: 'This chatting app is built using Flutter and Node.js. It is a real-time chatting app with features like messaging, group chatting, and file sharing.',
