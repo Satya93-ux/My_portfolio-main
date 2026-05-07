@@ -2,7 +2,7 @@ import React from 'react';
 
 const Skills = () => {
   const technicalSkills = [
-    { name: 'Flutter', percent: '85%', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" },
+    { name: 'Flutter', percent: '85%', icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCsywU_lTY2QHe0b9OHCDGHyyVwKb3OUtRxA&s" },
     { name: 'Dart', percent: '80%', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" },
     { name: 'Firebase', percent: '85%', icon: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" },
     { name: 'Android', percent: '75%', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" },
