@@ -6,8 +6,10 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-main">
-            <a href="#" className="nav-logo">
-              Satya<span style={{ color: 'var(--primary)' }}>.</span>
+            <a href="#" className="footer-logo">
+              <span className="logo-bracket">{'{'}</span>
+              <span className="logo-name">Satya</span>
+              <span className="logo-bracket">{'}'}</span>
             </a>
             <p className="footer-text">
               Flutter developer crafting beautiful mobile experiences. 

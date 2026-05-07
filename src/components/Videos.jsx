@@ -58,9 +58,9 @@ const Videos = () => {
 
         <div className="videos-grid">
           {videos.map(video => (
-            <div key={video.id} className="video-card glass-card reveal">
+            <div key={video.id} className="video-card">
               <div className="video-thumbnail">
-                <div className="video-embed-container">
+                <div className="video-embed">
                   <iframe 
                     src={video.url} 
                     title={video.title}
@@ -69,10 +69,10 @@ const Videos = () => {
                   </iframe>
                 </div>
               </div>
-              <div className="video-info-box">
+              <div className="video-info">
                 <div className="video-meta">
                   <span className="video-duration"><i className="fas fa-clock"></i> {video.duration}</span>
-                  <span className="video-views"><i className="fas fa-eye"></i> {video.views}</span>
+                  <span className="video-views"><i className="fas fa-eye"></i> {video.views} views</span>
                 </div>
                 <h3 className="video-title">{video.title}</h3>
                 <p className="video-description">{video.desc}</p>
@@ -85,9 +85,9 @@ const Videos = () => {
         </div>
 
         <div className="videos-cta">
-          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="btn-primary-gradient">
-            <span>Watch More on YouTube</span>
-            <i className="fab fa-youtube"></i>
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="btn-outline">
+            <span className="btn-text">Watch More on YouTube</span>
+            <span className="btn-icon"><i className="fab fa-youtube"></i></span>
           </a>
         </div>
       </div>

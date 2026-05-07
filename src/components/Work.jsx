@@ -104,7 +104,7 @@ const Work = () => {
 
         <div className="projects-grid">
           {filteredProjects.map((project, index) => (
-            <article key={project.id} className="project-card glass-card" data-category={project.category} style={{ '--delay': index }}>
+            <article key={project.id} className="project-card" data-category={project.category} style={{ '--delay': index }}>
               <div className="project-image" style={{ background: project.bgColor }}>
                 <img src={project.image} alt={project.title} />
                 <div className="project-overlay">
