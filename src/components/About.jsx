@@ -53,17 +53,17 @@ const About = () => {
               gap: '12px', 
               marginBottom: '25px' 
             }}>
-              <div style={{ background: 'var(--bg-card)', padding: '15px 10px', borderRadius: '12px', textAlign: 'center', border: '1px solid var(--border-color)', transition: '0.3s' }}>
+              <div className="glass-card" style={{ padding: '15px 10px', textAlign: 'center', transition: '0.3s' }}>
                 <i className="fas fa-award" style={{ fontSize: '1.2rem', color: 'var(--secondary)', marginBottom: '8px' }}></i>
                 <h3 style={{ fontSize: '0.85rem', fontWeight: '700', color: 'var(--text-primary)', marginBottom: '2px' }}>Experience</h3>
                 <p style={{ fontSize: '0.7rem', color: 'var(--text-muted)', fontWeight: '500' }}>1+ Years Working</p>
               </div>
-              <div style={{ background: 'var(--bg-card)', padding: '15px 10px', borderRadius: '12px', textAlign: 'center', border: '1px solid var(--border-color)', transition: '0.3s' }}>
+              <div className="glass-card" style={{ padding: '15px 10px', textAlign: 'center', transition: '0.3s' }}>
                 <i className="fas fa-users" style={{ fontSize: '1.2rem', color: 'var(--primary)', marginBottom: '8px' }}></i>
                 <h3 style={{ fontSize: '0.85rem', fontWeight: '700', color: 'var(--text-primary)', marginBottom: '2px' }}>Clients</h3>
                 <p style={{ fontSize: '0.7rem', color: 'var(--text-muted)', fontWeight: '500' }}>10+ Worldwide</p>
               </div>
-              <div style={{ background: 'var(--bg-card)', padding: '15px 10px', borderRadius: '12px', textAlign: 'center', border: '1px solid var(--border-color)', transition: '0.3s' }}>
+              <div className="glass-card" style={{ padding: '15px 10px', textAlign: 'center', transition: '0.3s' }}>
                 <i className="fas fa-folder-open" style={{ fontSize: '1.2rem', color: 'var(--primary)', marginBottom: '8px' }}></i>
                 <h3 style={{ fontSize: '0.85rem', fontWeight: '700', color: 'var(--text-primary)', marginBottom: '2px' }}>Projects</h3>
                 <p style={{ fontSize: '0.7rem', color: 'var(--text-muted)', fontWeight: '500' }}>20+ Completed</p>
