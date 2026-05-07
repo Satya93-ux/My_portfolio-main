@@ -3724,10 +3724,10 @@ img[loading="lazy"].loaded {
         margin-right: auto;
     }
     .hero-stats {
-        gap: 30px !important;
+        gap: clamp(10px, 3vw, 20px) !important;
         justify-content: center !important;
         width: 100%;
-        flex-wrap: wrap;
+        flex-wrap: nowrap !important;
     }
     .hero-actions {
         flex-direction: column;

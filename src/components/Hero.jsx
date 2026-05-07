@@ -10,9 +10,9 @@ const Hero = () => {
     
     const roles = [
       'Flutter Developer ',
-      'AI Developer ',
+      'AI Web Developer ',
       'Prompt Engineer ',
-      'Creative Coder '
+      'Vibe Coder '
     ];
 
     let roleIndex = 0;
@@ -74,23 +74,24 @@ const Hero = () => {
             <p style={{ fontSize: '1.2rem', marginBottom: '10px', color: 'rgba(255, 255, 255, 0.8)' }}>Hello, I'm</p>
             
             <h1 style={{ 
-              fontSize: 'clamp(2.5rem, 6vw, 4rem)', 
+              fontSize: 'clamp(1.8rem, 5vw, 3.2rem)', 
               fontWeight: '900', 
               lineHeight: '1.1',
               marginBottom: '15px',
               color: '#8b5cf6',
-              letterSpacing: '-1px'
+              letterSpacing: '-1px',
+              whiteSpace: 'nowrap'
             }}>
               Satyaprakash Upadhyay
             </h1>
 
-            <h2 style={{ fontSize: 'clamp(1.5rem, 4vw, 2rem)', fontWeight: '800', marginBottom: '30px', display: 'flex', alignItems: 'center', color: '#fff', flexWrap: 'wrap' }}>
+            <h2 style={{ fontSize: 'clamp(1.3rem, 4vw, 1.8rem)', fontWeight: '800', marginBottom: '30px', display: 'flex', alignItems: 'center', color: '#fff', flexWrap: 'wrap' }}>
               I'm a <span ref={roleTextRef} style={{ marginLeft: '12px', color: '#8b5cf6' }}></span>
               <span style={{ color: '#8b5cf6', marginLeft: '5px', animation: 'blink 1s infinite' }}>|</span>
             </h2>
 
             <p style={{ 
-              fontSize: '1.1rem', 
+              fontSize: '1rem', 
               lineHeight: '1.7', 
               maxWidth: '550px', 
               color: 'rgba(255, 255, 255, 0.6)',
@@ -99,9 +100,9 @@ const Hero = () => {
               Passionate Flutter Developer and Vibe Coder crafting beautiful mobile applications. I also build full-stack websites and robust backend systems with the power of AI. Turning ideas into reality, one widget and prompt at a time.
             </p>
 
-            <div className="hero-actions" style={{ display: 'flex', gap: '20px', marginBottom: '60px' }}>
+            <div className="hero-actions" style={{ display: 'flex', gap: '15px', marginBottom: '60px' }}>
               <a href="#work" style={{ 
-                padding: '16px 35px', 
+                padding: '14px 30px', 
                 borderRadius: '50px', 
                 background: 'linear-gradient(90deg, #3b82f6, #06b6d4)',
                 color: '#fff',
@@ -111,12 +112,13 @@ const Hero = () => {
                 justifyContent: 'center',
                 gap: '12px',
                 boxShadow: '0 10px 20px rgba(59, 130, 246, 0.3)',
-                textDecoration: 'none'
+                textDecoration: 'none',
+                fontSize: '0.9rem'
               }}>
                 View My Work <i className="fas fa-arrow-right"></i>
               </a>
               <a href="#contact" style={{ 
-                padding: '16px 35px', 
+                padding: '14px 30px', 
                 borderRadius: '50px', 
                 border: '1px solid rgba(255, 255, 255, 0.2)',
                 background: 'rgba(255, 255, 255, 0.03)',
@@ -126,30 +128,33 @@ const Hero = () => {
                 alignItems: 'center',
                 justifyContent: 'center',
                 gap: '12px',
-                textDecoration: 'none'
+                textDecoration: 'none',
+                fontSize: '0.9rem'
               }}>
                 Let's Talk <i className="fas fa-comment-dots"></i>
               </a>
             </div>
 
-            <div className="hero-stats" style={{ display: 'flex', gap: '50px' }}>
-              <div>
-                <span style={{ fontSize: '2.5rem', fontWeight: '900', color: '#3b82f6', display: 'block', lineHeight: '1' }}>5+</span>
-                <p style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.4)', marginTop: '10px' }}>Projects Completed</p>
+            <div className="hero-stats" style={{ display: 'flex', gap: 'clamp(15px, 4vw, 35px)', alignItems: 'center' }}>
+              <div style={{ textAlign: 'center' }}>
+                <span style={{ fontSize: '1.8rem', fontWeight: '900', color: '#3b82f6', display: 'block', lineHeight: '1' }}>5+</span>
+                <p style={{ fontSize: '0.7rem', color: 'rgba(255, 255, 255, 0.4)', marginTop: '8px', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700' }}>Projects</p>
               </div>
-              <div>
-                <span style={{ fontSize: '2.5rem', fontWeight: '900', color: '#3b82f6', display: 'block', lineHeight: '1' }}>10+</span>
-                <p style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.4)', marginTop: '10px' }}>Happy Clients</p>
+              <div style={{ width: '1px', height: '30px', background: 'rgba(255, 255, 255, 0.1)' }}></div>
+              <div style={{ textAlign: 'center' }}>
+                <span style={{ fontSize: '1.8rem', fontWeight: '900', color: '#3b82f6', display: 'block', lineHeight: '1' }}>10+</span>
+                <p style={{ fontSize: '0.7rem', color: 'rgba(255, 255, 255, 0.4)', marginTop: '8px', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700' }}>Clients</p>
               </div>
-              <div>
-                <span style={{ fontSize: '2.5rem', fontWeight: '900', color: '#3b82f6', display: 'block', lineHeight: '1' }}>6+</span>
-                <p style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.4)', marginTop: '10px' }}>Months Experience</p>
+              <div style={{ width: '1px', height: '30px', background: 'rgba(255, 255, 255, 0.1)' }}></div>
+              <div style={{ textAlign: 'center' }}>
+                <span style={{ fontSize: '1.8rem', fontWeight: '900', color: '#3b82f6', display: 'block', lineHeight: '1' }}>6+</span>
+                <p style={{ fontSize: '0.7rem', color: 'rgba(255, 255, 255, 0.4)', marginTop: '8px', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700' }}>Months Exp</p>
               </div>
             </div>
           </div>
 
           <div className="hero-right">
-            <div className="hero-image-container" style={{ position: 'relative', width: '380px', height: '380px', margin: '0 auto' }}>
+            <div className="hero-image-container" style={{ position: 'relative', width: 'clamp(280px, 35vw, 380px)', height: 'clamp(280px, 35vw, 380px)', margin: '0 auto' }}>
               {/* Circular Image Frame */}
               <div style={{ 
                 width: '100%', 
@@ -197,12 +202,12 @@ const Hero = () => {
       </div>
 
       {/* Scroll Down Mouse */}
-      <div style={{ position: 'absolute', bottom: '40px', left: '50%', transform: 'translateX(-50%)', textAlign: 'center', opacity: '0.6' }}>
+      <a href="#about" style={{ position: 'absolute', bottom: '40px', left: '50%', transform: 'translateX(-50%)', textAlign: 'center', opacity: '0.8', textDecoration: 'none', cursor: 'pointer', transition: '0.3s' }} className="scroll-indicator">
         <div style={{ width: '24px', height: '40px', border: '2px solid #fff', borderRadius: '12px', margin: '0 auto 8px', position: 'relative' }}>
           <div style={{ width: '4px', height: '8px', background: '#fff', position: 'absolute', top: '8px', left: '50%', transform: 'translateX(-50%)', borderRadius: '2px', animation: 'mouseScroll 1.5s infinite' }}></div>
         </div>
-        <span style={{ fontSize: '0.65rem', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: '700' }}>Scroll Down</span>
-      </div>
+        <span style={{ fontSize: '0.65rem', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: '700', color: '#fff' }}>Scroll Down</span>
+      </a>
     </section>
   );
 };
