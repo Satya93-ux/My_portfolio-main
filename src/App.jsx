@@ -9,6 +9,7 @@ import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
+import BackgroundParticles from './components/BackgroundParticles';
 import usePortfolioScripts from './hooks/usePortfolioScripts';
 import './index.css';
 
@@ -45,6 +46,7 @@ function App() {
       )}
 
       <CustomCursor />
+      <BackgroundParticles />
       <div className="noise-overlay"></div>
 
       <Header />

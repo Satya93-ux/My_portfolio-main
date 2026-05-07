@@ -50,9 +50,15 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="hero" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', padding: '60px 0', position: 'relative', overflow: 'hidden' }}>
+    <section id="home" className="hero" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', padding: 'clamp(80px, 10vh, 120px) 0 60px', position: 'relative', overflow: 'hidden' }}>
       <div className="container">
-        <div className="hero-content" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(20px, 4vw, 40px)', alignItems: 'center' }}>
+        <div className="hero-content" style={{ 
+          display: 'grid', 
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))', 
+          gap: 'clamp(40px, 6vw, 80px)', 
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}>
           
           <div className="hero-left">
             {/* Available for Work Badge */}
@@ -79,15 +85,29 @@ const Hero = () => {
               lineHeight: '1.1',
               marginBottom: '10px',
               color: 'var(--primary)',
-              letterSpacing: '-1px',
-              whiteSpace: 'nowrap'
+              letterSpacing: '-1px'
             }}>
               Satyaprakash Upadhyay
             </h1>
 
-            <h2 style={{ fontSize: 'clamp(1.2rem, 3.5vw, 1.6rem)', fontWeight: '800', marginBottom: '20px', display: 'flex', alignItems: 'center', color: 'var(--text-primary)', flexWrap: 'wrap' }}>
-              I'm a <span ref={roleTextRef} style={{ marginLeft: '10px', color: 'var(--primary)' }}></span>
-              <span style={{ color: 'var(--primary)', marginLeft: '5px', animation: 'blink 1s infinite' }}>|</span>
+            <h2 style={{ 
+              fontSize: 'clamp(1.1rem, 3.5vw, 1.6rem)', 
+              fontWeight: '800', 
+              marginBottom: '20px', 
+              display: 'flex', 
+              alignItems: 'center', 
+              color: 'var(--text-primary)', 
+              flexWrap: 'wrap',
+              minHeight: '1.6em',
+              lineHeight: '1.4'
+            }}>
+              I'm a <span ref={roleTextRef} style={{ 
+                marginLeft: '10px', 
+                color: 'var(--primary)', 
+                borderRight: '3px solid var(--primary)', 
+                paddingRight: '5px',
+                animation: 'blink-caret 0.75s step-end infinite'
+              }}></span>
             </h2>
 
             <p style={{ 
@@ -100,7 +120,7 @@ const Hero = () => {
               Passionate Flutter Developer and Vibe Coder crafting beautiful mobile applications. I also build full-stack websites and robust backend systems with the power of AI. Turning ideas into reality, one widget and prompt at a time.
             </p>
 
-            <div className="hero-actions" style={{ display: 'flex', gap: '15px', marginBottom: '40px' }}>
+            <div className="hero-actions" style={{ display: 'flex', gap: 'clamp(10px, 2vw, 20px)', marginBottom: '40px', flexWrap: 'wrap' }}>
               <a href="#work" style={{ 
                 padding: '14px 30px', 
                 borderRadius: '50px', 
@@ -113,7 +133,9 @@ const Hero = () => {
                 gap: '12px',
                 boxShadow: '0 10px 20px rgba(59, 130, 246, 0.3)',
                 textDecoration: 'none',
-                fontSize: '0.9rem'
+                fontSize: '0.9rem',
+                flex: '1 1 auto',
+                minWidth: '160px'
               }}>
                 View My Work <i className="fas fa-arrow-right"></i>
               </a>
@@ -129,7 +151,9 @@ const Hero = () => {
                 justifyContent: 'center',
                 gap: '12px',
                 textDecoration: 'none',
-                fontSize: '0.9rem'
+                fontSize: '0.9rem',
+                flex: '1 1 auto',
+                minWidth: '160px'
               }}>
                 Let's Talk <i className="fas fa-comment-dots"></i>
               </a>
@@ -162,7 +186,7 @@ const Hero = () => {
           </div>
 
           <div className="hero-right">
-            <div className="hero-image-container" style={{ position: 'relative', width: 'clamp(280px, 35vw, 380px)', height: 'clamp(280px, 35vw, 380px)', margin: '0 auto' }}>
+            <div className="hero-image-container" style={{ position: 'relative', width: 'clamp(240px, 35vw, 380px)', height: 'clamp(240px, 35vw, 380px)', margin: '0 auto' }}>
               {/* Circular Image Frame */}
               <div style={{ 
                 width: '100%', 

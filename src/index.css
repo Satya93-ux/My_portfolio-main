@@ -1095,6 +1095,11 @@ input, textarea {
     51%, 100% { opacity: 0; }
 }
 
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--primary) }
+}
+
 /* Hero Description */
 .hero-description {
     font-size: 1.1rem;
@@ -3905,6 +3910,69 @@ img[loading="lazy"].loaded {
     }
     .mobile-only {
         display: block !important;
-        margin: 40px auto 0 !important;
+    }
+}
+
+/* ============================================
+   Animations & Reveal Effects
+============================================ */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    will-change: opacity, transform;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered Delay for Grid Items */
+.skill-card.reveal.active,
+.project-card.reveal.active,
+.tool-card.reveal.active {
+    transition-delay: calc(var(--delay, 0) * 0.1s);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes mouseScroll {
+    0% { transform: translate(-50%, 0); opacity: 1; }
+    100% { transform: translate(-50%, 15px); opacity: 0; }
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        text-align: center;
+    }
+    .hero-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-badge {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hero-stats {
+        justify-content: center;
+        width: 100%;
+    }
+    .about-content {
+        text-align: center;
+    }
+    .about-left {
+        max-width: 400px;
+        margin: 0 auto;
     }
 }

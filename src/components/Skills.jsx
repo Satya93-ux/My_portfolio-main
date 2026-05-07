@@ -40,8 +40,8 @@ const Skills = () => {
             <span style={{ color: 'var(--primary)' }}>{`</>`}</span> Technical Skills
           </h3>
           <div className="skills-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(clamp(140px, 45%, 170px), 1fr))', gap: '16px' }}>
-            {technicalSkills.map((skill) => (
-              <div key={skill.name} className="skill-card" style={{ background: 'var(--bg-card)', padding: '20px 15px', borderRadius: '12px', textAlign: 'center', border: '1px solid var(--border-color)', transition: '0.3s ease' }}>
+            {technicalSkills.map((skill, index) => (
+              <div key={skill.name} className="skill-card" style={{ background: 'var(--bg-card)', padding: '20px 15px', borderRadius: '12px', textAlign: 'center', border: '1px solid var(--border-color)', transition: '0.3s ease', '--delay': index }}>
                 <div style={{ marginBottom: '12px', display: 'flex', justifyContent: 'center', height: '40px', alignItems: 'center' }}>
                   <img src={skill.icon} alt={skill.name} className={skill.name === 'GitHub' || skill.name === 'Railway' ? 'theme-icon-invert' : ''} style={{ width: '32px', height: '32px', objectFit: 'contain' }} />
                 </div>
@@ -56,8 +56,8 @@ const Skills = () => {
             <i className="fas fa-tools" style={{ color: 'var(--primary)' }}></i> Tools & Technologies
           </h3>
           <div className="tools-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(clamp(110px, 30%, 125px), 1fr))', gap: '14px' }}>
-            {tools.map((tool) => (
-              <div key={tool.name} className="tool-card" style={{ background: 'var(--bg-card)', padding: '18px 12px', borderRadius: '12px', textAlign: 'center', border: '1px solid var(--border-color)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100px', transition: 'transform 0.3s ease' }}>
+            {tools.map((tool, index) => (
+              <div key={tool.name} className="tool-card" style={{ background: 'var(--bg-card)', padding: '18px 12px', borderRadius: '12px', textAlign: 'center', border: '1px solid var(--border-color)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100px', transition: 'transform 0.3s ease', '--delay': index }}>
                 <div style={{ marginBottom: '10px', height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <img src={tool.icon} alt={tool.name} className={tool.name === 'GitHub' || tool.name === 'Cursor' ? 'theme-icon-invert' : ''} style={{ width: '28px', height: '28px', objectFit: 'contain' }} />
                 </div>

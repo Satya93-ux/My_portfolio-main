@@ -10,7 +10,12 @@ const About = () => {
           <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.2rem)', fontWeight: '800', color: 'var(--text-primary)', textTransform: 'uppercase', letterSpacing: '2px' }}>About Me</h2>
         </div>
 
-        <div className="about-content" style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: 'clamp(20px, 4vw, 50px)', alignItems: 'center' }}>
+        <div className="about-content" style={{ 
+          display: 'grid', 
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))', 
+          gap: 'clamp(30px, 5vw, 60px)', 
+          alignItems: 'center' 
+        }}>
           
           {/* Left Side: Illustration + Badge */}
           <div className="about-left" style={{ position: 'relative' }}>
@@ -42,7 +47,12 @@ const About = () => {
           {/* Right Side: Content */}
           <div className="about-right">
             {/* Stat Cards */}
-            <div className="about-stats" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '12px', marginBottom: '25px' }}>
+            <div className="about-stats" style={{ 
+              display: 'grid', 
+              gridTemplateColumns: 'repeat(auto-fit, minmax(100px, 1fr))', 
+              gap: '12px', 
+              marginBottom: '25px' 
+            }}>
               <div style={{ background: 'var(--bg-card)', padding: '15px 10px', borderRadius: '12px', textAlign: 'center', border: '1px solid var(--border-color)', transition: '0.3s' }}>
                 <i className="fas fa-award" style={{ fontSize: '1.2rem', color: 'var(--secondary)', marginBottom: '8px' }}></i>
                 <h3 style={{ fontSize: '0.85rem', fontWeight: '700', color: 'var(--text-primary)', marginBottom: '2px' }}>Experience</h3>
@@ -71,8 +81,8 @@ const About = () => {
             {/* Info Grid */}
             <div className="about-info-grid" style={{ 
               display: 'grid', 
-              gridTemplateColumns: 'minmax(150px, 1fr) minmax(200px, 1.2fr)', 
-              gap: '12px 25px', 
+              gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', 
+              gap: '15px 25px', 
               marginBottom: '35px',
               width: '100%'
             }}>
