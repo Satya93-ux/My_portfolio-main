@@ -79,7 +79,6 @@ const Testimonials = () => {
               <button className="nav-arrow prev" id="prevTestimonial">
                 <i className="fas fa-arrow-left"></i>
               </button>
-              <div className="nav-dots" id="testimonialDots"></div>
               <button className="nav-arrow next" id="nextTestimonial">
                 <i className="fas fa-arrow-right"></i>
               </button>

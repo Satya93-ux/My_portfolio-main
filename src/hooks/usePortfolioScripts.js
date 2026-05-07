@@ -186,22 +186,9 @@ function initTestimonialsSlider() {
   const total = items.length;
   let autoplay;
 
-  // Create dots
-  if (dotsContainer) {
-    items.forEach((_, i) => {
-      const dot = document.createElement('div');
-      dot.classList.add('dot');
-      if (i === 0) dot.classList.add('active');
-      dot.addEventListener('click', () => goTo(i));
-      dotsContainer.appendChild(dot);
-    });
-  }
 
   function update() {
     track.style.transform = `translateX(-${current * 100}%)`;
-    dotsContainer && dotsContainer.querySelectorAll('.dot').forEach((d, i) => {
-      d.classList.toggle('active', i === current);
-    });
   }
 
   function goTo(index) {

@@ -2494,25 +2494,6 @@ input, textarea {
     color: var(--bg-dark);
 }
 
-.nav-dots {
-    display: flex;
-    gap: 10px;
-}
-
-.nav-dots .dot {
-    width: 10px;
-    height: 10px;
-    background: rgba(var(--primary-rgb), 0.3);
-    border-radius: 50%;
-    cursor: pointer;
-    transition: var(--transition-normal);
-}
-
-.nav-dots .dot.active {
-    background: var(--primary);
-    width: 30px;
-    border-radius: 5px;
-}
 
 /* Testimonials Responsive */
 @media (max-width: 768px) {
