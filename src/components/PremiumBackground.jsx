@@ -28,54 +28,31 @@ const PremiumBackground = () => {
     },
     fpsLimit: 120,
     interactivity: {
-      detectsOn: "window",
       events: {
         onClick: {
-          enable: true,
-          mode: "push",
+          enable: false,
         },
         onHover: {
-          enable: true,
-          mode: "grab",
-          parallax: {
-            enable: true,
-            force: 60,
-            smooth: 10,
-          },
+          enable: false,
         },
         resize: true,
-      },
-      modes: {
-        push: {
-          quantity: 4,
-        },
-        grab: {
-          distance: 200,
-          links: {
-            opacity: 0.5,
-          },
-        },
       },
     },
     particles: {
       color: {
-        value: ["#2563eb", "#9333ea", "#06b6d4", "#ec4899"],
+        value: ["#ffffff", "#e2e8f0", "#94a3b8"],
       },
       links: {
-        color: "#ffffff",
-        distance: 150,
-        enable: true,
-        opacity: 0.05,
-        width: 1,
+        enable: false,
       },
       move: {
         direction: "none",
         enable: true,
         outModes: {
-          default: "bounce",
+          default: "out",
         },
         random: true,
-        speed: 0.4,
+        speed: 0.15,
         straight: false,
       },
       number: {
@@ -83,13 +60,13 @@ const PremiumBackground = () => {
           enable: true,
           area: 800,
         },
-        value: 40,
+        value: 30,
       },
       opacity: {
-        value: { min: 0.1, max: 0.4 },
+        value: { min: 0.05, max: 0.15 },
         animation: {
           enable: true,
-          speed: 0.3,
+          speed: 0.2,
           sync: false,
         }
       },
@@ -97,19 +74,12 @@ const PremiumBackground = () => {
         type: "circle",
       },
       size: {
-        value: { min: 2, max: 6 },
+        value: { min: 3, max: 12 },
         animation: {
           enable: true,
-          speed: 1,
+          speed: 0.5,
           sync: false,
         }
-      },
-      shadow: {
-        enable: true,
-        color: {
-            value: ["#2563eb", "#9333ea", "#06b6d4", "#ec4899"]
-        },
-        blur: 10
       }
     },
     detectRetina: true,

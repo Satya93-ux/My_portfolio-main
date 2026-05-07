@@ -238,32 +238,9 @@ const Hero = () => {
                 zIndex: '-1'
               }}></div>
             </div>
-            
-            {/* Scroll Down Indicator below image */}
-            <div style={{ 
-              marginTop: '20px', 
-              textAlign: 'center', 
-              opacity: '0.6'
-            }}>
-              <span style={{ 
-                fontSize: '0.65rem', 
-                textTransform: 'uppercase', 
-                letterSpacing: '2px', 
-                fontWeight: '700', 
-                color: 'var(--text-primary)' 
-              }}>Scroll Down</span>
-            </div>
           </div>
         </div>
       </div>
-
-      {/* Scroll Down Mouse (Desktop) */}
-      <a href="#about" className="scroll-indicator desktop-only" style={{ position: 'absolute', bottom: '40px', left: '50%', transform: 'translateX(-50%)', textAlign: 'center', opacity: '0.8', textDecoration: 'none', cursor: 'pointer', transition: '0.3s' }}>
-        <div style={{ width: '24px', height: '40px', border: '2px solid var(--text-primary)', borderRadius: '12px', margin: '0 auto 8px', position: 'relative' }}>
-          <div style={{ width: '4px', height: '8px', background: 'var(--text-primary)', position: 'absolute', top: '8px', left: '50%', transform: 'translateX(-50%)', borderRadius: '2px', animation: 'mouseScroll 1.5s infinite' }}></div>
-        </div>
-        <span style={{ fontSize: '0.65rem', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: '700', color: 'var(--text-primary)' }}>Scroll Down</span>
-      </a>
     </section>
   );
 };
