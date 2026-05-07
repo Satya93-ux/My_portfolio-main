@@ -4,10 +4,10 @@ const Videos = () => {
   const videos = [
     {
       id: 1,
-      title: "Landing Page for a Company 'Hafor Tech'",
+      title: "Landing Page for a Company 'Divanex Tecnology'",
       duration: '30 sec',
       views: '2.5K views',
-      desc: "This is a landing page for a company 'Hafor Tech'. It is built using HTML, CSS, and JavaScript.",
+      desc: "This is a landing page for a company 'Divanex Tecnology'. It is built using HTML, CSS, and JavaScript.",
       url: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
     },
     {
