@@ -74,7 +74,16 @@ const Testimonials = () => {
               ))}
             </div>
 
-            {/* Navigation removed as requested */}
+            {/* Navigation — wired up by usePortfolioScripts */}
+            <div className="testimonials-nav">
+              <button className="nav-arrow prev" id="prevTestimonial">
+                <i className="fas fa-arrow-left"></i>
+              </button>
+              <div className="nav-dots" id="testimonialDots"></div>
+              <button className="nav-arrow next" id="nextTestimonial">
+                <i className="fas fa-arrow-right"></i>
+              </button>
+            </div>
           </div>
         </div>
       </div>
