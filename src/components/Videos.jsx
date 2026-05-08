@@ -1,21 +1,37 @@
 import React from 'react';
 
 const Videos = () => {
-  const videos = [
+    const videos = [
     {
       id: 1,
-      title: "Landing Page for a Company 'Divanex Tecnology'",
+      title: "Landing Page for 'Divanex Tecnology'",
       duration: '30 sec',
       views: '2.5K views',
-      desc: "This is a landing page for a company 'Divanex Tecnology'. It is built using HTML, CSS, and JavaScript.",
+      desc: "A high-performance landing page built with modern web technologies, featuring smooth animations and responsive design.",
       url: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
     },
     {
       id: 2,
-      title: 'Chatting App',
+      title: 'Real-time Chatting App',
       duration: '1 min+',
       views: '1.8K views',
-      desc: 'This chatting app is built using Flutter and Node.js. It is a real-time chatting app with features like messaging, group chatting, and file sharing.',
+      desc: 'Full-featured chat application with real-time messaging, group channels, and secure file sharing powered by Flutter and Socket.io.',
+      url: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+    },
+    {
+      id: 3,
+      title: 'Driver App Walkthrough',
+      duration: '45 sec',
+      views: '1.2K views',
+      desc: 'A comprehensive walkthrough of the Driver application, showcasing real-time navigation and earnings management.',
+      url: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+    },
+    {
+      id: 4,
+      title: 'Customer App Demo',
+      duration: '1 min',
+      views: '3.1K views',
+      desc: 'Exploring the seamless booking experience and premium UI of the ride-hailing passenger application.',
       url: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
     }
   ];
@@ -39,15 +55,17 @@ const Videos = () => {
             WATCH
           </div>
           <div style={{ width: '60px', height: '4px', background: 'var(--gradient-primary)', margin: '0 auto 40px', borderRadius: '2px' }}></div>
-          <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', maxWidth: '800px', margin: '0 auto' }}>
+          <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', maxWidth: '800px', margin: '0 auto' }}>
             Watch detailed walkthroughs and demos of my featured projects
           </p>
         </div>
 
         <div className="videos-grid" style={{ 
           display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 450px), 1fr))', 
-          gap: '30px' 
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 420px), 1fr))', 
+          gap: '30px',
+          maxWidth: '1100px',
+          margin: '0 auto'
         }}>
           {videos.map(video => (
             <div key={video.id} className="video-card glass-card" style={{ 

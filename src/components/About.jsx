@@ -99,25 +99,25 @@ const About = () => {
             {/* Info Grid */}
             <div className="about-info-grid" style={{ 
               display: 'grid', 
-              gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', 
-              gap: '20px 40px', 
-              marginBottom: '40px'
+              gridTemplateColumns: 'repeat(2, 1fr)', 
+              gap: '15px 30px', 
+              marginBottom: '35px'
             }}>
-              <div style={{ display: 'flex', gap: '10px' }}>
-                <span style={{ fontWeight: '800', color: 'var(--text-primary)', fontSize: '0.95rem' }}>Name:</span>
-                <span style={{ color: 'var(--text-secondary)', fontWeight: '500', fontSize: '0.95rem' }}>Satyaprakash Upadhyay</span>
+              <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+                <span style={{ fontWeight: '800', color: 'var(--text-primary)', fontSize: '0.9rem', minWidth: '70px' }}>Name:</span>
+                <span style={{ color: 'var(--text-secondary)', fontWeight: '500', fontSize: '0.9rem', whiteSpace: 'nowrap' }}>Satyaprakash Upadhyay</span>
               </div>
-              <div style={{ display: 'flex', gap: '10px' }}>
-                <span style={{ fontWeight: '800', color: 'var(--text-primary)', fontSize: '0.95rem' }}>Email:</span>
-                <span style={{ color: 'var(--text-secondary)', fontWeight: '500', fontSize: '0.95rem', wordBreak: 'break-all' }}>sk9334069077@gmail.com</span>
+              <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+                <span style={{ fontWeight: '800', color: 'var(--text-primary)', fontSize: '0.9rem', minWidth: '70px' }}>Email:</span>
+                <span style={{ color: 'var(--text-secondary)', fontWeight: '500', fontSize: '0.9rem', whiteSpace: 'nowrap' }}>sk9334069077@gmail.com</span>
               </div>
-              <div style={{ display: 'flex', gap: '10px' }}>
-                <span style={{ fontWeight: '800', color: 'var(--text-primary)', fontSize: '0.95rem' }}>Location:</span>
-                <span style={{ color: 'var(--text-secondary)', fontWeight: '500', fontSize: '0.95rem' }}>India</span>
+              <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+                <span style={{ fontWeight: '800', color: 'var(--text-primary)', fontSize: '0.9rem', minWidth: '70px' }}>Location:</span>
+                <span style={{ color: 'var(--text-secondary)', fontWeight: '500', fontSize: '0.9rem' }}>India</span>
               </div>
-              <div style={{ display: 'flex', gap: '10px' }}>
-                <span style={{ fontWeight: '800', color: 'var(--text-primary)', fontSize: '0.95rem' }}>Freelance:</span>
-                <span style={{ color: 'var(--success)', fontWeight: '800', fontSize: '0.95rem' }}>Available</span>
+              <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+                <span style={{ fontWeight: '800', color: 'var(--text-primary)', fontSize: '0.9rem', minWidth: '70px' }}>Availability:</span>
+                <span style={{ color: 'var(--success)', fontWeight: '800', fontSize: '0.9rem' }}>Available</span>
               </div>
             </div>
 

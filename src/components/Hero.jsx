@@ -64,7 +64,7 @@ const Hero = () => {
         }}>
           
           {/* Content on the Left */}
-          <div className="hero-left" style={{ order: 1, textAlign: window.innerWidth < 1024 ? 'center' : 'left' }}>
+          <div className="hero-left">
             {/* Available for Work Badge */}
             <div className="hero-badge" style={{ 
               maxWidth: 'fit-content', 
@@ -75,8 +75,7 @@ const Hero = () => {
               display: 'flex',
               alignItems: 'center',
               gap: '10px',
-              marginBottom: '20px',
-              margin: window.innerWidth < 1024 ? '0 auto 20px' : '0 0 20px'
+              marginBottom: '20px'
             }}>
               <span className="badge-dot" style={{ width: '8px', height: '8px', background: 'var(--success)', borderRadius: '50%', boxShadow: '0 0 10px var(--success)' }}></span>
               <span style={{ fontWeight: 600, fontSize: '0.8rem', color: 'var(--text-primary)', letterSpacing: '0.5px' }}>Available for New Projects</span>
@@ -104,8 +103,7 @@ const Hero = () => {
               color: 'var(--text-secondary)', 
               flexWrap: 'wrap',
               minHeight: '1.6em',
-              lineHeight: '1.4',
-              justifyContent: window.innerWidth < 1024 ? 'center' : 'flex-start'
+              lineHeight: '1.4'
             }}>
               I'm a <span ref={roleTextRef} style={{ 
                 marginLeft: '12px', 
@@ -121,8 +119,7 @@ const Hero = () => {
               lineHeight: '1.7', 
               maxWidth: '560px', 
               color: 'var(--text-secondary)',
-              marginBottom: '40px',
-              margin: window.innerWidth < 1024 ? '0 auto 40px' : '0 0 40px'
+              marginBottom: '40px'
             }}>
               Passionate Flutter Developer and Vibe Coder crafting elegant mobile experiences. Specialized in building full-stack applications and intelligent systems powered by cutting-edge AI.
             </p>
@@ -131,8 +128,7 @@ const Hero = () => {
               display: 'flex', 
               gap: '16px', 
               marginBottom: '50px', 
-              flexWrap: 'wrap',
-              justifyContent: window.innerWidth < 1024 ? 'center' : 'flex-start'
+              flexWrap: 'wrap'
             }}>
               <a href="#work" className="btn-primary" style={{ 
                 padding: '16px 36px', 
@@ -181,8 +177,7 @@ const Hero = () => {
             <div className="hero-stats" style={{ 
               display: 'flex', 
               gap: 'clamp(20px, 5vw, 45px)', 
-              alignItems: 'center',
-              justifyContent: window.innerWidth < 1024 ? 'center' : 'flex-start'
+              alignItems: 'center'
             }}>
               <div style={{ textAlign: 'center' }}>
                 <span className="text-gradient" style={{ fontSize: '2.2rem', fontWeight: '900', display: 'block', lineHeight: '1' }}>5+</span>
@@ -202,7 +197,7 @@ const Hero = () => {
           </div>
 
           {/* Profile Image on the Right */}
-          <div className="hero-right" style={{ order: window.innerWidth < 1024 ? 1 : 2 }}>
+          <div className="hero-right">
             <div className="hero-image-container" style={{ position: 'relative', width: 'clamp(240px, 35vw, 380px)', height: 'clamp(240px, 35vw, 380px)', margin: '0 auto' }}>
               {/* Circular Image Frame */}
               <div style={{ 

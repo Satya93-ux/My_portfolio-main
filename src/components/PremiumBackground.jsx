@@ -40,19 +40,19 @@ const PremiumBackground = () => {
     },
     particles: {
       color: {
-        value: ["#ffffff", "#e2e8f0", "#94a3b8"],
+        value: ["#ffffff", "#60a5fa", "#94a3b8", "#e2e8f0"],
       },
       links: {
         enable: false,
       },
       move: {
-        direction: "none",
+        direction: "top",
         enable: true,
         outModes: {
           default: "out",
         },
         random: true,
-        speed: 0.15,
+        speed: { min: 0.3, max: 0.8 },
         straight: false,
       },
       number: {
@@ -60,13 +60,13 @@ const PremiumBackground = () => {
           enable: true,
           area: 800,
         },
-        value: 30,
+        value: 12,
       },
       opacity: {
-        value: { min: 0.05, max: 0.15 },
+        value: { min: 0.02, max: 0.07 },
         animation: {
           enable: true,
-          speed: 0.2,
+          speed: 0.3,
           sync: false,
         }
       },
@@ -74,12 +74,17 @@ const PremiumBackground = () => {
         type: "circle",
       },
       size: {
-        value: { min: 3, max: 12 },
+        value: { min: 80, max: 200 },
         animation: {
           enable: true,
-          speed: 0.5,
+          speed: 2,
           sync: false,
         }
+      },
+      shadow: {
+        enable: true,
+        color: "#ffffff",
+        blur: 15,
       }
     },
     detectRetina: true,

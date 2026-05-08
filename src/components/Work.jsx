@@ -130,8 +130,8 @@ const Work = () => {
 
         <div className="projects-grid" style={{ 
           display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 360px), 1fr))', 
-          gap: '30px' 
+          gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 310px), 1fr))', 
+          gap: '25px' 
         }}>
           {filteredProjects.map((project, index) => (
             <article key={project.id} className="project-card glass-card" style={{ 
@@ -145,7 +145,7 @@ const Work = () => {
             }}>
               <div className="project-image" style={{ 
                 position: 'relative', 
-                height: '220px', 
+                height: '190px', 
                 overflow: 'hidden'
               }}>
                 <img 
