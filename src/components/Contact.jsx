@@ -137,7 +137,7 @@ const Contact = () => {
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '20px', marginBottom: '25px' }}>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                   <label style={{ fontSize: '0.85rem', fontWeight: '600', color: 'var(--text-secondary)' }}>Full Name</label>
-                  <input type="text" placeholder="John Doe" style={{ 
+                  <input type="text" placeholder="Name" style={{ 
                     padding: '16px 20px', 
                     background: 'var(--bg-darker)', 
                     border: '1px solid var(--border-color)', 
@@ -149,7 +149,7 @@ const Contact = () => {
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                   <label style={{ fontSize: '0.85rem', fontWeight: '600', color: 'var(--text-secondary)' }}>Email Address</label>
-                  <input type="email" placeholder="john@example.com" style={{ 
+                  <input type="email" placeholder="Email" style={{ 
                     padding: '16px 20px', 
                     background: 'var(--bg-darker)', 
                     border: '1px solid var(--border-color)', 
