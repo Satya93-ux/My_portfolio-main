@@ -103,20 +103,20 @@ const About = () => {
               gap: '15px 30px', 
               marginBottom: '35px'
             }}>
-              <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
-                <span style={{ fontWeight: '800', color: 'var(--text-primary)', fontSize: '0.9rem', minWidth: '70px' }}>Name:</span>
+              <div style={{ display: 'flex', gap: '5px', alignItems: 'center' }}>
+                <span style={{ fontWeight: '800', color: 'var(--text-primary)', fontSize: '0.9rem' }}>Name:</span>
                 <span style={{ color: 'var(--text-secondary)', fontWeight: '500', fontSize: '0.9rem', whiteSpace: 'nowrap' }}>Satyaprakash Upadhyay</span>
               </div>
-              <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
-                <span style={{ fontWeight: '800', color: 'var(--text-primary)', fontSize: '0.9rem', minWidth: '70px' }}>Email:</span>
+              <div style={{ display: 'flex', gap: '5px', alignItems: 'center' }}>
+                <span style={{ fontWeight: '800', color: 'var(--text-primary)', fontSize: '0.9rem' }}>Email:</span>
                 <span style={{ color: 'var(--text-secondary)', fontWeight: '500', fontSize: '0.9rem', whiteSpace: 'nowrap' }}>sk9334069077@gmail.com</span>
               </div>
-              <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
-                <span style={{ fontWeight: '800', color: 'var(--text-primary)', fontSize: '0.9rem', minWidth: '70px' }}>Location:</span>
+              <div style={{ display: 'flex', gap: '5px', alignItems: 'center' }}>
+                <span style={{ fontWeight: '800', color: 'var(--text-primary)', fontSize: '0.9rem' }}>Location:</span>
                 <span style={{ color: 'var(--text-secondary)', fontWeight: '500', fontSize: '0.9rem' }}>India</span>
               </div>
-              <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
-                <span style={{ fontWeight: '800', color: 'var(--text-primary)', fontSize: '0.9rem', minWidth: '70px' }}>Availability:</span>
+              <div style={{ display: 'flex', gap: '5px', alignItems: 'center' }}>
+                <span style={{ fontWeight: '800', color: 'var(--text-primary)', fontSize: '0.9rem' }}>Availability:</span>
                 <span style={{ color: 'var(--success)', fontWeight: '800', fontSize: '0.9rem' }}>Available</span>
               </div>
             </div>
